@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-015",
+  "track": "javascript",
+  "title": "Proxy",
+  "description": "Crie Proxy que valida tipos.",
+  "starterCode": "function criarProxyValidado(obj, schema) {\n    // Proxy que valida tipos ao setar\n    return new Proxy(obj, {\n        set(target, prop, value) {\n            // TODO: valide tipo\n            target[prop] = value;\n            return true;\n        }\n    });\n}\n",
+  "tags": [
+    "proxy",
+    "metaprogramação"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const p = criarProxyValidado({}, {name:'string',age:'number'}); p.name = 'Ana'; results.push({ pass: p.name==='Ana', message: p.name==='Ana' ? 'Proxy ok!' : 'Incorreto' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-009",
+  "track": "javascript",
+  "title": "Flatten Recursivo",
+  "description": "Crie `flatten(arr)` achata recursivamente.",
+  "starterCode": "function flatten(arr) {\n    // Achate todos os níveis\n}\n",
+  "tags": [
+    "recursão",
+    "array"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = flatten([1,[2,[3,[4]]]]); const exp = \"[1,2,3,4]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Achatado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

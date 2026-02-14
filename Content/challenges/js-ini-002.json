@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-002",
+  "track": "javascript",
+  "title": "Soma de Números",
+  "description": "Crie função `soma(a, b)` que retorna a soma.",
+  "starterCode": "function soma(a, b) {\n    // Retorne a soma de a e b\n}\n",
+  "tags": [
+    "operadores",
+    "função"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = soma(2, 3); const exp = \"5\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'soma(2,3) = 5!' : 'soma(2,3) incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = soma(-1, 1); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'soma(-1,1) = 0!' : 'soma(-1,1) incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = soma(0, 0); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'soma(0,0) = 0!' : 'soma(0,0) incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-009",
+  "track": "javascript",
+  "title": "Somar até N",
+  "description": "Crie `somarAte(n)` soma de 1 a n.",
+  "starterCode": "function somarAte(n) {\n    // Retorne 1 + 2 + ... + n\n}\n",
+  "tags": [
+    "loop",
+    "soma"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = somarAte(5); const exp = \"15\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'somarAte(5)=15!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = somarAte(10); const exp = \"55\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'somarAte(10)=55!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

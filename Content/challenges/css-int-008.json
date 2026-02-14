@@ -1,0 +1,32 @@
+{
+  "id": "css-int-008",
+  "track": "css",
+  "title": "Grid Template Columns",
+  "description": "Defina colunas.",
+  "starterCode": "<style>\n/* Use grid-template-columns */\n\n</style>\n\n<div class=\"cols\"><div>1</div><div>2</div><div>3</div></div>",
+  "tags": [
+    "grid",
+    "columns"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".cols",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "Precisa grid.",
+        "successMessage": "Grid!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".cols",
+        "property": "grid-template-columns",
+        "errorMessage": "Defina grid-template-columns.",
+        "successMessage": "Columns ok!"
+      }
+    ]
+  }
+}

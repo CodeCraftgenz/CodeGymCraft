@@ -1,0 +1,16 @@
+{
+  "id": "js-int-020",
+  "track": "javascript",
+  "title": "Classe ES6",
+  "description": "Crie classe `Animal` com nome e falar().",
+  "starterCode": "class Animal {\n    // Construtor com nome\n    // Método falar() retorna 'O {nome} faz som'\n}\n",
+  "tags": [
+    "classe",
+    "OOP"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const a = new Animal('Rex'); results.push({ pass: a.falar() === 'O Rex faz som', message: a.falar() === 'O Rex faz som' ? 'Falar ok!' : 'Incorreto: ' + a.falar() }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "css-int-006",
+  "track": "css",
+  "title": "Flex Grow",
+  "description": "Use flex-grow.",
+  "starterCode": "<style>\n/* Use flex-grow */\n\n</style>\n\n<div class=\"grow-container\"><div class=\"grow-item\">Cresce</div><div>Fixo</div></div>",
+  "tags": [
+    "flexbox",
+    "grow"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".grow-container",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "Precisa flex.",
+        "successMessage": "Flex!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".grow-item",
+        "property": "flex-grow",
+        "errorMessage": "Defina flex-grow.",
+        "successMessage": "Grow ok!"
+      }
+    ]
+  }
+}

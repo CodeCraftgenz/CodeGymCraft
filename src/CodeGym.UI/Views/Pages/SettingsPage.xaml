@@ -1,0 +1,198 @@
+<Page x:Class="CodeGym.UI.Views.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="Configurações">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="700" HorizontalAlignment="Center" Margin="32,20,32,32">
+
+            <TextBlock Text="Configurações"
+                       Style="{StaticResource PageTitleStyle}" />
+            <TextBlock Text="Personalize sua experiência no CodeGym."
+                       Style="{StaticResource PageSubtitleStyle}" />
+
+            <!-- Aparência -->
+            <TextBlock Text="Aparência" Style="{StaticResource SectionTitleStyle}" />
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                                <ui:SymbolIcon Symbol="DarkTheme24" FontSize="16" Margin="0,0,8,0"
+                                               VerticalAlignment="Center" />
+                                <TextBlock Text="Tema" FontSize="15" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <TextBlock Text="Escolha entre tema escuro ou claro." FontSize="13" Opacity="0.55" />
+                        </StackPanel>
+                        <ComboBox DockPanel.Dock="Right"
+                                  ItemsSource="{Binding ThemeOptions}"
+                                  SelectedItem="{Binding SelectedTheme}"
+                                  Width="160"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center" />
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <!-- Editor -->
+            <TextBlock Text="Editor de Código" Style="{StaticResource SectionTitleStyle}"
+                       Margin="0,24,0,12" />
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="TextFontSize24" FontSize="16" Margin="0,0,8,0"
+                                               VerticalAlignment="Center" />
+                                <TextBlock Text="Tamanho da Fonte" FontSize="15" />
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding FontSize}" FontSize="15" FontWeight="SemiBold"
+                                       VerticalAlignment="Center" Margin="0,0,10,0" />
+                            <Slider Value="{Binding FontSize}"
+                                    Minimum="10" Maximum="24"
+                                    TickFrequency="1" IsSnapToTickEnabled="True"
+                                    Width="180" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                            <ui:SymbolIcon Symbol="TextFont24" FontSize="16" Margin="0,0,8,0"
+                                           VerticalAlignment="Center" />
+                            <TextBlock Text="Família de Fonte" FontSize="15" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <ComboBox DockPanel.Dock="Right"
+                                  ItemsSource="{Binding FontFamilyOptions}"
+                                  SelectedItem="{Binding SelectedFontFamily}"
+                                  Width="200"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center" />
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                            <ui:SymbolIcon Symbol="TextNumberListLtr24" FontSize="16" Margin="0,0,8,0"
+                                           VerticalAlignment="Center" />
+                            <TextBlock Text="Números de Linha" FontSize="15" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <ToggleButton DockPanel.Dock="Right" IsChecked="{Binding ShowLineNumbers}"
+                                      HorizontalAlignment="Right" VerticalAlignment="Center" />
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                            <ui:SymbolIcon Symbol="TextWrap24" FontSize="16" Margin="0,0,8,0"
+                                           VerticalAlignment="Center" />
+                            <TextBlock Text="Quebra de Linha" FontSize="15" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <ToggleButton DockPanel.Dock="Right" IsChecked="{Binding WordWrap}"
+                                      HorizontalAlignment="Right" VerticalAlignment="Center" />
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                            <ui:SymbolIcon Symbol="KeyboardTab24" FontSize="16" Margin="0,0,8,0"
+                                           VerticalAlignment="Center" />
+                            <TextBlock Text="Tamanho do Tab" FontSize="15" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <ComboBox DockPanel.Dock="Right"
+                                  ItemsSource="{Binding TabSizeOptions}"
+                                  SelectedItem="{Binding SelectedTabSize}"
+                                  Width="80"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center" />
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <!-- Dados -->
+            <TextBlock Text="Dados e Armazenamento" Style="{StaticResource SectionTitleStyle}"
+                       Margin="0,24,0,12" />
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                                <ui:SymbolIcon Symbol="Document24" FontSize="16" Margin="0,0,8,0"
+                                               VerticalAlignment="Center" />
+                                <TextBlock Text="Exportar Progresso" FontSize="15" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <TextBlock Text="Gera um relatório em PDF do seu progresso."
+                                       FontSize="13" Opacity="0.55" />
+                        </StackPanel>
+                        <ui:Button DockPanel.Dock="Right"
+                                   Content="Exportar PDF"
+                                   Icon="{ui:SymbolIcon ArrowDownload24}"
+                                   Command="{Binding ExportPdfCommand}"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center" />
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,6">
+                <ui:CardControl.Header>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                                <ui:SymbolIcon Symbol="Database24" FontSize="16" Margin="0,0,8,0"
+                                               VerticalAlignment="Center" />
+                                <TextBlock Text="Local do Banco de Dados" FontSize="15" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding DatabasePath}" FontSize="12" Opacity="0.45"
+                                       TextWrapping="Wrap" MaxWidth="500" />
+                        </StackPanel>
+                    </DockPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <!-- Zona de perigo -->
+            <TextBlock Text="Zona de Perigo" Style="{StaticResource SectionTitleStyle}"
+                       Foreground="{StaticResource DangerBrush}"
+                       Margin="0,24,0,12" />
+
+            <Border CornerRadius="10" BorderThickness="1" Padding="20,16"
+                    BorderBrush="{StaticResource DangerBrush}" Opacity="0.9"
+                    Margin="0,0,0,24">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                        <TextBlock Text="Resetar Progresso" FontSize="15" FontWeight="SemiBold"
+                                   Foreground="{StaticResource DangerBrush}" />
+                        <TextBlock Text="Apaga todo o progresso e dados salvos. Esta ação é irreversível."
+                                   FontSize="13" Opacity="0.55" TextWrapping="Wrap" MaxWidth="400" />
+                    </StackPanel>
+                    <ui:Button DockPanel.Dock="Right"
+                               Content="Resetar Tudo"
+                               Appearance="Danger"
+                               Command="{Binding ResetProgressCommand}"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center" />
+                </DockPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

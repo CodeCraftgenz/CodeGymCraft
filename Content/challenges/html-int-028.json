@@ -1,0 +1,35 @@
+{
+  "id": "html-int-028",
+  "track": "html",
+  "title": "Picture Element",
+  "description": "Use picture para imagens responsivas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use picture e source -->\n    \n</body>\n</html>",
+  "tags": [
+    "responsivo",
+    "picture"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "picture",
+        "errorMessage": "<picture> não encontrado.",
+        "successMessage": "<picture> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "picture source",
+        "errorMessage": "<source> dentro de picture não encontrado.",
+        "successMessage": "Source ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "picture img",
+        "errorMessage": "<img> dentro de picture não encontrado.",
+        "successMessage": "Img fallback ok!"
+      }
+    ]
+  }
+}

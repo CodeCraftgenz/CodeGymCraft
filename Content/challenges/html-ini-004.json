@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-004",
+  "track": "html",
+  "title": "Texto em Negrito e Itálico",
+  "description": "Use <strong> e <em> para formatar texto.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use strong e em -->\n    \n</body>\n</html>",
+  "tags": [
+    "formatação",
+    "texto"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "strong",
+        "errorMessage": "<strong> não encontrado.",
+        "successMessage": "<strong> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "em",
+        "errorMessage": "<em> não encontrado.",
+        "successMessage": "<em> ok!"
+      }
+    ]
+  }
+}

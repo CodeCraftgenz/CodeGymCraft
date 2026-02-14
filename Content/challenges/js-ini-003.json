@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-003",
+  "track": "javascript",
+  "title": "Par ou Ímpar",
+  "description": "Crie `parOuImpar(n)` que retorna 'par' ou 'ímpar'.",
+  "starterCode": "function parOuImpar(n) {\n    // Retorne 'par' ou 'ímpar'\n}\n",
+  "tags": [
+    "if/else",
+    "condição"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = parOuImpar(4); const exp = \"'par'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '4 é par!' : '4 deveria ser par: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = parOuImpar(7); const exp = \"'\\u00edmpar'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '7 é ímpar!' : '7 deveria ser ímpar: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = parOuImpar(0); const exp = \"'par'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '0 é par!' : '0 deveria ser par: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

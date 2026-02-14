@@ -1,0 +1,41 @@
+{
+  "id": "html-int-001",
+  "track": "html",
+  "title": "Elementos Semânticos",
+  "description": "Use header, nav, main, footer.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elementos semânticos -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "estrutura"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "header",
+        "errorMessage": "<header> não encontrado.",
+        "successMessage": "<header> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "nav",
+        "errorMessage": "<nav> não encontrado.",
+        "successMessage": "<nav> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "main",
+        "errorMessage": "<main> não encontrado.",
+        "successMessage": "<main> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "footer",
+        "errorMessage": "<footer> não encontrado.",
+        "successMessage": "<footer> ok!"
+      }
+    ]
+  }
+}

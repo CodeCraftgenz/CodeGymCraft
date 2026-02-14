@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-007",
+  "track": "css",
+  "title": "Text Decoration",
+  "description": "Remova sublinhado de links.",
+  "starterCode": "<style>\n/* Remova decoration */\n\n</style>\n\n<a class=\"link\" href=\"#\">Sem sublinhado</a>",
+  "tags": [
+    "texto",
+    "decoration"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".link",
+        "property": "text-decoration",
+        "value": "none",
+        "errorMessage": "text-decoration deve ser none.",
+        "successMessage": "Sem sublinhado!"
+      }
+    ]
+  }
+}

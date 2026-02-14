@@ -1,0 +1,24 @@
+{
+  "id": "css-int-019",
+  "track": "css",
+  "title": "Media Query",
+  "description": "Crie media query básica.",
+  "starterCode": "<style>\n/* Use @media */\n\n</style>\n\n<div class=\"responsive\">Responsivo</div>",
+  "tags": [
+    "responsivo",
+    "media query"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".responsive",
+        "property": "font-size",
+        "errorMessage": "Defina font-size base.",
+        "successMessage": "Base ok!"
+      }
+    ]
+  }
+}

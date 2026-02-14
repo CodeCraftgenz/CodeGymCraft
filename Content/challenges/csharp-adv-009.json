@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-009",
+  "track": "csharp",
+  "title": "Record",
+  "description": "Crie um record.",
+  "starterCode": "public record Coordenada(double X, double Y)\n{\n    // Adicione método Distancia(Coordenada outro)\n}\n\npublic class Solution\n{\n    public static double Teste()\n    {\n        var a = new Coordenada(0, 0);\n        var b = new Coordenada(3, 4);\n        return a.Distancia(b);\n    }\n}",
+  "tags": [
+    "record",
+    "imutável"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.Teste() - 5.0) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"Dist=5!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

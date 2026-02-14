@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-023",
+  "track": "css",
+  "title": "First-child",
+  "description": "Estilize primeiro filho.",
+  "starterCode": "<style>\n/* Use :first-child */\n\n</style>\n\n<ul><li>Primeiro</li><li>Segundo</li><li>Terceiro</li></ul>",
+  "tags": [
+    "pseudo-classe",
+    "first-child"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": "li:first-child",
+        "property": "font-weight",
+        "errorMessage": "Defina font-weight em li:first-child.",
+        "successMessage": "First-child ok!"
+      }
+    ]
+  }
+}

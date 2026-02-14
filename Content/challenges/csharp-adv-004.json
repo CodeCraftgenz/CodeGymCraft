@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-004",
+  "track": "csharp",
+  "title": "Lambda Avançada",
+  "description": "Use lambdas complexas.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static List<string> Transformar(List<int> nums)\n    {\n        // Filtre pares, ordene decrescente, converta para \"N é par\"\n        return new List<string>();\n    }\n}",
+  "tags": [
+    "lambda",
+    "LINQ"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.Transformar(new List<int>{5,2,8,1,4}); return r.Count == 2 && r[0] == \"8 é par\" && r[1] == \"4 é par\"; }; results.Add(new TestResult { Pass = p, Message = p ? \"Transformado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

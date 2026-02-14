@@ -1,0 +1,16 @@
+{
+  "id": "js-int-007",
+  "track": "javascript",
+  "title": "Array Flat",
+  "description": "Crie `achatar(arr)` que achata 1 nível.",
+  "starterCode": "function achatar(arr) {\n    // Achate um nível\n}\n",
+  "tags": [
+    "array",
+    "flat"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = achatar([[1,2],[3,4]]); const exp = \"[1,2,3,4]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Achatado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

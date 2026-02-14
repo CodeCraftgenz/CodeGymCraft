@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-030",
+  "track": "csharp",
+  "title": "Array Sort",
+  "description": "Crie `Solution.Ordenar(int[] arr)` ordena crescente.",
+  "starterCode": "public class Solution\n{\n    public static int[] Ordenar(int[] arr)\n    {\n        // Ordene e retorne\n        return arr;\n    }\n}",
+  "tags": [
+    "array",
+    "sort"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Ordenar(new[]{3,1,4,1,5}).SequenceEqual(new[]{1,1,3,4,5}); results.Add(new TestResult { Pass = p, Message = p ? \"Ordenado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

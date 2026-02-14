@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-003",
+  "track": "javascript",
+  "title": "Fatorial Recursivo",
+  "description": "Implemente fatorial com recursão.",
+  "starterCode": "function fatorial(n) {\n    // Recursão: n! = n * (n-1)!\n}\n",
+  "tags": [
+    "recursão",
+    "fatorial"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = fatorial(5); const exp = \"120\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '5!=120!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = fatorial(0); const exp = \"1\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '0!=1!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

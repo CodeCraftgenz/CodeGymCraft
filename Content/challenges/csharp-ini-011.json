@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-011",
+  "track": "csharp",
+  "title": "É Palíndromo",
+  "description": "Crie `Solution.Palindromo(string s)`.",
+  "starterCode": "public class Solution\n{\n    public static bool Palindromo(string s)\n    {\n        return false;\n    }\n}",
+  "tags": [
+    "string",
+    "lógica"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Palindromo(\"aba\"); results.Add(new TestResult { Pass = p, Message = p ? \"aba é palíndromo!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { bool p = !Solution.Palindromo(\"abc\"); results.Add(new TestResult { Pass = p, Message = p ? \"abc não é!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

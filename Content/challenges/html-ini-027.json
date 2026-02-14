@@ -1,0 +1,31 @@
+{
+  "id": "html-ini-027",
+  "track": "html",
+  "title": "Placeholder em Inputs",
+  "description": "Use placeholder para dar dicas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione placeholders -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "placeholder"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "input",
+        "min": 2,
+        "errorMessage": "Adicione pelo menos 2 inputs.",
+        "successMessage": "Inputs ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "input",
+        "attribute": "placeholder",
+        "errorMessage": "placeholder não encontrado.",
+        "successMessage": "Placeholder ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "css-int-013",
+  "track": "css",
+  "title": "Position Absolute",
+  "description": "Use position absolute.",
+  "starterCode": "<style>\n/* Use position absolute */\n\n</style>\n\n<div class=\"parent\" style=\"position:relative;height:200px\"><div class=\"child\">Absoluto</div></div>",
+  "tags": [
+    "position",
+    "layout"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".child",
+        "property": "position",
+        "value": "absolute",
+        "errorMessage": "position deve ser absolute.",
+        "successMessage": "Absolute ok!"
+      }
+    ]
+  }
+}

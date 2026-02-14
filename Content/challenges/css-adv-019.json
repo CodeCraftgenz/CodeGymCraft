@@ -1,0 +1,31 @@
+{
+  "id": "css-adv-019",
+  "track": "css",
+  "title": "Loading Spinner",
+  "description": "Spinner com animação.",
+  "starterCode": "<style>\n/* Crie spinner animado */\n\n</style>\n\n<div class=\"spinner\"></div>",
+  "tags": [
+    "animação",
+    "spinner"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".spinner",
+        "property": "animation",
+        "errorMessage": "Defina animation no spinner.",
+        "successMessage": "Animation ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".spinner",
+        "property": "border-radius",
+        "errorMessage": "Spinner precisa border-radius.",
+        "successMessage": "Radius ok!"
+      }
+    ]
+  }
+}

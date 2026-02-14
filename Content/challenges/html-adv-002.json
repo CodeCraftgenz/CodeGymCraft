@@ -1,0 +1,31 @@
+{
+  "id": "html-adv-002",
+  "track": "html",
+  "title": "Formulário Multi-step",
+  "description": "Crie formulário com múltiplos fieldsets.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie formulário com 3 fieldsets -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "multi-step"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "fieldset",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 fieldsets.",
+        "successMessage": "3+ fieldsets!"
+      },
+      {
+        "type": "element-count",
+        "selector": "legend",
+        "min": 3,
+        "errorMessage": "Adicione legends aos fieldsets.",
+        "successMessage": "Legends ok!"
+      }
+    ]
+  }
+}

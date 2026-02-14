@@ -1,0 +1,41 @@
+{
+  "id": "html-adv-015",
+  "track": "html",
+  "title": "Contato Acessível",
+  "description": "Formulário de contato completo.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie formulário de contato acessível -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "contato"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "Form ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "input[type='email']",
+        "errorMessage": "Input email não encontrado.",
+        "successMessage": "Email ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "textarea",
+        "errorMessage": "Textarea não encontrado.",
+        "successMessage": "Textarea ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "button[type='submit']",
+        "errorMessage": "Submit não encontrado.",
+        "successMessage": "Submit ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "html-int-016",
+  "track": "html",
+  "title": "Progress Bar",
+  "description": "Crie uma barra de progresso.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento progress -->\n    \n</body>\n</html>",
+  "tags": [
+    "interativo",
+    "progress"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "progress",
+        "errorMessage": "<progress> não encontrado.",
+        "successMessage": "<progress> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "progress",
+        "attribute": "value",
+        "errorMessage": "Atributo value não encontrado.",
+        "successMessage": "Value ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "progress",
+        "attribute": "max",
+        "errorMessage": "Atributo max não encontrado.",
+        "successMessage": "Max ok!"
+      }
+    ]
+  }
+}

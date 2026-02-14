@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-016",
+  "track": "css",
+  "title": "Opacidade",
+  "description": "Use opacity.",
+  "starterCode": "<style>\n/* Use opacity */\n\n</style>\n\n<div class=\"fade\">Transparente</div>",
+  "tags": [
+    "visual",
+    "opacidade"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".fade",
+        "property": "opacity",
+        "errorMessage": "Defina opacity.",
+        "successMessage": "Opacity ok!"
+      }
+    ]
+  }
+}

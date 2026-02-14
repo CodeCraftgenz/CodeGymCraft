@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-027",
+  "track": "csharp",
+  "title": "Pattern Matching",
+  "description": "Use is pattern.",
+  "starterCode": "public class Solution\n{\n    public static string Descrever(object obj)\n    {\n        // Use pattern matching: int->\"inteiro: N\", string->\"texto: S\", null->\"nulo\"\n        return \"\";\n    }\n}",
+  "tags": [
+    "pattern matching",
+    "tipo"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Descrever(42); bool p = r == \"inteiro: 42\"; results.Add(new TestResult { Pass = p, Message = p ? \"Inteiro ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Descrever(\"oi\"); bool p = r == \"texto: oi\"; results.Add(new TestResult { Pass = p, Message = p ? \"Texto ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Descrever(null); bool p = r == \"nulo\"; results.Add(new TestResult { Pass = p, Message = p ? \"Nulo ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

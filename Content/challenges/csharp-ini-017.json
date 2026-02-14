@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-017",
+  "track": "csharp",
+  "title": "String Interpolation",
+  "description": "Crie `Solution.Saudacao(string nome, int idade)`.",
+  "starterCode": "public class Solution\n{\n    public static string Saudacao(string nome, int idade)\n    {\n        // Retorne \"Olá, {nome}! Você tem {idade} anos.\"\n        return \"\";\n    }\n}",
+  "tags": [
+    "string",
+    "interpolation"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Saudacao(\"Ana\", 25); bool p = r == \"Olá, Ana! Você tem 25 anos.\"; results.Add(new TestResult { Pass = p, Message = p ? \"Saudação ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-int-010",
+  "track": "javascript",
+  "title": "Spread Array",
+  "description": "Crie `juntar(a, b)` junta dois arrays.",
+  "starterCode": "function juntar(a, b) {\n    // Use spread operator\n}\n",
+  "tags": [
+    "spread",
+    "array"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = juntar([1,2],[3,4]); const exp = \"[1,2,3,4]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Juntado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

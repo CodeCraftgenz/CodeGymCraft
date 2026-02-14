@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-023",
+  "track": "html",
+  "title": "Imagem como Link",
+  "description": "Coloque uma imagem dentro de um link.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Coloque img dentro de a -->\n    \n</body>\n</html>",
+  "tags": [
+    "imagem",
+    "link"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "a img",
+        "errorMessage": "Imagem dentro de link não encontrada.",
+        "successMessage": "Imagem-link ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "a img",
+        "attribute": "alt",
+        "errorMessage": "Alt na imagem não encontrado.",
+        "successMessage": "Alt presente!"
+      }
+    ]
+  }
+}

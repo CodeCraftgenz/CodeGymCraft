@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-017",
+  "track": "csharp",
+  "title": "Custom Exception",
+  "description": "Crie exceção customizada.",
+  "starterCode": "public class IdadeInvalidaException : Exception\n{\n    // Construtor com mensagem\n}\n\npublic class Solution\n{\n    public static void ValidarIdade(int idade)\n    {\n        // Lance IdadeInvalidaException se idade < 0 ou > 150\n    }\n}",
+  "tags": [
+    "exception",
+    "custom"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { try { Solution.ValidarIdade(-1); return false; } catch (IdadeInvalidaException) { return true; } }; results.Add(new TestResult { Pass = p, Message = p ? \"Exceção lançada!\" : \"Exceção não lançada\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { bool p = { try { Solution.ValidarIdade(25); return true; } catch { return false; } }; results.Add(new TestResult { Pass = p, Message = p ? \"25 é válido!\" : \"Não deveria lançar\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

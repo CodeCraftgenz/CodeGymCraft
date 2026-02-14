@@ -1,0 +1,16 @@
+{
+  "id": "js-int-017",
+  "track": "javascript",
+  "title": "Promise All",
+  "description": "Crie `executarTodas(promises)` com Promise.all.",
+  "starterCode": "function executarTodas(promises) {\n    // Use Promise.all\n}\n",
+  "tags": [
+    "promise",
+    "all"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = executarTodas([Promise.resolve(1), Promise.resolve(2)]); results.push({ pass: r instanceof Promise, message: r instanceof Promise ? 'Retorna Promise!' : 'Deve retornar Promise' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

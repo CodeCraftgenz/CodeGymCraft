@@ -1,0 +1,31 @@
+{
+  "id": "html-ini-015",
+  "track": "html",
+  "title": "Checkboxes",
+  "description": "Crie 3 checkboxes com labels.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie checkboxes com labels -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "checkbox"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "input[type='checkbox']",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 checkboxes.",
+        "successMessage": "3+ checkboxes!"
+      },
+      {
+        "type": "element-count",
+        "selector": "label",
+        "min": 3,
+        "errorMessage": "Adicione labels para os checkboxes.",
+        "successMessage": "Labels ok!"
+      }
+    ]
+  }
+}

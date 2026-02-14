@@ -1,0 +1,35 @@
+{
+  "id": "html-adv-007",
+  "track": "html",
+  "title": "Open Graph Tags",
+  "description": "Adicione meta Open Graph.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <!-- Adicione meta OG tags -->\n    <title>Open Graph</title>\n</head>\n<body><p>Conteúdo</p></body>\n</html>",
+  "tags": [
+    "SEO",
+    "OpenGraph"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "meta[property='og:title']",
+        "errorMessage": "og:title não encontrado.",
+        "successMessage": "OG title ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "meta[property='og:description']",
+        "errorMessage": "og:description não encontrado.",
+        "successMessage": "OG description ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "meta[property='og:type']",
+        "errorMessage": "og:type não encontrado.",
+        "successMessage": "OG type ok!"
+      }
+    ]
+  }
+}

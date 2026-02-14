@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-029",
+  "track": "javascript",
+  "title": "FizzBuzz",
+  "description": "Crie `fizzBuzz(n)`: múltiplo de 3='Fizz', 5='Buzz', ambos='FizzBuzz'.",
+  "starterCode": "function fizzBuzz(n) {\n    // Retorne 'Fizz', 'Buzz', 'FizzBuzz' ou n\n}\n",
+  "tags": [
+    "lógica",
+    "condição"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = fizzBuzz(15); const exp = \"'FizzBuzz'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '15=FizzBuzz!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = fizzBuzz(9); const exp = \"'Fizz'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '9=Fizz!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = fizzBuzz(10); const exp = \"'Buzz'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '10=Buzz!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = fizzBuzz(7); const exp = \"7\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '7=7!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

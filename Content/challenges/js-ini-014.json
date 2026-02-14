@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-014",
+  "track": "javascript",
+  "title": "Primeira Letra",
+  "description": "Crie `primeiraLetra(str)` retorna primeiro caractere.",
+  "starterCode": "function primeiraLetra(str) {\n    // Retorne o primeiro caractere\n}\n",
+  "tags": [
+    "string",
+    "charAt"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = primeiraLetra('Hello'); const exp = \"'H'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'H ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = primeiraLetra('abc'); const exp = \"'a'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'a ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

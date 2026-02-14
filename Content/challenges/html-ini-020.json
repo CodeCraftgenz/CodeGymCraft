@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-020",
+  "track": "html",
+  "title": "Meta Viewport",
+  "description": "Configure o viewport para responsividade.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <!-- Adicione meta viewport aqui -->\n    <title>Responsivo</title>\n</head>\n<body>\n    <h1>Página Responsiva</h1>\n</body>\n</html>",
+  "tags": [
+    "meta",
+    "responsivo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "meta[name='viewport']",
+        "errorMessage": "meta viewport não encontrado.",
+        "successMessage": "Viewport configurado!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "meta[name='viewport']",
+        "attribute": "content",
+        "errorMessage": "Atributo content do viewport não encontrado.",
+        "successMessage": "Content presente!"
+      }
+    ]
+  }
+}

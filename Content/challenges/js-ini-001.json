@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-001",
+  "track": "javascript",
+  "title": "Variáveis Let e Const",
+  "description": "Declare variáveis corretamente.\n\nCrie uma função `criarVariaveis()` que retorne um objeto com nome (string) e idade (number).",
+  "starterCode": "// Crie a função criarVariaveis\nfunction criarVariaveis() {\n    // Retorne { nome: 'seu nome', idade: sua idade }\n}\n",
+  "tags": [
+    "variáveis",
+    "tipos"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = criarVariaveis().nome !== undefined && typeof criarVariaveis().nome === 'string'; const exp = \"true\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Nome é string!' : 'Nome deve ser string: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = typeof criarVariaveis().idade; const exp = \"'number'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Idade é number!' : 'Idade deve ser number: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "css-int-016",
+  "track": "css",
+  "title": "Transitions",
+  "description": "Adicione transição suave.",
+  "starterCode": "<style>\n/* Use transition */\n\n</style>\n\n<button class=\"smooth\">Hover</button>",
+  "tags": [
+    "transição",
+    "animação"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".smooth",
+        "property": "transition",
+        "errorMessage": "Defina transition.",
+        "successMessage": "Transition ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".smooth:hover",
+        "property": "background-color",
+        "errorMessage": "Mude cor no hover.",
+        "successMessage": "Hover ok!"
+      }
+    ]
+  }
+}

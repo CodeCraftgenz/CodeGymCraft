@@ -1,0 +1,25 @@
+{
+  "id": "css-int-014",
+  "track": "css",
+  "title": "Position Fixed",
+  "description": "Use position fixed.",
+  "starterCode": "<style>\n/* Use position fixed */\n\n</style>\n\n<div class=\"fixed-bar\">Barra fixa</div><div style=\"height:2000px\">Scroll</div>",
+  "tags": [
+    "position",
+    "fixo"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".fixed-bar",
+        "property": "position",
+        "value": "fixed",
+        "errorMessage": "position deve ser fixed.",
+        "successMessage": "Fixed ok!"
+      }
+    ]
+  }
+}

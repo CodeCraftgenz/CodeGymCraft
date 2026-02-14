@@ -1,0 +1,31 @@
+{
+  "id": "html-ini-017",
+  "track": "html",
+  "title": "Divs e Estrutura",
+  "description": "Crie 3 divs com classes diferentes.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie 3 divs com classes -->\n    \n</body>\n</html>",
+  "tags": [
+    "div",
+    "estrutura"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "div",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 <div>.",
+        "successMessage": "3+ divs!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "div",
+        "attribute": "class",
+        "errorMessage": "Adicione classes às divs.",
+        "successMessage": "Classes presentes!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-006",
+  "track": "csharp",
+  "title": "Async Task",
+  "description": "Crie método async.",
+  "starterCode": "using System.Threading.Tasks;\n\npublic class Solution\n{\n    public static async Task<int> CalcularAsync(int n)\n    {\n        await Task.Delay(1);\n        // Retorne n * n\n        return 0;\n    }\n}",
+  "tags": [
+    "async",
+    "Task"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.CalcularAsync(5).GetAwaiter().GetResult(); return r == 25; }; results.Add(new TestResult { Pass = p, Message = p ? \"25 ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

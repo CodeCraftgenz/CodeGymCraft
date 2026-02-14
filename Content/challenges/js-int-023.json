@@ -1,0 +1,16 @@
+{
+  "id": "js-int-023",
+  "track": "javascript",
+  "title": "Static Method",
+  "description": "Crie método estático.",
+  "starterCode": "class MathUtil {\n    // static soma(a, b)\n}\n",
+  "tags": [
+    "classe",
+    "static"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = MathUtil.soma(2, 3); const exp = \"5\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Estático ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

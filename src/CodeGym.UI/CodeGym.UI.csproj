@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>CodeGym.UI</RootNamespace>
+    <AssemblyName>CodeGymOffline</AssemblyName>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- AvalonEdit: editor de código com syntax highlight -->
+    <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+    <!-- WebView2: preview HTML/CSS/JS offline -->
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2903.40" />
+    <!-- WPF-UI: Fluent Design (Windows 11) com controles modernos -->
+    <PackageReference Include="WPF-UI" Version="3.0.5" />
+    <!-- DI Container: substitui ServiceLocator -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <!-- LiveCharts: gráficos na tela de progresso -->
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc3.3" />
+    <!-- QuestPDF: exportar relatório de progresso em PDF -->
+    <PackageReference Include="QuestPDF" Version="2025.1.0" />
+    <!-- Markdig: renderizar Markdown (ajuda, enunciados) -->
+    <PackageReference Include="Markdig" Version="0.37.0" />
+    <!-- System.Management: obter hardware ID para licenciamento -->
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <!-- DPAPI: proteger dados de licença localmente -->
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeGym.Core\CodeGym.Core.csproj" />
+    <ProjectReference Include="..\CodeGym.Storage\CodeGym.Storage.csproj" />
+    <ProjectReference Include="..\CodeGym.Runner\CodeGym.Runner.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Logo.png" />
+  </ItemGroup>
+
+</Project>

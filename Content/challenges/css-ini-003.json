@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-003",
+  "track": "css",
+  "title": "Tamanho de Fonte",
+  "description": "Altere font-size.",
+  "starterCode": "<style>\n/* Altere font-size */\n\n</style>\n\n<h1 class=\"titulo\">Grande</h1>",
+  "tags": [
+    "fonte",
+    "tamanho"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".titulo",
+        "property": "font-size",
+        "errorMessage": "Defina font-size em .titulo.",
+        "successMessage": "Font-size ok!"
+      }
+    ]
+  }
+}

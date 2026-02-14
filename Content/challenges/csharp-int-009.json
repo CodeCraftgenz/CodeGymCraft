@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-009",
+  "track": "csharp",
+  "title": "Herança",
+  "description": "Crie Cachorro que herda de Animal.",
+  "starterCode": "public class Animal\n{\n    public string Nome { get; set; }\n    public virtual string Falar() => $\"{Nome} faz som\";\n}\n\npublic class Cachorro : Animal\n{\n    // Override Falar() para retornar \"{Nome} diz: Au au!\"\n}\n\npublic class Solution\n{\n    public static string Teste() => new Cachorro { Nome = \"Rex\" }.Falar();\n}",
+  "tags": [
+    "herança",
+    "OOP"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"Rex diz: Au au!\"; results.Add(new TestResult { Pass = p, Message = p ? \"Au au!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

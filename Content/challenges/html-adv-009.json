@@ -1,0 +1,36 @@
+{
+  "id": "html-adv-009",
+  "track": "html",
+  "title": "Formulário Acessível",
+  "description": "Formulário completo com ARIA.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie formulário acessível completo -->\n    \n</body>\n</html>",
+  "tags": [
+    "acessibilidade",
+    "formulário"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "Form ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "label",
+        "min": 3,
+        "errorMessage": "Adicione labels.",
+        "successMessage": "Labels ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[aria-required]",
+        "errorMessage": "aria-required não encontrado.",
+        "successMessage": "Aria-required ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-009",
+  "track": "css",
+  "title": "Margem",
+  "description": "Use margin.",
+  "starterCode": "<style>\n/* Use margin */\n\n</style>\n\n<div class=\"card\">Card</div>",
+  "tags": [
+    "box",
+    "margem"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".card",
+        "property": "margin",
+        "errorMessage": "Defina margin.",
+        "successMessage": "Margin ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-015",
+  "track": "csharp",
+  "title": "Queue e Stack",
+  "description": "Use Stack para inverter.",
+  "starterCode": "public class Solution\n{\n    public static string InverterComStack(string s)\n    {\n        // Use Stack<char>\n        return \"\";\n    }\n}",
+  "tags": [
+    "Stack",
+    "coleção"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.InverterComStack(\"abc\"); bool p = r == \"cba\"; results.Add(new TestResult { Pass = p, Message = p ? \"Invertido!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

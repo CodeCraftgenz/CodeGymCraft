@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-021",
+  "track": "html",
+  "title": "Title e Meta Description",
+  "description": "Configure title e meta description.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <!-- Configure title e meta description -->\n</head>\n<body>\n    <p>Conteúdo</p>\n</body>\n</html>",
+  "tags": [
+    "meta",
+    "SEO"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "title",
+        "errorMessage": "<title> não encontrado.",
+        "successMessage": "Title ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "meta[name='description']",
+        "errorMessage": "meta description não encontrado.",
+        "successMessage": "Meta description ok!"
+      }
+    ]
+  }
+}

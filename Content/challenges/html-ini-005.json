@@ -1,0 +1,38 @@
+{
+  "id": "html-ini-005",
+  "track": "html",
+  "title": "Links Externos",
+  "description": "Crie um link que aponte para uma URL externa com target='_blank'.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie um link externo -->\n    \n</body>\n</html>",
+  "tags": [
+    "links",
+    "navegação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "a",
+        "errorMessage": "<a> não encontrado.",
+        "successMessage": "Link encontrado!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "a",
+        "attribute": "href",
+        "errorMessage": "Atributo href não encontrado.",
+        "successMessage": "href presente!"
+      },
+      {
+        "type": "attribute-value",
+        "selector": "a",
+        "attribute": "target",
+        "value": "_blank",
+        "errorMessage": "target='_blank' não encontrado.",
+        "successMessage": "target correto!"
+      }
+    ]
+  }
+}

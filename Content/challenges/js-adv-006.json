@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-006",
+  "track": "javascript",
+  "title": "Linked List",
+  "description": "Implemente lista encadeada básica.",
+  "starterCode": "class Node {\n    constructor(val) { this.val = val; this.next = null; }\n}\nclass LinkedList {\n    constructor() { this.head = null; }\n    // append(val), toArray(), size()\n}\n",
+  "tags": [
+    "estrutura",
+    "linked list"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const ll = new LinkedList(); ll.append(1); ll.append(2); ll.append(3); const r = ll.toArray(); results.push({ pass: JSON.stringify(r)==='[1,2,3]', message: JSON.stringify(r)==='[1,2,3]' ? 'Lista ok!' : 'Incorreto: ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

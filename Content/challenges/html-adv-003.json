@@ -1,0 +1,41 @@
+{
+  "id": "html-adv-003",
+  "track": "html",
+  "title": "Tabela Complexa",
+  "description": "Tabela com caption, colgroup, thead, tbody, tfoot.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie tabela completa -->\n    \n</body>\n</html>",
+  "tags": [
+    "tabela",
+    "complexa"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "caption",
+        "errorMessage": "<caption> não encontrado.",
+        "successMessage": "Caption ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "thead",
+        "errorMessage": "<thead> não encontrado.",
+        "successMessage": "Thead ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "tbody",
+        "errorMessage": "<tbody> não encontrado.",
+        "successMessage": "Tbody ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "tfoot",
+        "errorMessage": "<tfoot> não encontrado.",
+        "successMessage": "Tfoot ok!"
+      }
+    ]
+  }
+}

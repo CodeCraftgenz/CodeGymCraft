@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-016",
+  "track": "csharp",
+  "title": "Try/Catch",
+  "description": "Trate exceção de divisão.",
+  "starterCode": "public class Solution\n{\n    public static string DivisaoSegura(int a, int b)\n    {\n        // Retorne resultado ou \"Erro: divisão por zero\"\n        return \"\";\n    }\n}",
+  "tags": [
+    "exception",
+    "tratamento"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.DivisaoSegura(10, 2); bool p = r == \"5\"; results.Add(new TestResult { Pass = p, Message = p ? \"10/2=5!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.DivisaoSegura(10, 0); bool p = r == \"Erro: divisão por zero\"; results.Add(new TestResult { Pass = p, Message = p ? \"Erro capturado!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

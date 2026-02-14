@@ -1,0 +1,29 @@
+{
+  "id": "html-int-007",
+  "track": "html",
+  "title": "Details e Summary",
+  "description": "Crie conteúdo colapsável.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use details e summary -->\n    \n</body>\n</html>",
+  "tags": [
+    "interativo",
+    "details"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "details",
+        "errorMessage": "<details> não encontrado.",
+        "successMessage": "<details> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "summary",
+        "errorMessage": "<summary> não encontrado.",
+        "successMessage": "<summary> ok!"
+      }
+    ]
+  }
+}

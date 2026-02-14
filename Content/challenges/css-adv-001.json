@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-001",
+  "track": "css",
+  "title": "Animação Keyframes",
+  "description": "Crie animação com @keyframes.",
+  "starterCode": "<style>\n/* Use @keyframes */\n\n</style>\n\n<div class=\"pulse\">Pulsar</div>",
+  "tags": [
+    "animação",
+    "keyframes"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".pulse",
+        "property": "animation",
+        "errorMessage": "Defina animation.",
+        "successMessage": "Animation ok!"
+      }
+    ]
+  }
+}

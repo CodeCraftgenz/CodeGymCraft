@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-003",
+  "track": "csharp",
+  "title": "Func e Action",
+  "description": "Use Func<T> e Action<T>.",
+  "starterCode": "public class Solution\n{\n    public static int Aplicar(Func<int, int> fn, int valor) => fn(valor);\n    public static int Teste() => Aplicar(x => x * x, 5);\n}",
+  "tags": [
+    "func",
+    "action"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == 25; results.Add(new TestResult { Pass = p, Message = p ? \"5²=25!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

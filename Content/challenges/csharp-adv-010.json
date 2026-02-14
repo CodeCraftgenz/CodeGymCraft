@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-010",
+  "track": "csharp",
+  "title": "Init Only",
+  "description": "Use init-only properties.",
+  "starterCode": "public class Config\n{\n    public string Nome { get; init; } = \"\";\n    public int Valor { get; init; }\n}\n\npublic class Solution\n{\n    public static string Teste()\n    {\n        var c = new Config { Nome = \"teste\", Valor = 42 };\n        return $\"{c.Nome}:{c.Valor}\";\n    }\n}",
+  "tags": [
+    "init",
+    "propriedade"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"teste:42\"; results.Add(new TestResult { Pass = p, Message = p ? \"teste:42!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

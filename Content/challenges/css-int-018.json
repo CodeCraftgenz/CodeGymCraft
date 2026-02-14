@@ -1,0 +1,24 @@
+{
+  "id": "css-int-018",
+  "track": "css",
+  "title": "Transform Rotate",
+  "description": "Rotacione elemento.",
+  "starterCode": "<style>\n/* Use transform rotate */\n\n</style>\n\n<div class=\"rotated\">45°</div>",
+  "tags": [
+    "transform",
+    "rotate"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".rotated",
+        "property": "transform",
+        "errorMessage": "Defina transform rotate.",
+        "successMessage": "Rotate ok!"
+      }
+    ]
+  }
+}

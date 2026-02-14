@@ -1,0 +1,16 @@
+{
+  "id": "js-int-018",
+  "track": "javascript",
+  "title": "Async/Await",
+  "description": "Crie função async `buscarDado()`.",
+  "starterCode": "async function buscarDado() {\n    // Retorne 'dado' após await\n    return 'dado';\n}\n",
+  "tags": [
+    "async",
+    "await"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = buscarDado(); results.push({ pass: r instanceof Promise, message: r instanceof Promise ? 'É async!' : 'Deve ser async' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

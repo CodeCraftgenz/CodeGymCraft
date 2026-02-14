@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-001",
+  "track": "csharp",
+  "title": "LINQ Where",
+  "description": "Use Where para filtrar pares.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static List<int> Pares(List<int> nums)\n    {\n        // Use Where\n        return new List<int>();\n    }\n}",
+  "tags": [
+    "LINQ",
+    "filtro"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Pares(new List<int>{1,2,3,4,5,6}).SequenceEqual(new[]{2,4,6}); results.Add(new TestResult { Pass = p, Message = p ? \"Pares filtrados!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

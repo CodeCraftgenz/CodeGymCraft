@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-019",
+  "track": "css",
+  "title": "Seletor de ID",
+  "description": "Estilize por ID.",
+  "starterCode": "<style>\n/* Estilize #principal */\n\n</style>\n\n<h1 id=\"principal\">Principal</h1>",
+  "tags": [
+    "seletor",
+    "id"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": "#principal",
+        "property": "color",
+        "errorMessage": "Defina color em #principal.",
+        "successMessage": "ID estilizado!"
+      }
+    ]
+  }
+}

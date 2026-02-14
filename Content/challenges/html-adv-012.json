@@ -1,0 +1,30 @@
+{
+  "id": "html-adv-012",
+  "track": "html",
+  "title": "Colgroup",
+  "description": "Use colgroup para estilizar colunas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use colgroup -->\n    \n</body>\n</html>",
+  "tags": [
+    "tabela",
+    "colgroup"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "colgroup",
+        "errorMessage": "<colgroup> não encontrado.",
+        "successMessage": "Colgroup ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "col",
+        "min": 2,
+        "errorMessage": "Adicione elementos col.",
+        "successMessage": "Col ok!"
+      }
+    ]
+  }
+}

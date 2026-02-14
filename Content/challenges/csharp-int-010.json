@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-010",
+  "track": "csharp",
+  "title": "Override",
+  "description": "Use virtual/override.",
+  "starterCode": "public abstract class Forma\n{\n    public abstract double Area();\n}\n\npublic class Circulo : Forma\n{\n    public double Raio { get; set; }\n    // Override Area() = π * r²\n}\n\npublic class Solution\n{\n    public static double Teste() => new Circulo { Raio = 5 }.Area();\n}",
+  "tags": [
+    "OOP",
+    "polimorfismo"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.Teste() - Math.PI * 25) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"Área ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

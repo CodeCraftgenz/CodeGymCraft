@@ -1,0 +1,33 @@
+## .NET
+bin/
+obj/
+artifacts/
+*.user
+*.suo
+*.vs/
+.vs/
+
+## NuGet
+packages/
+*.nupkg
+
+## IDE
+.idea/
+*.swp
+*~
+
+## Build
+publish/
+output/
+
+## Python
+__pycache__/
+*.pyc
+
+## OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+## WebView2 cache
+WebView2/

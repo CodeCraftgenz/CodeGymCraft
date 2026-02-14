@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-010",
+  "track": "javascript",
+  "title": "Curry",
+  "description": "Implemente `curry(fn)` currying.",
+  "starterCode": "function curry(fn) {\n    // Retorne versão curried de fn\n}\n",
+  "tags": [
+    "funcional",
+    "curry"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const add = curry((a,b,c) => a+b+c); results.push({ pass: add(1)(2)(3)===6, message: add(1)(2)(3)===6 ? 'Curry ok!' : 'Incorreto' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

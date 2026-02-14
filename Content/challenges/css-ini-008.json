@@ -1,0 +1,31 @@
+{
+  "id": "css-ini-008",
+  "track": "css",
+  "title": "Largura e Altura",
+  "description": "Defina width e height.",
+  "starterCode": "<style>\n/* Defina width e height */\n\n</style>\n\n<div class=\"box\">Box</div>",
+  "tags": [
+    "box",
+    "dimensões"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".box",
+        "property": "width",
+        "errorMessage": "Defina width.",
+        "successMessage": "Width ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".box",
+        "property": "height",
+        "errorMessage": "Defina height.",
+        "successMessage": "Height ok!"
+      }
+    ]
+  }
+}

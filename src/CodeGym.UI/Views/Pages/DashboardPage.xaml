@@ -1,0 +1,300 @@
+<Page x:Class="CodeGym.UI.Views.Pages.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="Início">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="32,20,32,32">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Hero Section com gradiente -->
+            <Border Grid.Row="0" CornerRadius="12" Padding="32,28" Margin="0,0,0,24">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#1A60CDFF" Offset="0" />
+                        <GradientStop Color="#0D3498DB" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="Bem-vindo ao CodeGym!"
+                                   Style="{StaticResource PageTitleStyle}" />
+                        <TextBlock Text="Pratique programação offline com desafios interativos de HTML, CSS, JavaScript e C#."
+                                   FontSize="15" Opacity="0.65" TextWrapping="Wrap"
+                                   MaxWidth="500" />
+                    </StackPanel>
+                    <ui:SymbolIcon Grid.Column="1" Symbol="Code24" FontSize="64"
+                                   Foreground="{StaticResource AccentBrush}" Opacity="0.3"
+                                   VerticalAlignment="Center" Margin="24,0,0,0" />
+                </Grid>
+            </Border>
+
+            <!-- Cards de estatísticas -->
+            <UniformGrid Grid.Row="1" Columns="4" Margin="0,0,0,28">
+                <!-- Concluídos -->
+                <Border CornerRadius="10" Padding="20,18" Margin="0,0,8,0"
+                        Background="{ui:ThemeResource ControlFillColorDefaultBrush}">
+                    <StackPanel>
+                        <Border Width="40" Height="40" CornerRadius="10" Margin="0,0,0,12"
+                                HorizontalAlignment="Left">
+                            <Border.Background>
+                                <SolidColorBrush Color="#27AE60" Opacity="0.15" />
+                            </Border.Background>
+                            <ui:SymbolIcon Symbol="Checkmark24" FontSize="20"
+                                          Foreground="{StaticResource SuccessBrush}"
+                                          HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Text="{Binding CompletedCount}"
+                                   FontSize="32" FontWeight="Bold" />
+                        <TextBlock Text="Concluídos" FontSize="13" Opacity="0.55"
+                                   Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Streak -->
+                <Border CornerRadius="10" Padding="20,18" Margin="4,0"
+                        Background="{ui:ThemeResource ControlFillColorDefaultBrush}">
+                    <StackPanel>
+                        <Border Width="40" Height="40" CornerRadius="10" Margin="0,0,0,12"
+                                HorizontalAlignment="Left">
+                            <Border.Background>
+                                <SolidColorBrush Color="#F39C12" Opacity="0.15" />
+                            </Border.Background>
+                            <ui:SymbolIcon Symbol="Fire24" FontSize="20"
+                                          Foreground="{StaticResource WarningBrush}"
+                                          HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Text="{Binding CurrentStreak}"
+                                   FontSize="32" FontWeight="Bold" />
+                        <TextBlock Text="Dias de Sequência" FontSize="13" Opacity="0.55"
+                                   Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Tentativas -->
+                <Border CornerRadius="10" Padding="20,18" Margin="4,0"
+                        Background="{ui:ThemeResource ControlFillColorDefaultBrush}">
+                    <StackPanel>
+                        <Border Width="40" Height="40" CornerRadius="10" Margin="0,0,0,12"
+                                HorizontalAlignment="Left">
+                            <Border.Background>
+                                <SolidColorBrush Color="#3498DB" Opacity="0.15" />
+                            </Border.Background>
+                            <ui:SymbolIcon Symbol="Play24" FontSize="20"
+                                          Foreground="{StaticResource InfoBrush}"
+                                          HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Text="{Binding TotalAttempts}"
+                                   FontSize="32" FontWeight="Bold" />
+                        <TextBlock Text="Tentativas" FontSize="13" Opacity="0.55"
+                                   Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Total de desafios -->
+                <Border CornerRadius="10" Padding="20,18" Margin="8,0,0,0"
+                        Background="{ui:ThemeResource ControlFillColorDefaultBrush}">
+                    <StackPanel>
+                        <Border Width="40" Height="40" CornerRadius="10" Margin="0,0,0,12"
+                                HorizontalAlignment="Left">
+                            <Border.Background>
+                                <SolidColorBrush Color="#60CDFF" Opacity="0.15" />
+                            </Border.Background>
+                            <ui:SymbolIcon Symbol="Library24" FontSize="20"
+                                          Foreground="{StaticResource AccentBrush}"
+                                          HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Text="{Binding TotalChallengesCount}"
+                                   FontSize="32" FontWeight="Bold" />
+                        <TextBlock Text="Total de Desafios" FontSize="13" Opacity="0.55"
+                                   Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <!-- Quick start trilhas -->
+            <StackPanel Grid.Row="2" Margin="0,0,0,24">
+                <TextBlock Text="Trilhas de Estudo"
+                           Style="{StaticResource SectionTitleStyle}" />
+                <UniformGrid Columns="4">
+                    <ui:CardAction Margin="0,0,6,0" Padding="16,14"
+                                   Command="{Binding GoToTrackCommand}"
+                                   CommandParameter="html">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="36" Height="36" CornerRadius="8" Margin="0,0,12,0">
+                                <Border.Background>
+                                    <SolidColorBrush Color="#E44D26" Opacity="0.15" />
+                                </Border.Background>
+                                <TextBlock Text="H" FontSize="18" FontWeight="Bold"
+                                           Foreground="{StaticResource HtmlBrush}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="HTML" FontWeight="SemiBold" FontSize="14" />
+                                <TextBlock Text="{Binding HtmlProgress}" FontSize="11" Opacity="0.5" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ui:CardAction>
+
+                    <ui:CardAction Margin="3,0" Padding="16,14"
+                                   Command="{Binding GoToTrackCommand}"
+                                   CommandParameter="css">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="36" Height="36" CornerRadius="8" Margin="0,0,12,0">
+                                <Border.Background>
+                                    <SolidColorBrush Color="#264DE4" Opacity="0.15" />
+                                </Border.Background>
+                                <TextBlock Text="C" FontSize="18" FontWeight="Bold"
+                                           Foreground="{StaticResource CssBrush}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="CSS" FontWeight="SemiBold" FontSize="14" />
+                                <TextBlock Text="{Binding CssProgress}" FontSize="11" Opacity="0.5" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ui:CardAction>
+
+                    <ui:CardAction Margin="3,0" Padding="16,14"
+                                   Command="{Binding GoToTrackCommand}"
+                                   CommandParameter="javascript">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="36" Height="36" CornerRadius="8" Margin="0,0,12,0">
+                                <Border.Background>
+                                    <SolidColorBrush Color="#F0DB4F" Opacity="0.15" />
+                                </Border.Background>
+                                <TextBlock Text="JS" FontSize="15" FontWeight="Bold"
+                                           Foreground="{StaticResource JsBrush}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="JavaScript" FontWeight="SemiBold" FontSize="14" />
+                                <TextBlock Text="{Binding JsProgress}" FontSize="11" Opacity="0.5" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ui:CardAction>
+
+                    <ui:CardAction Margin="6,0,0,0" Padding="16,14"
+                                   Command="{Binding GoToTrackCommand}"
+                                   CommandParameter="csharp">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="36" Height="36" CornerRadius="8" Margin="0,0,12,0">
+                                <Border.Background>
+                                    <SolidColorBrush Color="#68217A" Opacity="0.15" />
+                                </Border.Background>
+                                <TextBlock Text="C#" FontSize="15" FontWeight="Bold"
+                                           Foreground="{StaticResource CSharpBrush}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="C#" FontWeight="SemiBold" FontSize="14" />
+                                <TextBlock Text="{Binding CSharpProgress}" FontSize="11" Opacity="0.5" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ui:CardAction>
+                </UniformGrid>
+            </StackPanel>
+
+            <!-- Continue de onde parou + Atividade recente -->
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Continue de onde parou -->
+                <StackPanel Grid.Column="0" Margin="0,0,12,0">
+                    <TextBlock Text="Continue de onde parou"
+                               Style="{StaticResource SectionTitleStyle}" />
+
+                    <ItemsControl ItemsSource="{Binding RecentChallenges}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <ui:CardAction Margin="0,0,0,6" Padding="14"
+                                               Command="{Binding DataContext.OpenChallengeCommand,
+                                                   RelativeSource={RelativeSource AncestorType=Page}}"
+                                               CommandParameter="{Binding Id}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border Grid.Column="0" Width="36" Height="36"
+                                                CornerRadius="8" Margin="0,0,14,0"
+                                                Background="{Binding TrackBrush}">
+                                            <ui:SymbolIcon Symbol="Code24" FontSize="16"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center" />
+                                        </Border>
+
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Title}" FontWeight="SemiBold"
+                                                       FontSize="14" />
+                                            <TextBlock Text="{Binding TrackDisplay}" FontSize="12"
+                                                       Opacity="0.5" />
+                                        </StackPanel>
+
+                                        <ui:SymbolIcon Grid.Column="2" Symbol="ChevronRight24"
+                                                       FontSize="14" Opacity="0.4"
+                                                       VerticalAlignment="Center" />
+                                    </Grid>
+                                </ui:CardAction>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <TextBlock Text="Nenhum desafio em progresso ainda. Escolha uma trilha para começar!"
+                               FontSize="14" Opacity="0.45" TextWrapping="Wrap"
+                               Visibility="{Binding HasNoRecent, Converter={StaticResource BoolToVisibility}}"
+                               Margin="0,8,0,0" />
+                </StackPanel>
+
+                <!-- Atividade recente -->
+                <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                    <TextBlock Text="Atividade Recente"
+                               Style="{StaticResource SectionTitleStyle}" />
+
+                    <ItemsControl ItemsSource="{Binding RecentActivity}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Padding="10,8" Margin="0,0,0,4"
+                                        CornerRadius="8"
+                                        Background="{ui:ThemeResource ControlFillColorDefaultBrush}">
+                                    <DockPanel>
+                                        <TextBlock DockPanel.Dock="Left"
+                                                   Text="{Binding Icon}" FontSize="16"
+                                                   VerticalAlignment="Center"
+                                                   Margin="0,0,10,0" />
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Description}" FontSize="13"
+                                                       TextTrimming="CharacterEllipsis" />
+                                            <TextBlock Text="{Binding TimeAgo}" FontSize="11"
+                                                       Opacity="0.45" />
+                                        </StackPanel>
+                                    </DockPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <TextBlock Text="Nenhuma atividade recente."
+                               FontSize="13" Opacity="0.45"
+                               Visibility="{Binding HasNoActivity, Converter={StaticResource BoolToVisibility}}"
+                               Margin="0,8,0,0" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>

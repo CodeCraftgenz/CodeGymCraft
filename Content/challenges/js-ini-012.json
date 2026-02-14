@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-012",
+  "track": "javascript",
+  "title": "Área do Retângulo",
+  "description": "Crie `areaRetangulo(b, h)` base * altura.",
+  "starterCode": "function areaRetangulo(b, h) {\n    // Retorne base * altura\n}\n",
+  "tags": [
+    "função",
+    "cálculo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = areaRetangulo(5, 3); const exp = \"15\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '5×3=15!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = areaRetangulo(10, 10); const exp = \"100\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '10×10=100!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

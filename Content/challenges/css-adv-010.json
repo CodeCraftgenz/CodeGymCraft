@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-010",
+  "track": "css",
+  "title": "Filter CSS",
+  "description": "Use filter.",
+  "starterCode": "<style>\n/* Use filter */\n\n</style>\n\n<img class=\"filtered\" src=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><rect fill='red' width='100' height='100'/></svg>\" alt=\"test\">",
+  "tags": [
+    "filter",
+    "visual"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".filtered",
+        "property": "filter",
+        "errorMessage": "Defina filter.",
+        "successMessage": "Filter ok!"
+      }
+    ]
+  }
+}

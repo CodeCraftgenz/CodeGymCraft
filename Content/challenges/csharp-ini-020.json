@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-020",
+  "track": "csharp",
+  "title": "List Contains",
+  "description": "Crie `Solution.Contem(List<string> lista, string item)`.",
+  "starterCode": "public class Solution\n{\n    public static bool Contem(List<string> lista, string item)\n    {\n        return false;\n    }\n}",
+  "tags": [
+    "List",
+    "busca"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Contem(new List<string>{\"a\",\"b\",\"c\"}, \"b\"); results.Add(new TestResult { Pass = p, Message = p ? \"Encontrado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { bool p = !Solution.Contem(new List<string>{\"a\",\"b\"}, \"z\"); results.Add(new TestResult { Pass = p, Message = p ? \"Não encontrado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

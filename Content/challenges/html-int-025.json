@@ -1,0 +1,29 @@
+{
+  "id": "html-int-025",
+  "track": "html",
+  "title": "ARIA Role",
+  "description": "Use role para acessibilidade.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use roles ARIA -->\n    \n</body>\n</html>",
+  "tags": [
+    "acessibilidade",
+    "ARIA"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "[role='navigation']",
+        "errorMessage": "role='navigation' não encontrado.",
+        "successMessage": "Role navigation ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[role='main']",
+        "errorMessage": "role='main' não encontrado.",
+        "successMessage": "Role main ok!"
+      }
+    ]
+  }
+}

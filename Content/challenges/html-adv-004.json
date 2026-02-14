@@ -1,0 +1,29 @@
+{
+  "id": "html-adv-004",
+  "track": "html",
+  "title": "SVG Inline Básico",
+  "description": "Crie gráfico SVG inline.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie SVG inline -->\n    \n</body>\n</html>",
+  "tags": [
+    "SVG",
+    "gráficos"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "svg",
+        "errorMessage": "<svg> não encontrado.",
+        "successMessage": "SVG ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "svg circle, svg rect, svg line",
+        "errorMessage": "Adicione formas ao SVG.",
+        "successMessage": "Formas ok!"
+      }
+    ]
+  }
+}

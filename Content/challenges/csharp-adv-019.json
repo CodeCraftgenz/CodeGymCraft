@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-019",
+  "track": "csharp",
+  "title": "Nullable Reference",
+  "description": "Use nullable reference types.",
+  "starterCode": "#nullable enable\n\npublic class Solution\n{\n    public static string Cumprimentar(string? nome)\n    {\n        // Se nome null, retorne \"Olá, Visitante!\"\n        // Senão \"Olá, {nome}!\"\n        return \"\";\n    }\n}",
+  "tags": [
+    "nullable",
+    "referência"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Cumprimentar(null); bool p = r == \"Olá, Visitante!\"; results.Add(new TestResult { Pass = p, Message = p ? \"Null ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Cumprimentar(\"Ana\"); bool p = r == \"Olá, Ana!\"; results.Add(new TestResult { Pass = p, Message = p ? \"Ana ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

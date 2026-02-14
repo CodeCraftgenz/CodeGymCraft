@@ -1,0 +1,23 @@
+{
+  "id": "html-int-024",
+  "track": "html",
+  "title": "Data Attributes",
+  "description": "Use data-* para dados custom.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use data-attributes -->\n    \n</body>\n</html>",
+  "tags": [
+    "data",
+    "atributos"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "[data-id]",
+        "errorMessage": "data-id não encontrado.",
+        "successMessage": "Data-id ok!"
+      }
+    ]
+  }
+}

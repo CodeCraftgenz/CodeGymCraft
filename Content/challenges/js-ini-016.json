@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-016",
+  "track": "javascript",
+  "title": "Contém Palavra",
+  "description": "Crie `contemPalavra(str, palavra)` retorna true/false.",
+  "starterCode": "function contemPalavra(str, palavra) {\n    // Retorne true se str contém palavra\n}\n",
+  "tags": [
+    "string",
+    "includes"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = contemPalavra('Hello World', 'World'); const exp = \"true\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'World encontrado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = contemPalavra('Hello', 'xyz'); const exp = \"false\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'xyz não encontrado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-027",
+  "track": "css",
+  "title": "Letter Spacing",
+  "description": "Ajuste espaçamento.",
+  "starterCode": "<style>\n/* Use letter-spacing */\n\n</style>\n\n<p class=\"espacado\">Espaçado</p>",
+  "tags": [
+    "texto",
+    "spacing"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".espacado",
+        "property": "letter-spacing",
+        "errorMessage": "Defina letter-spacing.",
+        "successMessage": "Spacing ok!"
+      }
+    ]
+  }
+}

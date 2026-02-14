@@ -1,0 +1,30 @@
+{
+  "id": "html-adv-014",
+  "track": "html",
+  "title": "Product Listing",
+  "description": "Layout de e-commerce semântico.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie listing de produtos -->\n    \n</body>\n</html>",
+  "tags": [
+    "e-commerce",
+    "layout"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "article",
+        "min": 3,
+        "errorMessage": "Adicione 3+ articles para produtos.",
+        "successMessage": "Products ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "article img",
+        "errorMessage": "Imagens nos products não encontradas.",
+        "successMessage": "Imgs ok!"
+      }
+    ]
+  }
+}

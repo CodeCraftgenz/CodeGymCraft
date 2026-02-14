@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-005",
+  "track": "javascript",
+  "title": "Queue",
+  "description": "Implemente uma Queue.",
+  "starterCode": "class Queue {\n    constructor() { this.items = []; }\n    // enqueue(item), dequeue(), front(), isEmpty(), size()\n}\n",
+  "tags": [
+    "estrutura",
+    "queue"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const q = new Queue(); q.enqueue(1); q.enqueue(2); const r = q.dequeue(); results.push({ pass: r===1, message: r===1 ? 'Queue ok! FIFO correto' : 'Incorreto' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

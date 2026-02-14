@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-002",
+  "track": "csharp",
+  "title": "LINQ Select",
+  "description": "Use Select para transformar.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static List<int> Dobrar(List<int> nums)\n    {\n        // Use Select\n        return new List<int>();\n    }\n}",
+  "tags": [
+    "LINQ",
+    "projeção"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Dobrar(new List<int>{1,2,3}).SequenceEqual(new[]{2,4,6}); results.Add(new TestResult { Pass = p, Message = p ? \"Dobrado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

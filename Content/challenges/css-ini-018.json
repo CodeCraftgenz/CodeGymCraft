@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-018",
+  "track": "css",
+  "title": "Seletor de Classe",
+  "description": "Estilize por classe.",
+  "starterCode": "<style>\n/* Estilize .destaque */\n\n</style>\n\n<p class=\"destaque\">Destaque</p><p>Normal</p>",
+  "tags": [
+    "seletor",
+    "classe"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".destaque",
+        "property": "color",
+        "errorMessage": "Defina color em .destaque.",
+        "successMessage": "Classe estilizada!"
+      }
+    ]
+  }
+}

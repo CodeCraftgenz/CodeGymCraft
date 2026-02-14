@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-020",
+  "track": "csharp",
+  "title": "Range e Index",
+  "description": "Use ranges e indices.",
+  "starterCode": "public class Solution\n{\n    public static int[] UltimosTres(int[] arr)\n    {\n        // Use range [^3..] para pegar últimos 3\n        return new int[0];\n    }\n}",
+  "tags": [
+    "range",
+    "index"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.UltimosTres(new[]{1,2,3,4,5}).SequenceEqual(new[]{3,4,5}); results.Add(new TestResult { Pass = p, Message = p ? \"Últimos 3!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

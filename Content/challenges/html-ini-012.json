@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-012",
+  "track": "html",
+  "title": "Formulário com Textarea",
+  "description": "Adicione um textarea para mensagem.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione um textarea -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "textarea"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "<form> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "textarea",
+        "errorMessage": "<textarea> não encontrado.",
+        "successMessage": "Textarea ok!"
+      }
+    ]
+  }
+}

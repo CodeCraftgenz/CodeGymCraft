@@ -1,0 +1,24 @@
+{
+  "id": "css-int-027",
+  "track": "css",
+  "title": "Media Queries Avançadas",
+  "description": "Use min e max-width.",
+  "starterCode": "<style>\n/* Use media queries com breakpoints */\n\n</style>\n\n<div class=\"adapt\">Adaptável</div>",
+  "tags": [
+    "responsivo",
+    "breakpoints"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".adapt",
+        "property": "padding",
+        "errorMessage": "Defina padding base.",
+        "successMessage": "Base ok!"
+      }
+    ]
+  }
+}

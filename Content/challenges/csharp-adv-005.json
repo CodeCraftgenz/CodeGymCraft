@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-005",
+  "track": "csharp",
+  "title": "LINQ SelectMany",
+  "description": "Use SelectMany.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static List<int> Achatar(List<List<int>> listas)\n    {\n        return new List<int>();\n    }\n}",
+  "tags": [
+    "LINQ",
+    "flatten"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Achatar(new List<List<int>>{new(){1,2},new(){3,4}}).SequenceEqual(new[]{1,2,3,4}); results.Add(new TestResult { Pass = p, Message = p ? \"Achatado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

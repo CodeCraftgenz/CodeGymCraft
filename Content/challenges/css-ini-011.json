@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-011",
+  "track": "css",
+  "title": "Borda Simples",
+  "description": "Adicione border.",
+  "starterCode": "<style>\n/* Adicione border */\n\n</style>\n\n<div class=\"bordered\">Borda</div>",
+  "tags": [
+    "borda",
+    "estilo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".bordered",
+        "property": "border",
+        "errorMessage": "Defina border.",
+        "successMessage": "Border ok!"
+      }
+    ]
+  }
+}

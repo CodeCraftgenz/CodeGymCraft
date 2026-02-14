@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-030",
+  "track": "javascript",
+  "title": "Reverter String",
+  "description": "Crie `reverter(str)` inverte a string.",
+  "starterCode": "function reverter(str) {\n    // 'abc' -> 'cba'\n}\n",
+  "tags": [
+    "string",
+    "reverse"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = reverter('hello'); const exp = \"'olleh'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'olleh ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = reverter('abc'); const exp = \"'cba'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'cba ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "html-int-022",
+  "track": "html",
+  "title": "Mapa de Imagem",
+  "description": "Crie image map com area.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie mapa de imagem -->\n    \n</body>\n</html>",
+  "tags": [
+    "imagem",
+    "map"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "map",
+        "errorMessage": "<map> não encontrado.",
+        "successMessage": "<map> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "area",
+        "errorMessage": "<area> não encontrado.",
+        "successMessage": "<area> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "img",
+        "attribute": "usemap",
+        "errorMessage": "usemap não encontrado na img.",
+        "successMessage": "Usemap ok!"
+      }
+    ]
+  }
+}

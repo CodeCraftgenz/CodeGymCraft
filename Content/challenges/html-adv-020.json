@@ -1,0 +1,47 @@
+{
+  "id": "html-adv-020",
+  "track": "html",
+  "title": "Página Completa",
+  "description": "Página com todas as best practices.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie página com todas as best practices -->\n    \n</body>\n</html>",
+  "tags": [
+    "completo",
+    "best practices"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "meta[name='viewport']",
+        "errorMessage": "Viewport não encontrado.",
+        "successMessage": "Viewport ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "header",
+        "errorMessage": "Header não encontrado.",
+        "successMessage": "Header ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "main",
+        "errorMessage": "Main não encontrado.",
+        "successMessage": "Main ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "footer",
+        "errorMessage": "Footer não encontrado.",
+        "successMessage": "Footer ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "nav",
+        "errorMessage": "Nav não encontrado.",
+        "successMessage": "Nav ok!"
+      }
+    ]
+  }
+}

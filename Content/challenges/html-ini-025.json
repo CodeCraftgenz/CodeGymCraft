@@ -1,0 +1,36 @@
+{
+  "id": "html-ini-025",
+  "track": "html",
+  "title": "Tabela com Cabeçalho",
+  "description": "Crie tabela com thead e th.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie tabela com thead/th -->\n    \n</body>\n</html>",
+  "tags": [
+    "tabela",
+    "cabeçalho"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "table",
+        "errorMessage": "<table> não encontrado.",
+        "successMessage": "<table> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "thead",
+        "errorMessage": "<thead> não encontrado.",
+        "successMessage": "<thead> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "th",
+        "min": 2,
+        "errorMessage": "Adicione pelo menos 2 <th>.",
+        "successMessage": "Headers ok!"
+      }
+    ]
+  }
+}

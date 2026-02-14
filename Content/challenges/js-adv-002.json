@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-002",
+  "track": "javascript",
+  "title": "Binary Search",
+  "description": "Implemente busca binária.",
+  "starterCode": "function binarySearch(arr, target) {\n    // Retorne index ou -1\n}\n",
+  "tags": [
+    "algoritmo",
+    "search"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = binarySearch([1,2,3,4,5], 3); const exp = \"2\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Index 2!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = binarySearch([1,2,3], 4); const exp = \"-1\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '-1 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

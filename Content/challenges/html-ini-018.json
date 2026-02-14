@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-018",
+  "track": "html",
+  "title": "Span Inline",
+  "description": "Use span para destacar palavras dentro de parágrafos.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use span dentro de parágrafos -->\n    \n</body>\n</html>",
+  "tags": [
+    "span",
+    "inline"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "p",
+        "errorMessage": "<p> não encontrado.",
+        "successMessage": "<p> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "p span",
+        "errorMessage": "<span> dentro de <p> não encontrado.",
+        "successMessage": "Span inline ok!"
+      }
+    ]
+  }
+}

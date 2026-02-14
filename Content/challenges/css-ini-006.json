@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-006",
+  "track": "css",
+  "title": "Alinhamento de Texto",
+  "description": "Use text-align center.",
+  "starterCode": "<style>\n/* Centralize o texto */\n\n</style>\n\n<h2 class=\"centro\">Centralizado</h2>",
+  "tags": [
+    "texto",
+    "alinhamento"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".centro",
+        "property": "text-align",
+        "value": "center",
+        "errorMessage": "text-align deve ser center.",
+        "successMessage": "Centralizado!"
+      }
+    ]
+  }
+}

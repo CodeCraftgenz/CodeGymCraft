@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-013",
+  "track": "csharp",
+  "title": "Dictionary",
+  "description": "Use Dictionary.",
+  "starterCode": "public class Solution\n{\n    public static Dictionary<string, int> ContarPalavras(string texto)\n    {\n        // Conte ocorrências de cada palavra\n        return new Dictionary<string, int>();\n    }\n}",
+  "tags": [
+    "Dictionary",
+    "coleção"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.ContarPalavras(\"oi oi tchau\"); return r[\"oi\"] == 2 && r[\"tchau\"] == 1; }; results.Add(new TestResult { Pass = p, Message = p ? \"Contagem ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

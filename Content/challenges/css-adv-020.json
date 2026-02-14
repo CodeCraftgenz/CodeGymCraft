@@ -1,0 +1,39 @@
+{
+  "id": "css-adv-020",
+  "track": "css",
+  "title": "Galeria Responsiva",
+  "description": "Layout de galeria.",
+  "starterCode": "<style>\n/* Crie galeria responsiva */\n\n</style>\n\n<div class=\"gallery\"><div class=\"gallery-item\">1</div><div class=\"gallery-item\">2</div><div class=\"gallery-item\">3</div><div class=\"gallery-item\">4</div><div class=\"gallery-item\">5</div><div class=\"gallery-item\">6</div></div>",
+  "tags": [
+    "galeria",
+    "responsivo"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".gallery",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "Precisa grid.",
+        "successMessage": "Grid!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".gallery",
+        "property": "grid-template-columns",
+        "errorMessage": "Defina columns.",
+        "successMessage": "Columns ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".gallery",
+        "property": "gap",
+        "errorMessage": "Defina gap.",
+        "successMessage": "Gap ok!"
+      }
+    ]
+  }
+}

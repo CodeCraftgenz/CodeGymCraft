@@ -1,0 +1,25 @@
+{
+  "id": "css-adv-013",
+  "track": "css",
+  "title": "Object Fit",
+  "description": "Use object-fit.",
+  "starterCode": "<style>\n/* Use object-fit */\n\n</style>\n\n<img class=\"fit\" style=\"width:200px;height:200px\" src=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><rect fill='green' width='300' height='100'/></svg>\" alt=\"test\">",
+  "tags": [
+    "object-fit",
+    "imagem"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".fit",
+        "property": "object-fit",
+        "value": "cover",
+        "errorMessage": "object-fit deve ser cover.",
+        "successMessage": "Cover ok!"
+      }
+    ]
+  }
+}

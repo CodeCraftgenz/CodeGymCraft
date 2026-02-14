@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-008",
+  "track": "csharp",
+  "title": "Switch Expression",
+  "description": "Switch expression avançado.",
+  "starterCode": "public class Solution\n{\n    public static string Classificar(object obj) => obj switch\n    {\n        // int i when i > 0 => \"positivo\"\n        // int i when i < 0 => \"negativo\"\n        // int => \"zero\"\n        // string s => $\"texto: {s}\"\n        // null => \"nulo\"\n        // _ => \"desconhecido\"\n        _ => \"\"\n    };\n}",
+  "tags": [
+    "pattern",
+    "switch"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Classificar(5); bool p = r == \"positivo\"; results.Add(new TestResult { Pass = p, Message = p ? \"Positivo!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Classificar(-3); bool p = r == \"negativo\"; results.Add(new TestResult { Pass = p, Message = p ? \"Negativo!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Classificar(null); bool p = r == \"nulo\"; results.Add(new TestResult { Pass = p, Message = p ? \"Nulo!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

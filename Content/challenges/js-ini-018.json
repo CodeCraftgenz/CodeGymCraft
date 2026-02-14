@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-018",
+  "track": "javascript",
+  "title": "Inverter Palavras",
+  "description": "Crie `inverterPalavras(str)` inverte ordem das palavras.",
+  "starterCode": "function inverterPalavras(str) {\n    // 'hello world' -> 'world hello'\n}\n",
+  "tags": [
+    "string",
+    "split/join"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = inverterPalavras('hello world'); const exp = \"'world hello'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Invertido!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = inverterPalavras('a b c'); const exp = \"'c b a'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'abc→cba ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

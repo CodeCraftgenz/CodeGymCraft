@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-025",
+  "track": "css",
+  "title": "Box Shadow",
+  "description": "Adicione sombra.",
+  "starterCode": "<style>\n/* Use box-shadow */\n\n</style>\n\n<div class=\"card\" style=\"padding:20px\">Card</div>",
+  "tags": [
+    "shadow",
+    "visual"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".card",
+        "property": "box-shadow",
+        "errorMessage": "Defina box-shadow.",
+        "successMessage": "Shadow ok!"
+      }
+    ]
+  }
+}

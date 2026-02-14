@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-026",
+  "track": "csharp",
+  "title": "Operador Ternário",
+  "description": "Crie `Solution.MaiorIdade(int idade)` retorna 'maior' ou 'menor'.",
+  "starterCode": "public class Solution\n{\n    public static string MaiorIdade(int idade)\n    {\n        // Use operador ternário\n        return \"\";\n    }\n}",
+  "tags": [
+    "ternário",
+    "condição"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.MaiorIdade(18); bool p = r == \"maior\"; results.Add(new TestResult { Pass = p, Message = p ? \"18=maior!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.MaiorIdade(10); bool p = r == \"menor\"; results.Add(new TestResult { Pass = p, Message = p ? \"10=menor!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

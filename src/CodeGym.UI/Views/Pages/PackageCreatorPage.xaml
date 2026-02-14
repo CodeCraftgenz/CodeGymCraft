@@ -1,0 +1,226 @@
+<Page x:Class="CodeGym.UI.Views.Pages.PackageCreatorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:ae="http://icsharpcode.net/sharpdevelop/avalonedit"
+      Title="Criador de Pacotes">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header + Steps indicator -->
+        <StackPanel Grid.Row="0" Margin="24,16,24,0">
+            <TextBlock Text="Criador de Pacotes"
+                       FontSize="28" FontWeight="Bold" Margin="0,0,0,4" />
+            <TextBlock Text="Crie pacotes de desafios para importar ou compartilhar"
+                       FontSize="14" Opacity="0.6" Margin="0,0,0,16" />
+
+            <!-- Step indicator -->
+            <UniformGrid Columns="3" Margin="0,0,0,16">
+                <Border Background="{Binding Step1Brush}" CornerRadius="4" Padding="8,6" Margin="0,0,4,0">
+                    <TextBlock Text="1. Metadados" HorizontalAlignment="Center"
+                               FontWeight="{Binding Step1Weight}" />
+                </Border>
+                <Border Background="{Binding Step2Brush}" CornerRadius="4" Padding="8,6" Margin="2,0">
+                    <TextBlock Text="2. Desafios" HorizontalAlignment="Center"
+                               FontWeight="{Binding Step2Weight}" />
+                </Border>
+                <Border Background="{Binding Step3Brush}" CornerRadius="4" Padding="8,6" Margin="4,0,0,0">
+                    <TextBlock Text="3. Exportar" HorizontalAlignment="Center"
+                               FontWeight="{Binding Step3Weight}" />
+                </Border>
+            </UniformGrid>
+        </StackPanel>
+
+        <!-- Step content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="24,0">
+          <Grid>
+
+            <!-- Step 1: Metadados -->
+            <StackPanel x:Name="Step1Panel" MaxWidth="700" HorizontalAlignment="Center"
+                        Visibility="{Binding Step1Visible}">
+                <ui:CardControl Margin="0,0,0,16">
+                    <ui:CardControl.Header>
+                        <StackPanel>
+                            <TextBlock Text="Informações do Pacote" FontSize="18" FontWeight="SemiBold"
+                                       Margin="0,0,0,16" />
+
+                            <TextBlock Text="Nome do pacote" FontSize="13" Margin="0,0,0,4" />
+                            <ui:TextBox x:Name="PackageNameBox" PlaceholderText="Ex: desafios-css-avancado"
+                                        Text="{Binding PackageName, UpdateSourceTrigger=PropertyChanged}"
+                                        Margin="0,0,0,12" />
+
+                            <TextBlock Text="Descrição" FontSize="13" Margin="0,0,0,4" />
+                            <ui:TextBox x:Name="PackageDescBox" PlaceholderText="Breve descrição do pacote"
+                                        Text="{Binding PackageDescription, UpdateSourceTrigger=PropertyChanged}"
+                                        Margin="0,0,0,12" />
+
+                            <TextBlock Text="Autor" FontSize="13" Margin="0,0,0,4" />
+                            <ui:TextBox x:Name="PackageAuthorBox" PlaceholderText="Seu nome"
+                                        Text="{Binding PackageAuthor, UpdateSourceTrigger=PropertyChanged}"
+                                        Margin="0,0,0,12" />
+
+                            <TextBlock Text="Versão" FontSize="13" Margin="0,0,0,4" />
+                            <ui:TextBox PlaceholderText="1.0.0"
+                                        Text="{Binding PackageVersion, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+                    </ui:CardControl.Header>
+                </ui:CardControl>
+            </StackPanel>
+
+            <!-- Step 2: Desafios -->
+            <StackPanel x:Name="Step2Panel" MaxWidth="900" HorizontalAlignment="Center"
+                        Visibility="{Binding Step2Visible}">
+
+                <!-- Lista de desafios adicionados -->
+                <DockPanel Margin="0,0,0,12">
+                    <TextBlock DockPanel.Dock="Left" FontSize="16" FontWeight="SemiBold"
+                               VerticalAlignment="Center">
+                        <Run Text="Desafios:" />
+                        <Run Text="{Binding ChallengeCount, Mode=OneWay}" />
+                    </TextBlock>
+                    <ui:Button DockPanel.Dock="Right" Content="Adicionar Desafio"
+                               Icon="{ui:SymbolIcon Add24}"
+                               Command="{Binding AddChallengeCommand}"
+                               HorizontalAlignment="Right" />
+                </DockPanel>
+
+                <ItemsControl ItemsSource="{Binding Challenges}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <ui:CardControl Margin="0,0,0,8">
+                                <ui:CardControl.Header>
+                                    <StackPanel>
+                                        <DockPanel Margin="0,0,0,8">
+                                            <TextBlock DockPanel.Dock="Left" FontWeight="SemiBold"
+                                                       Text="{Binding DisplayTitle}" FontSize="15" />
+                                            <ui:Button DockPanel.Dock="Right" Content="Remover"
+                                                       Appearance="Danger"
+                                                       Command="{Binding DataContext.RemoveChallengeCommand,
+                                                           RelativeSource={RelativeSource AncestorType=Page}}"
+                                                       CommandParameter="{Binding}"
+                                                       HorizontalAlignment="Right" />
+                                        </DockPanel>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackPanel Grid.Column="0" Margin="0,0,8,0">
+                                                <TextBlock Text="ID" FontSize="12" Opacity="0.6" />
+                                                <ui:TextBox Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}"
+                                                            PlaceholderText="ex: css-grid-01" />
+                                            </StackPanel>
+
+                                            <StackPanel Grid.Column="1" Margin="4,0">
+                                                <TextBlock Text="Trilha" FontSize="12" Opacity="0.6" />
+                                                <ComboBox SelectedValue="{Binding Track}"
+                                                          SelectedValuePath="Tag">
+                                                    <ComboBoxItem Content="HTML" Tag="html" />
+                                                    <ComboBoxItem Content="CSS" Tag="css" />
+                                                    <ComboBoxItem Content="JavaScript" Tag="javascript" />
+                                                    <ComboBoxItem Content="C#" Tag="csharp" />
+                                                </ComboBox>
+                                            </StackPanel>
+
+                                            <StackPanel Grid.Column="2" Margin="8,0,0,0">
+                                                <TextBlock Text="Dificuldade" FontSize="12" Opacity="0.6" />
+                                                <ComboBox SelectedValue="{Binding Difficulty}"
+                                                          SelectedValuePath="Tag">
+                                                    <ComboBoxItem Content="Iniciante" Tag="Iniciante" />
+                                                    <ComboBoxItem Content="Intermediário" Tag="Intermediario" />
+                                                    <ComboBoxItem Content="Avançado" Tag="Avancado" />
+                                                </ComboBox>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <TextBlock Text="Título" FontSize="12" Opacity="0.6" Margin="0,8,0,0" />
+                                        <ui:TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+                                                    PlaceholderText="Título do desafio" />
+
+                                        <TextBlock Text="Descrição" FontSize="12" Opacity="0.6" Margin="0,8,0,0" />
+                                        <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
+                                                 TextWrapping="Wrap" AcceptsReturn="True"
+                                                 Height="60" />
+
+                                        <TextBlock Text="Código Inicial" FontSize="12" Opacity="0.6" Margin="0,8,0,0" />
+                                        <TextBox Text="{Binding StarterCode, UpdateSourceTrigger=PropertyChanged}"
+                                                 TextWrapping="Wrap" AcceptsReturn="True"
+                                                 FontFamily="Consolas" FontSize="12"
+                                                 Height="80" />
+
+                                        <TextBlock Text="Tipo de Validador" FontSize="12" Opacity="0.6" Margin="0,8,0,0" />
+                                        <ComboBox SelectedValue="{Binding ValidatorType}"
+                                                  SelectedValuePath="Tag">
+                                            <ComboBoxItem Content="Regras HTML" Tag="html-rules" />
+                                            <ComboBoxItem Content="Regras CSS" Tag="css-rules" />
+                                            <ComboBoxItem Content="Testes JavaScript" Tag="js-tests" />
+                                            <ComboBoxItem Content="Testes C#" Tag="csharp-tests" />
+                                        </ComboBox>
+
+                                        <TextBlock Text="Configuração do Validador (JSON)" FontSize="12" Opacity="0.6"
+                                                   Margin="0,8,0,0" />
+                                        <TextBox Text="{Binding ValidatorConfigJson, UpdateSourceTrigger=PropertyChanged}"
+                                                 TextWrapping="Wrap" AcceptsReturn="True"
+                                                 FontFamily="Consolas" FontSize="12"
+                                                 Height="100" />
+                                    </StackPanel>
+                                </ui:CardControl.Header>
+                            </ui:CardControl>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+
+            <!-- Step 3: Exportar -->
+            <StackPanel x:Name="Step3Panel" MaxWidth="700" HorizontalAlignment="Center"
+                        Visibility="{Binding Step3Visible}">
+                <ui:CardControl Margin="0,0,0,16">
+                    <ui:CardControl.Header>
+                        <StackPanel HorizontalAlignment="Center">
+                            <ui:SymbolIcon Symbol="BoxCheckmark24" FontSize="64" Margin="0,16,0,16"
+                                          HorizontalAlignment="Center" />
+                            <TextBlock Text="Pacote Pronto!" FontSize="22" FontWeight="Bold"
+                                       HorizontalAlignment="Center" Margin="0,0,0,8" />
+                            <TextBlock Text="{Binding ExportSummary}" FontSize="14" Opacity="0.7"
+                                       HorizontalAlignment="Center" Margin="0,0,0,16"
+                                       TextAlignment="Center" />
+
+                            <ui:Button Content="Exportar como .zip"
+                                       Icon="{ui:SymbolIcon ArrowDownload24}"
+                                       Appearance="Primary"
+                                       Command="{Binding ExportCommand}"
+                                       HorizontalAlignment="Center"
+                                       Margin="0,0,0,8" />
+
+                            <TextBlock Text="{Binding ExportStatus}" FontSize="13"
+                                       HorizontalAlignment="Center" Opacity="0.6"
+                                       Margin="0,8,0,16" />
+                        </StackPanel>
+                    </ui:CardControl.Header>
+                </ui:CardControl>
+            </StackPanel>
+          </Grid>
+        </ScrollViewer>
+
+        <!-- Navigation buttons -->
+        <DockPanel Grid.Row="2" Margin="24,8,24,16">
+            <ui:Button DockPanel.Dock="Left" Content="Voltar"
+                       Icon="{ui:SymbolIcon ArrowLeft24}"
+                       Command="{Binding PreviousStepCommand}"
+                       Visibility="{Binding BackVisible}" />
+            <ui:Button DockPanel.Dock="Right" Content="{Binding NextButtonText}"
+                       Icon="{ui:SymbolIcon ArrowRight24}"
+                       Appearance="Primary"
+                       Command="{Binding NextStepCommand}"
+                       HorizontalAlignment="Right" />
+        </DockPanel>
+    </Grid>
+</Page>

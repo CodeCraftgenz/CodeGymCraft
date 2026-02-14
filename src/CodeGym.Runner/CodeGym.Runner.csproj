@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>CodeGym.Runner</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Roslyn para compilar código C# em tempo de execução -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+    <!-- Jint: engine JavaScript em .NET (100% offline, sem Node.js) -->
+    <PackageReference Include="Jint" Version="4.2.1" />
+    <!-- AngleSharp: parser HTML/CSS para validação de DOM e estilos -->
+    <PackageReference Include="AngleSharp" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeGym.Core\CodeGym.Core.csproj" />
+  </ItemGroup>
+
+</Project>

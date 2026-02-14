@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-019",
+  "track": "html",
+  "title": "Comentários HTML",
+  "description": "Adicione comentários explicativos no código.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione comentários -->\n    \n</body>\n</html>",
+  "tags": [
+    "comentários",
+    "boas práticas"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "h1",
+        "errorMessage": "Adicione ao menos um <h1>.",
+        "successMessage": "<h1> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "p",
+        "errorMessage": "Adicione ao menos um <p>.",
+        "successMessage": "<p> ok!"
+      }
+    ]
+  }
+}

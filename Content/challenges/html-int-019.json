@@ -1,0 +1,30 @@
+{
+  "id": "html-int-019",
+  "track": "html",
+  "title": "Abbreviation",
+  "description": "Use abbr com title.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento abbr -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "abbr"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "abbr",
+        "errorMessage": "<abbr> não encontrado.",
+        "successMessage": "<abbr> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "abbr",
+        "attribute": "title",
+        "errorMessage": "title não encontrado.",
+        "successMessage": "Title ok!"
+      }
+    ]
+  }
+}

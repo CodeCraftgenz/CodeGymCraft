@@ -1,0 +1,16 @@
+{
+  "id": "js-int-003",
+  "track": "javascript",
+  "title": "Array Reduce",
+  "description": "Crie `somarTodos(arr)` usando reduce.",
+  "starterCode": "function somarTodos(arr) {\n    // Use reduce para somar\n}\n",
+  "tags": [
+    "array",
+    "reduce"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = somarTodos([1,2,3,4]); const exp = \"10\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '10 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = somarTodos([]); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '[] ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-014",
+  "track": "css",
+  "title": "Counter CSS",
+  "description": "Use CSS counters.",
+  "starterCode": "<style>\n/* Use counter-reset e counter-increment */\n\n</style>\n\n<div class=\"counted\"><h3>Item</h3><h3>Item</h3><h3>Item</h3></div>",
+  "tags": [
+    "counter",
+    "lista"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".counted",
+        "property": "counter-reset",
+        "errorMessage": "Defina counter-reset.",
+        "successMessage": "Counter ok!"
+      }
+    ]
+  }
+}

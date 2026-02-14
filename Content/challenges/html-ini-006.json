@@ -1,0 +1,37 @@
+{
+  "id": "html-ini-006",
+  "track": "html",
+  "title": "Imagens com Alt",
+  "description": "Adicione uma imagem com atributo alt descritivo.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione uma imagem com alt -->\n    \n</body>\n</html>",
+  "tags": [
+    "imagem",
+    "acessibilidade"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "img",
+        "errorMessage": "<img> não encontrado.",
+        "successMessage": "Imagem encontrada!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "img",
+        "attribute": "src",
+        "errorMessage": "src não encontrado.",
+        "successMessage": "src presente!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "img",
+        "attribute": "alt",
+        "errorMessage": "alt não encontrado. Sempre use alt para acessibilidade.",
+        "successMessage": "alt presente!"
+      }
+    ]
+  }
+}

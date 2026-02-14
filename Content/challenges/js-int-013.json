@@ -1,0 +1,16 @@
+{
+  "id": "js-int-013",
+  "track": "javascript",
+  "title": "Default Parameters",
+  "description": "Crie `saudar(nome='Visitante')` com default.",
+  "starterCode": "function saudar(nome = 'Visitante') {\n    // Retorne 'Olá, {nome}!'\n}\n",
+  "tags": [
+    "default",
+    "parâmetros"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = saudar(); const exp = \"'Ol\\u00e1, Visitante!'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Default ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = saudar('Ana'); const exp = \"'Ol\\u00e1, Ana!'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Ana ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

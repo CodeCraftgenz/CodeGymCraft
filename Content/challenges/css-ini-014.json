@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-014",
+  "track": "css",
+  "title": "Estilizar Lista",
+  "description": "Remova bullets da lista.",
+  "starterCode": "<style>\n/* Remova list-style */\n\n</style>\n\n<ul class=\"clean\"><li>Item 1</li><li>Item 2</li></ul>",
+  "tags": [
+    "lista",
+    "estilo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".clean",
+        "property": "list-style",
+        "value": "none",
+        "errorMessage": "list-style deve ser none.",
+        "successMessage": "Sem bullets!"
+      }
+    ]
+  }
+}

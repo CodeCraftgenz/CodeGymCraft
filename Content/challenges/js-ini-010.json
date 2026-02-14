@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-010",
+  "track": "javascript",
+  "title": "Somar Array",
+  "description": "Crie `somarArray(arr)` soma de todos os elementos.",
+  "starterCode": "function somarArray(arr) {\n    // Retorne a soma de todos os elementos\n}\n",
+  "tags": [
+    "array",
+    "loop"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = somarArray([1,2,3]); const exp = \"6\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '[1,2,3]=6!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = somarArray([10,-5,5]); const exp = \"10\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '[10,-5,5]=10!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = somarArray([]); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '[]=0!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

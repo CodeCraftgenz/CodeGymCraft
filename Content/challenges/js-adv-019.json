@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-019",
+  "track": "javascript",
+  "title": "Pipe",
+  "description": "Implemente pipe (inverso de compose).",
+  "starterCode": "function pipe(...fns) {\n    // pipe(f, g)(x) = g(f(x))\n}\n",
+  "tags": [
+    "funcional",
+    "pipe"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = pipe(x => x*2, x => x+1)(3); results.push({ pass: r===7, message: r===7 ? 'pipe ok! (3*2)+1=7' : 'Incorreto: ' + r }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "html-int-018",
+  "track": "html",
+  "title": "Time e Datetime",
+  "description": "Use time com datetime.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento time -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "time"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "time",
+        "errorMessage": "<time> não encontrado.",
+        "successMessage": "<time> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "time",
+        "attribute": "datetime",
+        "errorMessage": "datetime não encontrado.",
+        "successMessage": "Datetime ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-011",
+  "track": "javascript",
+  "title": "Memoize",
+  "description": "Implemente memoização.",
+  "starterCode": "function memoize(fn) {\n    // Retorne versão memoizada\n}\n",
+  "tags": [
+    "otimização",
+    "memoize"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { let calls = 0; const fn = memoize(x => { calls++; return x*2; }); fn(5); fn(5); results.push({ pass: calls===1, message: calls===1 ? 'Memoizado!' : 'Chamou '+calls+' vezes' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

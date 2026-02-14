@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-005",
+  "track": "javascript",
+  "title": "Classificar Nota",
+  "description": "Crie `classificar(nota)`: A(>=90), B(>=80), C(>=70), D(>=60), F(<60).",
+  "starterCode": "function classificar(nota) {\n    // Retorne 'A', 'B', 'C', 'D' ou 'F'\n}\n",
+  "tags": [
+    "if/else",
+    "lógica"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = classificar(95); const exp = \"'A'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '95=A!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = classificar(85); const exp = \"'B'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '85=B!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = classificar(55); const exp = \"'F'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '55=F!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

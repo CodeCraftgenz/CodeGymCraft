@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-007",
+  "track": "javascript",
+  "title": "Debounce",
+  "description": "Implemente debounce.",
+  "starterCode": "function debounce(fn, delay) {\n    // Retorne função debounced\n}\n",
+  "tags": [
+    "padrão",
+    "debounce"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { let count = 0; const d = debounce(() => count++, 100); d(); d(); d(); results.push({ pass: typeof d === 'function', message: typeof d === 'function' ? 'Retorna função!' : 'Deve retornar função' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

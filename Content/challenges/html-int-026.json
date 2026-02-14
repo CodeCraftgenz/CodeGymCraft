@@ -1,0 +1,23 @@
+{
+  "id": "html-int-026",
+  "track": "html",
+  "title": "Aria-label",
+  "description": "Use aria-label para descrever elementos.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use aria-label -->\n    \n</body>\n</html>",
+  "tags": [
+    "acessibilidade",
+    "ARIA"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "[aria-label]",
+        "errorMessage": "aria-label não encontrado.",
+        "successMessage": "Aria-label ok!"
+      }
+    ]
+  }
+}

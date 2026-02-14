@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-006",
+  "track": "csharp",
+  "title": "LINQ GroupBy",
+  "description": "Use GroupBy.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static Dictionary<string, int> ContarPorInicial(List<string> nomes)\n    {\n        // Agrupe por primeira letra, conte cada grupo\n        return new Dictionary<string, int>();\n    }\n}",
+  "tags": [
+    "LINQ",
+    "agrupamento"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.ContarPorInicial(new List<string>{\"Ana\",\"Alice\",\"Bob\"}); return r[\"A\"] == 2 && r[\"B\"] == 1; }; results.Add(new TestResult { Pass = p, Message = p ? \"Agrupado!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

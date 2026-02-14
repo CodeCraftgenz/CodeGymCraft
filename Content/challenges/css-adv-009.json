@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-009",
+  "track": "css",
+  "title": "Blend Mode",
+  "description": "Use mix-blend-mode.",
+  "starterCode": "<style>\n/* Use mix-blend-mode */\n\n</style>\n\n<div style=\"background:blue;padding:20px\"><h1 class=\"blend\" style=\"color:white\">Blend</h1></div>",
+  "tags": [
+    "blend",
+    "visual"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".blend",
+        "property": "mix-blend-mode",
+        "errorMessage": "Defina mix-blend-mode.",
+        "successMessage": "Blend ok!"
+      }
+    ]
+  }
+}

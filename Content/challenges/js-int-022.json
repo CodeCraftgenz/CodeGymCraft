@@ -1,0 +1,16 @@
+{
+  "id": "js-int-022",
+  "track": "javascript",
+  "title": "Getter/Setter",
+  "description": "Crie classe com get/set.",
+  "starterCode": "class Temperatura {\n    constructor(celsius) { this._celsius = celsius; }\n    // get fahrenheit\n    // set fahrenheit\n}\n",
+  "tags": [
+    "classe",
+    "getter/setter"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const t = new Temperatura(0); results.push({ pass: t.fahrenheit === 32, message: t.fahrenheit === 32 ? '0°C = 32°F!' : 'Incorreto: ' + t.fahrenheit }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

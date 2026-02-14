@@ -1,0 +1,36 @@
+{
+  "id": "html-int-009",
+  "track": "html",
+  "title": "Elemento Audio",
+  "description": "Adicione um player de áudio.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione elemento audio -->\n    \n</body>\n</html>",
+  "tags": [
+    "mídia",
+    "audio"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "audio",
+        "errorMessage": "<audio> não encontrado.",
+        "successMessage": "<audio> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "audio",
+        "attribute": "controls",
+        "errorMessage": "Atributo controls não encontrado.",
+        "successMessage": "Controls ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "audio source",
+        "errorMessage": "<source> dentro de audio não encontrado.",
+        "successMessage": "Source ok!"
+      }
+    ]
+  }
+}

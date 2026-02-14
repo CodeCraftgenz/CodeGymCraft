@@ -1,0 +1,16 @@
+{
+  "id": "js-int-009",
+  "track": "javascript",
+  "title": "Destructuring Objeto",
+  "description": "Crie `extrair(obj)` retorna nome e idade.",
+  "starterCode": "function extrair(obj) {\n    // Use destructuring para retornar { nome, idade }\n}\n",
+  "tags": [
+    "destructuring",
+    "objeto"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = extrair({nome:'Ana',idade:25,cidade:'SP'}).nome; const exp = \"'Ana'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Nome ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

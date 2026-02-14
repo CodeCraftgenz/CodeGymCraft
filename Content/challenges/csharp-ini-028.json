@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-028",
+  "track": "csharp",
+  "title": "While Loop",
+  "description": "Crie `Solution.SomarDigitos(int n)` soma os dígitos.",
+  "starterCode": "public class Solution\n{\n    public static int SomarDigitos(int n)\n    {\n        // 123 -> 1+2+3 = 6\n        return 0;\n    }\n}",
+  "tags": [
+    "loop",
+    "math"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.SomarDigitos(123); bool p = r == 6; results.Add(new TestResult { Pass = p, Message = p ? \"123→6!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.SomarDigitos(9999); bool p = r == 36; results.Add(new TestResult { Pass = p, Message = p ? \"9999→36!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

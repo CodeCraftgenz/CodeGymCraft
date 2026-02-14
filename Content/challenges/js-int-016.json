@@ -1,0 +1,16 @@
+{
+  "id": "js-int-016",
+  "track": "javascript",
+  "title": "Promise Básico",
+  "description": "Crie `esperar(ms)` retorna Promise.",
+  "starterCode": "function esperar(ms) {\n    // Retorne Promise que resolve após ms\n    return new Promise((resolve) => {\n        // TODO\n    });\n}\n",
+  "tags": [
+    "promise",
+    "async"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const p = esperar(10); results.push({ pass: p instanceof Promise, message: p instanceof Promise ? 'É Promise!' : 'Não é Promise' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

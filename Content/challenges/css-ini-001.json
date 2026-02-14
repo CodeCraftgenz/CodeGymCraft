@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-001",
+  "track": "css",
+  "title": "Cor de Texto",
+  "description": "Altere a cor do texto de um parágrafo para azul.",
+  "starterCode": "<style>\n/* Altere a cor do .texto */\n\n</style>\n\n<p class=\"texto\">Olhe minha cor!</p>",
+  "tags": [
+    "cor",
+    "text"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".texto",
+        "property": "color",
+        "errorMessage": "Defina color em .texto.",
+        "successMessage": "Color definido!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "css-int-011",
+  "track": "css",
+  "title": "Grid Area",
+  "description": "Nomeie áreas.",
+  "starterCode": "<style>\n/* Use grid-template-areas */\n\n</style>\n\n<div class=\"layout\"><div class=\"header\">H</div><div class=\"sidebar\">S</div><div class=\"content\">C</div></div>",
+  "tags": [
+    "grid",
+    "area"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".layout",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "Precisa grid.",
+        "successMessage": "Grid!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".layout",
+        "property": "grid-template-areas",
+        "errorMessage": "Defina grid-template-areas.",
+        "successMessage": "Areas ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "html-int-008",
+  "track": "html",
+  "title": "Figure e Figcaption",
+  "description": "Use figure para imagem com legenda.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use figure e figcaption -->\n    \n</body>\n</html>",
+  "tags": [
+    "imagem",
+    "figure"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "figure",
+        "errorMessage": "<figure> não encontrado.",
+        "successMessage": "<figure> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "figcaption",
+        "errorMessage": "<figcaption> não encontrado.",
+        "successMessage": "<figcaption> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "figure img",
+        "errorMessage": "img dentro de figure não encontrado.",
+        "successMessage": "Img ok!"
+      }
+    ]
+  }
+}

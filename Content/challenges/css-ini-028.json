@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-028",
+  "track": "css",
+  "title": "Overflow Hidden",
+  "description": "Controle overflow.",
+  "starterCode": "<style>\n/* Use overflow hidden */\n\n</style>\n\n<div class=\"container\" style=\"height:50px\"><p>Texto longo que vai ultrapassar o container definido</p></div>",
+  "tags": [
+    "overflow",
+    "layout"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".container",
+        "property": "overflow",
+        "value": "hidden",
+        "errorMessage": "overflow deve ser hidden.",
+        "successMessage": "Overflow hidden!"
+      }
+    ]
+  }
+}

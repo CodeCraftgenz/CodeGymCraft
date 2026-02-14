@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-017",
+  "track": "javascript",
+  "title": "Throttle",
+  "description": "Implemente throttle.",
+  "starterCode": "function throttle(fn, limit) {\n    // Retorne função throttled\n}\n",
+  "tags": [
+    "padrão",
+    "throttle"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const t = throttle(() => {}, 100); results.push({ pass: typeof t === 'function', message: typeof t === 'function' ? 'Retorna função!' : 'Incorreto' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

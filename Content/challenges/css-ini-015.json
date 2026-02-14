@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-015",
+  "track": "css",
+  "title": "Background Image",
+  "description": "Use background conceitos.",
+  "starterCode": "<style>\n/* Use background */\n\n</style>\n\n<div class=\"hero\" style=\"height:200px\">Hero</div>",
+  "tags": [
+    "background",
+    "imagem"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".hero",
+        "property": "background",
+        "errorMessage": "Defina background.",
+        "successMessage": "Background ok!"
+      }
+    ]
+  }
+}

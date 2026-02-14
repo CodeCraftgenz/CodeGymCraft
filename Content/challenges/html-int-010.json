@@ -1,0 +1,36 @@
+{
+  "id": "html-int-010",
+  "track": "html",
+  "title": "Elemento Video",
+  "description": "Adicione um player de vídeo.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione elemento video -->\n    \n</body>\n</html>",
+  "tags": [
+    "mídia",
+    "video"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "video",
+        "errorMessage": "<video> não encontrado.",
+        "successMessage": "<video> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "video",
+        "attribute": "controls",
+        "errorMessage": "Controls não encontrado.",
+        "successMessage": "Controls ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "video source",
+        "errorMessage": "Source não encontrado.",
+        "successMessage": "Source ok!"
+      }
+    ]
+  }
+}

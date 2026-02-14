@@ -1,0 +1,42 @@
+{
+  "id": "html-adv-018",
+  "track": "html",
+  "title": "Dashboard Layout",
+  "description": "Layout de dashboard com sections.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie layout de dashboard -->\n    \n</body>\n</html>",
+  "tags": [
+    "layout",
+    "dashboard"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "header",
+        "errorMessage": "Header não encontrado.",
+        "successMessage": "Header ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "nav",
+        "errorMessage": "Nav não encontrado.",
+        "successMessage": "Nav ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "main",
+        "errorMessage": "Main não encontrado.",
+        "successMessage": "Main ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "section",
+        "min": 3,
+        "errorMessage": "3+ sections no main.",
+        "successMessage": "Sections ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "html-int-020",
+  "track": "html",
+  "title": "Blockquote",
+  "description": "Use blockquote com cite.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use blockquote e cite -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "citação"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "blockquote",
+        "errorMessage": "<blockquote> não encontrado.",
+        "successMessage": "<blockquote> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "cite",
+        "errorMessage": "<cite> não encontrado.",
+        "successMessage": "<cite> ok!"
+      }
+    ]
+  }
+}

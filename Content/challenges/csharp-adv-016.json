@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-016",
+  "track": "csharp",
+  "title": "IDisposable",
+  "description": "Implemente Dispose pattern.",
+  "starterCode": "public class Recurso : IDisposable\n{\n    public bool Aberto { get; private set; } = true;\n    public void Dispose() { Aberto = false; }\n}\n\npublic class Solution\n{\n    public static bool Teste()\n    {\n        Recurso r;\n        using (r = new Recurso()) { /* usa recurso */ }\n        return !r.Aberto;\n    }\n}",
+  "tags": [
+    "dispose",
+    "recurso"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Teste(); results.Add(new TestResult { Pass = p, Message = p ? \"Dispose ok!\" : \"Não fez dispose\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

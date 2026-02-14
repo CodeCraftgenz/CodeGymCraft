@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-026",
+  "track": "javascript",
+  "title": "Somar Strings",
+  "description": "Crie `somarStrings(a, b)` soma strings numéricas.",
+  "starterCode": "function somarStrings(a, b) {\n    // '5' + '3' = 8 (number, não string)\n}\n",
+  "tags": [
+    "parsing",
+    "Number"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = somarStrings('5', '3'); const exp = \"8\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '5+3=8!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = typeof somarStrings('1','2'); const exp = \"'number'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'É number!' : 'Deve ser number: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

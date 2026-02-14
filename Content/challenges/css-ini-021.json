@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-021",
+  "track": "css",
+  "title": "Seletor Descendente",
+  "description": "Use seletor descendente.",
+  "starterCode": "<style>\n/* Estilize .container p */\n\n</style>\n\n<div class=\"container\"><p>Filho</p></div><p>Fora</p>",
+  "tags": [
+    "seletor",
+    "descendente"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".container p",
+        "property": "color",
+        "errorMessage": "Defina color em .container p.",
+        "successMessage": "Descendente ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-011",
+  "track": "css",
+  "title": "Scroll Snap",
+  "description": "Use scroll snap.",
+  "starterCode": "<style>\n/* Use scroll-snap */\n\n</style>\n\n<div class=\"snap-container\" style=\"height:200px;overflow-y:scroll\"><div class=\"snap-item\" style=\"height:200px\">1</div><div class=\"snap-item\" style=\"height:200px\">2</div></div>",
+  "tags": [
+    "scroll",
+    "snap"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".snap-container",
+        "property": "scroll-snap-type",
+        "errorMessage": "Defina scroll-snap-type.",
+        "successMessage": "Snap ok!"
+      }
+    ]
+  }
+}

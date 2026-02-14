@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-005",
+  "track": "csharp",
+  "title": "Maior de Três",
+  "description": "Crie `Solution.Maior(int a, int b, int c)`.",
+  "starterCode": "public class Solution\n{\n    public static int Maior(int a, int b, int c)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "if/else",
+    "comparação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Maior(1, 5, 3); bool p = r == 5; results.Add(new TestResult { Pass = p, Message = p ? \"5 é maior!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Maior(9, 2, 7); bool p = r == 9; results.Add(new TestResult { Pass = p, Message = p ? \"9 é maior!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

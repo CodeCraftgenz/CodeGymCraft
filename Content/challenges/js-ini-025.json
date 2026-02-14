@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-025",
+  "track": "javascript",
+  "title": "Aleatório Entre",
+  "description": "Crie `aleatorioEntre(min, max)` retorna inteiro entre min e max.",
+  "starterCode": "function aleatorioEntre(min, max) {\n    // Retorne inteiro aleatório entre min e max (inclusive)\n}\n",
+  "tags": [
+    "Math",
+    "random"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = (function(){ const r = aleatorioEntre(1,10); return r >= 1 && r <= 10; })(); results.push({ pass: !!r, message: r ? 'Valor no range!' : 'Fora do range' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = Number.isInteger(aleatorioEntre(1,10)); results.push({ pass: !!r, message: r ? 'É inteiro!' : 'Deve ser inteiro' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "css-int-007",
+  "track": "css",
+  "title": "Grid Básico",
+  "description": "Use display grid.",
+  "starterCode": "<style>\n/* Use display grid */\n\n</style>\n\n<div class=\"grid\"><div>1</div><div>2</div><div>3</div><div>4</div></div>",
+  "tags": [
+    "grid",
+    "layout"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".grid",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "display deve ser grid.",
+        "successMessage": "Grid ok!"
+      }
+    ]
+  }
+}

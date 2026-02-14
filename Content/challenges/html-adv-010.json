@@ -1,0 +1,30 @@
+{
+  "id": "html-adv-010",
+  "track": "html",
+  "title": "Nav Acessível",
+  "description": "Navegação completa com ARIA.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie nav acessível -->\n    \n</body>\n</html>",
+  "tags": [
+    "acessibilidade",
+    "nav"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "nav[aria-label]",
+        "errorMessage": "Nav com aria-label não encontrado.",
+        "successMessage": "Nav ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "nav a",
+        "min": 4,
+        "errorMessage": "Adicione pelo menos 4 links.",
+        "successMessage": "Links ok!"
+      }
+    ]
+  }
+}

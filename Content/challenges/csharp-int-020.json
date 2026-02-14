@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-020",
+  "track": "csharp",
+  "title": "Tuple",
+  "description": "Use ValueTuple.",
+  "starterCode": "public class Solution\n{\n    public static (int min, int max) MinMax(List<int> nums)\n    {\n        return (0, 0);\n    }\n}",
+  "tags": [
+    "tuple",
+    "retorno"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.MinMax(new List<int>{3,1,4,1,5}); return r.min == 1 && r.max == 5; }; results.Add(new TestResult { Pass = p, Message = p ? \"Min=1, Max=5!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

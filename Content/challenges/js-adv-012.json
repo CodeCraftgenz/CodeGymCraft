@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-012",
+  "track": "javascript",
+  "title": "Observer Pattern",
+  "description": "Implemente EventEmitter.",
+  "starterCode": "class EventEmitter {\n    constructor() { this.events = {}; }\n    // on(event, handler), emit(event, ...args), off(event, handler)\n}\n",
+  "tags": [
+    "padrão",
+    "observer"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const em = new EventEmitter(); let val = 0; em.on('test', x => val = x); em.emit('test', 42); results.push({ pass: val===42, message: val===42 ? 'Observer ok!' : 'Incorreto: ' + val }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-017",
+  "track": "javascript",
+  "title": "Primeiros N Caracteres",
+  "description": "Crie `primeiros(str, n)` retorna os primeiros n chars.",
+  "starterCode": "function primeiros(str, n) {\n    // Retorne os primeiros n caracteres\n}\n",
+  "tags": [
+    "string",
+    "slice"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = primeiros('JavaScript', 4); const exp = \"'Java'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Java ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = primeiros('abc', 2); const exp = \"'ab'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'ab ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

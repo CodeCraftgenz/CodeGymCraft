@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-017",
+  "track": "css",
+  "title": "Cursor Pointer",
+  "description": "Mude o cursor.",
+  "starterCode": "<style>\n/* Use cursor pointer */\n\n</style>\n\n<div class=\"clicavel\">Clique aqui</div>",
+  "tags": [
+    "cursor",
+    "interação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".clicavel",
+        "property": "cursor",
+        "value": "pointer",
+        "errorMessage": "cursor deve ser pointer.",
+        "successMessage": "Cursor pointer!"
+      }
+    ]
+  }
+}

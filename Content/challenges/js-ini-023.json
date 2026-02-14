@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-023",
+  "track": "javascript",
+  "title": "Acessar Propriedade",
+  "description": "Crie `getNome(pessoa)` retorna nome.",
+  "starterCode": "function getNome(pessoa) {\n    // Retorne pessoa.nome\n}\n",
+  "tags": [
+    "objeto",
+    "acesso"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = getNome({nome:'Bob',idade:30}); const exp = \"'Bob'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Bob ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

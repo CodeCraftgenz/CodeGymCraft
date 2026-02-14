@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-015",
+  "track": "csharp",
+  "title": "IComparable",
+  "description": "Implemente IComparable.",
+  "starterCode": "public class Aluno : IComparable<Aluno>\n{\n    public string Nome { get; set; }\n    public double Nota { get; set; }\n    // CompareTo ordena por Nota decrescente\n}\n\npublic class Solution\n{\n    public static string Teste()\n    {\n        var lista = new List<Aluno> { new(){Nome=\"B\",Nota=7}, new(){Nome=\"A\",Nota=9} };\n        lista.Sort();\n        return lista[0].Nome;\n    }\n}",
+  "tags": [
+    "interface",
+    "comparação"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"A\"; results.Add(new TestResult { Pass = p, Message = p ? \"A primeiro (nota 9)!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "html-adv-017",
+  "track": "html",
+  "title": "FAQ Acessível",
+  "description": "FAQ com details/summary.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie FAQ com details -->\n    \n</body>\n</html>",
+  "tags": [
+    "FAQ",
+    "acessibilidade"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "details",
+        "min": 5,
+        "errorMessage": "Adicione 5+ perguntas.",
+        "successMessage": "5+ FAQs!"
+      },
+      {
+        "type": "element-count",
+        "selector": "summary",
+        "min": 5,
+        "errorMessage": "Adicione summaries.",
+        "successMessage": "Summaries ok!"
+      }
+    ]
+  }
+}

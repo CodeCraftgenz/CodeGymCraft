@@ -1,0 +1,24 @@
+{
+  "id": "css-int-017",
+  "track": "css",
+  "title": "Transform Translate",
+  "description": "Mova elemento.",
+  "starterCode": "<style>\n/* Use transform translate */\n\n</style>\n\n<div class=\"mover\">Mover</div>",
+  "tags": [
+    "transform",
+    "translate"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".mover",
+        "property": "transform",
+        "errorMessage": "Defina transform.",
+        "successMessage": "Transform ok!"
+      }
+    ]
+  }
+}

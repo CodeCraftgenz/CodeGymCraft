@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-012",
+  "track": "csharp",
+  "title": "Generics",
+  "description": "Crie classe genérica Caixa<T>.",
+  "starterCode": "public class Caixa<T>\n{\n    // Propriedade Conteudo de tipo T\n    // Método Abrir() retorna Conteudo\n}\n\npublic class Solution\n{\n    public static string Teste()\n    {\n        var c = new Caixa<string> { Conteudo = \"presente\" };\n        return c.Abrir();\n    }\n}",
+  "tags": [
+    "generics",
+    "tipo"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"presente\"; results.Add(new TestResult { Pass = p, Message = p ? \"Presente ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

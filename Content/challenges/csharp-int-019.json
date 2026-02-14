@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-019",
+  "track": "csharp",
+  "title": "Struct",
+  "description": "Crie struct Ponto.",
+  "starterCode": "public struct Ponto\n{\n    public double X { get; set; }\n    public double Y { get; set; }\n    // Método Distancia(Ponto outro)\n}\n\npublic class Solution\n{\n    public static double Teste()\n    {\n        var p1 = new Ponto { X = 0, Y = 0 };\n        var p2 = new Ponto { X = 3, Y = 4 };\n        return p1.Distancia(p2);\n    }\n}",
+  "tags": [
+    "struct",
+    "tipo valor"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.Teste() - 5.0) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"Distância=5!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

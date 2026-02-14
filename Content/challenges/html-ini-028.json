@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-028",
+  "track": "html",
+  "title": "Atributo Required",
+  "description": "Torne campos obrigatórios.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use atributo required -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "validação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "<form> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "input[required]",
+        "errorMessage": "Input required não encontrado.",
+        "successMessage": "Required ok!"
+      }
+    ]
+  }
+}

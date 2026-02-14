@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-011",
+  "track": "html",
+  "title": "Formulário com Input Text",
+  "description": "Crie um formulário com campo de nome.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie form com input text -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "input"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "<form> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "input[type='text']",
+        "errorMessage": "input type='text' não encontrado.",
+        "successMessage": "Input text ok!"
+      }
+    ]
+  }
+}

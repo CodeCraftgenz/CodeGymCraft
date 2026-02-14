@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-012",
+  "track": "csharp",
+  "title": "Indexer",
+  "description": "Crie classe com indexer.",
+  "starterCode": "public class Matriz\n{\n    private int[,] _data;\n    public Matriz(int rows, int cols) { _data = new int[rows, cols]; }\n    // Indexer this[int row, int col]\n}\n\npublic class Solution\n{\n    public static int Teste()\n    {\n        var m = new Matriz(2, 2);\n        m[0, 0] = 42;\n        return m[0, 0];\n    }\n}",
+  "tags": [
+    "indexer",
+    "acesso"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == 42; results.Add(new TestResult { Pass = p, Message = p ? \"42 ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

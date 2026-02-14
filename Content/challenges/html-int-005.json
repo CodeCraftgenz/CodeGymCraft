@@ -1,0 +1,35 @@
+{
+  "id": "html-int-005",
+  "track": "html",
+  "title": "Input Types Avançados",
+  "description": "Use email, number, date.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use diferentes input types -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "input types"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "input[type='email']",
+        "errorMessage": "input type='email' não encontrado.",
+        "successMessage": "Email ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "input[type='number']",
+        "errorMessage": "input type='number' não encontrado.",
+        "successMessage": "Number ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "input[type='date']",
+        "errorMessage": "input type='date' não encontrado.",
+        "successMessage": "Date ok!"
+      }
+    ]
+  }
+}

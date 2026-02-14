@@ -1,0 +1,23 @@
+{
+  "id": "html-int-027",
+  "track": "html",
+  "title": "Tabindex",
+  "description": "Controle a ordem de foco com tabindex.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use tabindex -->\n    \n</body>\n</html>",
+  "tags": [
+    "acessibilidade",
+    "tabindex"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "[tabindex]",
+        "errorMessage": "tabindex não encontrado.",
+        "successMessage": "Tabindex ok!"
+      }
+    ]
+  }
+}

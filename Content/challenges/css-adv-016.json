@@ -1,0 +1,38 @@
+{
+  "id": "css-adv-016",
+  "track": "css",
+  "title": "Card Hover Effect",
+  "description": "Card com hover elaborado.",
+  "starterCode": "<style>\n/* Crie hover effect completo */\n\n</style>\n\n<div class=\"hover-card\" style=\"padding:20px;border:1px solid #ccc\">Card interativo</div>",
+  "tags": [
+    "hover",
+    "card"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".hover-card",
+        "property": "transition",
+        "errorMessage": "Defina transition.",
+        "successMessage": "Transition ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".hover-card:hover",
+        "property": "transform",
+        "errorMessage": "Defina transform no hover.",
+        "successMessage": "Hover transform ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".hover-card:hover",
+        "property": "box-shadow",
+        "errorMessage": "Defina box-shadow no hover.",
+        "successMessage": "Hover shadow ok!"
+      }
+    ]
+  }
+}

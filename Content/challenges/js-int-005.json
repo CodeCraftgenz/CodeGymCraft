@@ -1,0 +1,16 @@
+{
+  "id": "js-int-005",
+  "track": "javascript",
+  "title": "Array Some/Every",
+  "description": "Crie `todosPares(arr)` e `algumPar(arr)`.",
+  "starterCode": "function todosPares(arr) {\n    // true se todos são pares\n}\nfunction algumPar(arr) {\n    // true se algum é par\n}\n",
+  "tags": [
+    "array",
+    "some/every"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = todosPares([2,4,6]); const exp = \"true\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Todos pares!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = algumPar([1,3,4]); const exp = \"true\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Algum par!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

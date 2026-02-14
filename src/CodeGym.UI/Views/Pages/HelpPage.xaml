@@ -1,0 +1,46 @@
+<Page x:Class="CodeGym.UI.Views.Pages.HelpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="Ajuda">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="24,16,24,0">
+            <TextBlock Text="Ajuda e Referências"
+                       FontSize="28" FontWeight="Bold" Margin="0,0,0,4" />
+            <TextBlock Text="Documentação offline completa para suas trilhas de estudo"
+                       FontSize="14" Opacity="0.6" Margin="0,0,0,16" />
+        </StackPanel>
+
+        <!-- Tabs de conteúdo -->
+        <TabControl Grid.Row="1" Margin="24,0,24,24" x:Name="HelpTabs">
+            <TabItem Header="Como Usar">
+                <WebBrowser x:Name="BrowserComoUsar" />
+            </TabItem>
+            <TabItem Header="HTML">
+                <WebBrowser x:Name="BrowserHtml" />
+            </TabItem>
+            <TabItem Header="CSS">
+                <WebBrowser x:Name="BrowserCss" />
+            </TabItem>
+            <TabItem Header="JavaScript">
+                <WebBrowser x:Name="BrowserJs" />
+            </TabItem>
+            <TabItem Header="C#">
+                <WebBrowser x:Name="BrowserCSharp" />
+            </TabItem>
+            <TabItem Header="Atalhos">
+                <WebBrowser x:Name="BrowserAtalhos" />
+            </TabItem>
+            <TabItem Header="Sobre">
+                <WebBrowser x:Name="BrowserSobre" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

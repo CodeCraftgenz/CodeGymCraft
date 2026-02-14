@@ -1,0 +1,41 @@
+{
+  "id": "html-adv-001",
+  "track": "html",
+  "title": "Blog Semântico",
+  "description": "Crie layout completo de blog.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie um layout de blog completo -->\n    \n</body>\n</html>",
+  "tags": [
+    "layout",
+    "semântica"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "header nav",
+        "errorMessage": "Nav no header não encontrado.",
+        "successMessage": "Nav ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "main article",
+        "errorMessage": "Article no main não encontrado.",
+        "successMessage": "Article ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "aside",
+        "errorMessage": "Aside não encontrado.",
+        "successMessage": "Aside ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "footer",
+        "errorMessage": "Footer não encontrado.",
+        "successMessage": "Footer ok!"
+      }
+    ]
+  }
+}

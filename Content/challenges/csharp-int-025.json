@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-025",
+  "track": "csharp",
+  "title": "Params",
+  "description": "Use params keyword.",
+  "starterCode": "public class Solution\n{\n    public static int Somar(params int[] nums)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "params",
+    "variádico"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Somar(1, 2, 3); bool p = r == 6; results.Add(new TestResult { Pass = p, Message = p ? \"1+2+3=6!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Somar(10); bool p = r == 10; results.Add(new TestResult { Pass = p, Message = p ? \"10 ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "html-int-012",
+  "track": "html",
+  "title": "Tabela com Colspan",
+  "description": "Use colspan para mesclar colunas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use colspan na tabela -->\n    \n</body>\n</html>",
+  "tags": [
+    "tabela",
+    "colspan"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "table",
+        "errorMessage": "<table> não encontrado.",
+        "successMessage": "<table> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[colspan]",
+        "errorMessage": "Atributo colspan não encontrado.",
+        "successMessage": "Colspan ok!"
+      }
+    ]
+  }
+}

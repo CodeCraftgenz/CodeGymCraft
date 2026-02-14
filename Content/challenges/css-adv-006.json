@@ -1,0 +1,32 @@
+{
+  "id": "css-adv-006",
+  "track": "css",
+  "title": "Layout Flexbox",
+  "description": "Layout responsivo com flex.",
+  "starterCode": "<style>\n/* Layout com flexbox */\n\n</style>\n\n<div class=\"flex-layout\"><nav class=\"fl-nav\">Nav</nav><main class=\"fl-main\">Main</main><aside class=\"fl-side\">Side</aside></div>",
+  "tags": [
+    "flexbox",
+    "responsivo"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".flex-layout",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "Precisa flex.",
+        "successMessage": "Flex!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".fl-main",
+        "property": "flex-grow",
+        "errorMessage": "Main deve crescer.",
+        "successMessage": "Grow ok!"
+      }
+    ]
+  }
+}

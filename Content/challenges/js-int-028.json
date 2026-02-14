@@ -1,0 +1,16 @@
+{
+  "id": "js-int-028",
+  "track": "javascript",
+  "title": "Optional Chaining",
+  "description": "Crie `getCidade(pessoa)` com ?.",
+  "starterCode": "function getCidade(pessoa) {\n    // Use ?. para acessar pessoa.endereco.cidade\n    // Retorne undefined se não existir\n}\n",
+  "tags": [
+    "optional",
+    "chaining"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = getCidade({endereco:{cidade:'SP'}}); const exp = \"'SP'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'SP ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = getCidade({}); const exp = \"undefined\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Undefined ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "css-int-002",
+  "track": "css",
+  "title": "Flex Direction",
+  "description": "Mude direção do flex.",
+  "starterCode": "<style>\n/* Use flex-direction column */\n\n</style>\n\n<div class=\"col\"><div>A</div><div>B</div></div>",
+  "tags": [
+    "flexbox",
+    "direction"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".col",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "display flex necessário.",
+        "successMessage": "Flex ok!"
+      },
+      {
+        "type": "css-property",
+        "selector": ".col",
+        "property": "flex-direction",
+        "value": "column",
+        "errorMessage": "flex-direction deve ser column.",
+        "successMessage": "Column ok!"
+      }
+    ]
+  }
+}

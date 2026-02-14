@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-026",
+  "track": "csharp",
+  "title": "Named Parameters",
+  "description": "Use parâmetros nomeados e opcionais.",
+  "starterCode": "public class Solution\n{\n    public static string FormatarNome(string primeiro, string ultimo, string titulo = \"\")\n    {\n        // Se titulo vazio: \"primeiro ultimo\", senão \"titulo primeiro ultimo\"\n        return \"\";\n    }\n}",
+  "tags": [
+    "parâmetros",
+    "named"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.FormatarNome(\"Ana\", \"Silva\"); bool p = r == \"Ana Silva\"; results.Add(new TestResult { Pass = p, Message = p ? \"Sem título ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.FormatarNome(\"Ana\", \"Silva\", titulo: \"Dra.\"); bool p = r == \"Dra. Ana Silva\"; results.Add(new TestResult { Pass = p, Message = p ? \"Com título ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-013",
+  "track": "csharp",
+  "title": "Operator Overloading",
+  "description": "Sobrecarregue operador +.",
+  "starterCode": "public class Vetor\n{\n    public double X { get; set; }\n    public double Y { get; set; }\n    // Sobrecarregue operator +(Vetor a, Vetor b)\n}\n\npublic class Solution\n{\n    public static double Teste()\n    {\n        var v = new Vetor{X=1,Y=2} + new Vetor{X=3,Y=4};\n        return v.X + v.Y;\n    }\n}",
+  "tags": [
+    "operador",
+    "sobrecarga"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.Teste() - 10.0) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"(1+3)+(2+4)=10!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

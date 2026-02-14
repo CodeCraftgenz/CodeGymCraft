@@ -1,0 +1,37 @@
+{
+  "id": "html-int-011",
+  "track": "html",
+  "title": "Iframe",
+  "description": "Incorpore conteúdo externo com iframe.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione iframe -->\n    \n</body>\n</html>",
+  "tags": [
+    "incorporação",
+    "iframe"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "iframe",
+        "errorMessage": "<iframe> não encontrado.",
+        "successMessage": "<iframe> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "iframe",
+        "attribute": "src",
+        "errorMessage": "src não encontrado.",
+        "successMessage": "Src ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "iframe",
+        "attribute": "title",
+        "errorMessage": "title para acessibilidade não encontrado.",
+        "successMessage": "Title ok!"
+      }
+    ]
+  }
+}

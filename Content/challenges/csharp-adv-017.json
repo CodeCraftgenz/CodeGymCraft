@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-017",
+  "track": "csharp",
+  "title": "Generic Method",
+  "description": "Método genérico com constraint.",
+  "starterCode": "public class Solution\n{\n    public static T MaiorDe<T>(T a, T b) where T : IComparable<T>\n    {\n        // Retorne o maior\n        return default!;\n    }\n}",
+  "tags": [
+    "generics",
+    "método"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.MaiorDe(3, 7); bool p = r == 7; results.Add(new TestResult { Pass = p, Message = p ? \"7>3!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.MaiorDe(\"a\", \"z\"); bool p = r == \"z\"; results.Add(new TestResult { Pass = p, Message = p ? \"z>a!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-int-006",
+  "track": "javascript",
+  "title": "Array Sort",
+  "description": "Crie `ordenar(arr)` ordena números crescente.",
+  "starterCode": "function ordenar(arr) {\n    // Ordene numericamente (crescente)\n}\n",
+  "tags": [
+    "array",
+    "sort"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = ordenar([3,1,4,1,5]); const exp = \"[1,1,3,4,5]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Ordenado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

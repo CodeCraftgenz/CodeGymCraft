@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-024",
+  "track": "csharp",
+  "title": "Enum",
+  "description": "Crie enum `Cor` com Vermelho, Verde, Azul e método para string.",
+  "starterCode": "public enum Cor { Vermelho, Verde, Azul }\n\npublic class Solution\n{\n    public static string CorParaHex(Cor c)\n    {\n        // Vermelho=#FF0000, Verde=#00FF00, Azul=#0000FF\n        return \"\";\n    }\n}",
+  "tags": [
+    "enum",
+    "tipo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.CorParaHex(Cor.Vermelho); bool p = r == \"#FF0000\"; results.Add(new TestResult { Pass = p, Message = p ? \"Vermelho ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.CorParaHex(Cor.Azul); bool p = r == \"#0000FF\"; results.Add(new TestResult { Pass = p, Message = p ? \"Azul ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

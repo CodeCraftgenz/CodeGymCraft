@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-005",
+  "track": "css",
+  "title": "Peso da Fonte",
+  "description": "Use font-weight.",
+  "starterCode": "<style>\n/* Use font-weight */\n\n</style>\n\n<p class=\"negrito\">Texto forte</p>",
+  "tags": [
+    "fonte",
+    "peso"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".negrito",
+        "property": "font-weight",
+        "errorMessage": "Defina font-weight.",
+        "successMessage": "Font-weight ok!"
+      }
+    ]
+  }
+}

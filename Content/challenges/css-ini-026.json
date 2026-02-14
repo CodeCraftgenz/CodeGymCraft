@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-026",
+  "track": "css",
+  "title": "Text Transform",
+  "description": "Use uppercase.",
+  "starterCode": "<style>\n/* Use text-transform */\n\n</style>\n\n<h3 class=\"upper\">maiúsculo</h3>",
+  "tags": [
+    "texto",
+    "transform"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".upper",
+        "property": "text-transform",
+        "value": "uppercase",
+        "errorMessage": "text-transform deve ser uppercase.",
+        "successMessage": "Uppercase!"
+      }
+    ]
+  }
+}

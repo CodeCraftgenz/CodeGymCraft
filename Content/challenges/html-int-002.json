@@ -1,0 +1,29 @@
+{
+  "id": "html-int-002",
+  "track": "html",
+  "title": "Article e Section",
+  "description": "Use article e section corretamente.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use article e section -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "article"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "article",
+        "errorMessage": "<article> não encontrado.",
+        "successMessage": "<article> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "section",
+        "errorMessage": "<section> não encontrado.",
+        "successMessage": "<section> ok!"
+      }
+    ]
+  }
+}

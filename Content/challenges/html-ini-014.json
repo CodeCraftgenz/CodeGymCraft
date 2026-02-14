@@ -1,0 +1,31 @@
+{
+  "id": "html-ini-014",
+  "track": "html",
+  "title": "Radio Buttons",
+  "description": "Crie 3 radio buttons com mesmo name.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie radio buttons -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "radio"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "input[type='radio']",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 radio buttons.",
+        "successMessage": "3+ radios!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "input[type='radio']",
+        "attribute": "name",
+        "errorMessage": "Atributo name não encontrado.",
+        "successMessage": "name presente!"
+      }
+    ]
+  }
+}

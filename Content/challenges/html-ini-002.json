@@ -1,0 +1,35 @@
+{
+  "id": "html-ini-002",
+  "track": "html",
+  "title": "Headings H1 a H3",
+  "description": "Crie títulos usando h1, h2 e h3.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione headings h1, h2 e h3 -->\n    \n</body>\n</html>",
+  "tags": [
+    "headings",
+    "títulos"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "h1",
+        "errorMessage": "<h1> não encontrado.",
+        "successMessage": "<h1> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "h2",
+        "errorMessage": "<h2> não encontrado.",
+        "successMessage": "<h2> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "h3",
+        "errorMessage": "<h3> não encontrado.",
+        "successMessage": "<h3> ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "html-adv-006",
+  "track": "html",
+  "title": "Microdata Schema",
+  "description": "Use microdata schema.org.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use itemscope e itemprop -->\n    \n</body>\n</html>",
+  "tags": [
+    "SEO",
+    "microdata"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "[itemscope]",
+        "errorMessage": "itemscope não encontrado.",
+        "successMessage": "Itemscope ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[itemprop]",
+        "errorMessage": "itemprop não encontrado.",
+        "successMessage": "Itemprop ok!"
+      }
+    ]
+  }
+}

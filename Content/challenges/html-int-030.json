@@ -1,0 +1,29 @@
+{
+  "id": "html-int-030",
+  "track": "html",
+  "title": "Dialog Element",
+  "description": "Crie um modal com dialog.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento dialog -->\n    \n</body>\n</html>",
+  "tags": [
+    "interativo",
+    "dialog"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "dialog",
+        "errorMessage": "<dialog> não encontrado.",
+        "successMessage": "<dialog> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "button",
+        "errorMessage": "Botão para abrir dialog não encontrado.",
+        "successMessage": "Botão ok!"
+      }
+    ]
+  }
+}

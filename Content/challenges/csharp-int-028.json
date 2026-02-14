@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-028",
+  "track": "csharp",
+  "title": "Abstract Class",
+  "description": "Crie classe abstrata.",
+  "starterCode": "public abstract class Veiculo\n{\n    public string Modelo { get; set; }\n    public abstract int Rodas();\n}\n\npublic class Carro : Veiculo\n{\n    // Rodas() retorna 4\n}\n\npublic class Moto : Veiculo\n{\n    // Rodas() retorna 2\n}\n\npublic class Solution\n{\n    public static int Teste() => new Carro { Modelo = \"Civic\" }.Rodas() + new Moto { Modelo = \"CB\" }.Rodas();\n}",
+  "tags": [
+    "abstract",
+    "OOP"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == 6; results.Add(new TestResult { Pass = p, Message = p ? \"4+2=6!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

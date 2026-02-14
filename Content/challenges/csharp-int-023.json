@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-023",
+  "track": "csharp",
+  "title": "Property Validation",
+  "description": "Propriedade com validação.",
+  "starterCode": "public class Produto\n{\n    private double _preco;\n    public double Preco\n    {\n        get => _preco;\n        set\n        {\n            // Lance ArgumentException se value < 0\n            _preco = value;\n        }\n    }\n}\n\npublic class Solution\n{\n    public static bool Teste()\n    {\n        try { new Produto { Preco = -1 }; return false; }\n        catch (ArgumentException) { return true; }\n    }\n}",
+  "tags": [
+    "propriedade",
+    "validação"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Teste(); results.Add(new TestResult { Pass = p, Message = p ? \"Validação ok!\" : \"Não validou\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-027",
+  "track": "csharp",
+  "title": "For Loop",
+  "description": "Crie `Solution.Tabuada(int n)` retorna array com tabuada.",
+  "starterCode": "public class Solution\n{\n    public static int[] Tabuada(int n)\n    {\n        // Retorne [n*1, n*2, ..., n*10]\n        return new int[0];\n    }\n}",
+  "tags": [
+    "loop",
+    "array"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Tabuada(3).SequenceEqual(new[]{3,6,9,12,15,18,21,24,27,30}); results.Add(new TestResult { Pass = p, Message = p ? \"Tabuada do 3 ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

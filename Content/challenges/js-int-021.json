@@ -1,0 +1,16 @@
+{
+  "id": "js-int-021",
+  "track": "javascript",
+  "title": "Herança",
+  "description": "Crie `Cachorro extends Animal` com latir().",
+  "starterCode": "class Animal {\n    constructor(nome) { this.nome = nome; }\n    falar() { return `O ${this.nome} faz som`; }\n}\n\nclass Cachorro extends Animal {\n    // latir() retorna '{nome} diz: Au au!'\n}\n",
+  "tags": [
+    "herança",
+    "extends"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const d = new Cachorro('Rex'); results.push({ pass: d.latir() === 'Rex diz: Au au!', message: d.latir() === 'Rex diz: Au au!' ? 'Latir ok!' : 'Incorreto: ' + d.latir() }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const d = new Cachorro('Rex'); results.push({ pass: d.falar() === 'O Rex faz som', message: d.falar() === 'O Rex faz som' ? 'Herança ok!' : 'Falar herdado incorreto' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

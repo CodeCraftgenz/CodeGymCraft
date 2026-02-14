@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-004",
+  "track": "csharp",
+  "title": "Valor Absoluto",
+  "description": "Crie `Solution.Absoluto(int n)` sem Math.Abs.",
+  "starterCode": "public class Solution\n{\n    public static int Absoluto(int n)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "condição",
+    "math"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Absoluto(-5); bool p = r == 5; results.Add(new TestResult { Pass = p, Message = p ? \"-5→5!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Absoluto(3); bool p = r == 3; results.Add(new TestResult { Pass = p, Message = p ? \"3→3!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

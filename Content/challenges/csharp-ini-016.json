@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-016",
+  "track": "csharp",
+  "title": "Contar Pares",
+  "description": "Crie `Solution.ContarPares(int[] arr)`.",
+  "starterCode": "public class Solution\n{\n    public static int ContarPares(int[] arr)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "array",
+    "contagem"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.ContarPares(new[]{1,2,3,4,5,6}); bool p = r == 3; results.Add(new TestResult { Pass = p, Message = p ? \"3 pares!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

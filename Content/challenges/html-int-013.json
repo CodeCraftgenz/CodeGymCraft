@@ -1,0 +1,29 @@
+{
+  "id": "html-int-013",
+  "track": "html",
+  "title": "Tabela com Rowspan",
+  "description": "Use rowspan para mesclar linhas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use rowspan na tabela -->\n    \n</body>\n</html>",
+  "tags": [
+    "tabela",
+    "rowspan"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "table",
+        "errorMessage": "<table> não encontrado.",
+        "successMessage": "<table> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[rowspan]",
+        "errorMessage": "Atributo rowspan não encontrado.",
+        "successMessage": "Rowspan ok!"
+      }
+    ]
+  }
+}

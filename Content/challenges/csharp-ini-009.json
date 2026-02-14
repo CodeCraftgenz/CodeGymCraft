@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-009",
+  "track": "csharp",
+  "title": "Contar Vogais",
+  "description": "Crie `Solution.ContarVogais(string s)`.",
+  "starterCode": "public class Solution\n{\n    public static int ContarVogais(string s)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "string",
+    "loop"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.ContarVogais(\"hello\"); bool p = r == 2; results.Add(new TestResult { Pass = p, Message = p ? \"hello=2!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.ContarVogais(\"aeiou\"); bool p = r == 5; results.Add(new TestResult { Pass = p, Message = p ? \"aeiou=5!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

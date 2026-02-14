@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-018",
+  "track": "javascript",
+  "title": "Compose",
+  "description": "Implemente compose(f, g, ...).",
+  "starterCode": "function compose(...fns) {\n    // compose(f, g)(x) = f(g(x))\n}\n",
+  "tags": [
+    "funcional",
+    "compose"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = compose(x => x+1, x => x*2)(3); results.push({ pass: r===7, message: r===7 ? 'compose ok! (3*2)+1=7' : 'Incorreto: ' + r }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

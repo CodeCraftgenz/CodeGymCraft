@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-015",
+  "track": "css",
+  "title": "Custom Scrollbar",
+  "description": "Estilize scrollbar.",
+  "starterCode": "<style>\n/* Estilize ::-webkit-scrollbar */\n\n</style>\n\n<div class=\"custom-scroll\" style=\"height:100px;overflow-y:scroll\"><p style=\"height:300px\">Scroll</p></div>",
+  "tags": [
+    "scrollbar",
+    "visual"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".custom-scroll::-webkit-scrollbar",
+        "property": "width",
+        "errorMessage": "Defina width em ::-webkit-scrollbar.",
+        "successMessage": "Scrollbar ok!"
+      }
+    ]
+  }
+}

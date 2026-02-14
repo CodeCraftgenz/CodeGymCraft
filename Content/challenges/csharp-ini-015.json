@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-015",
+  "track": "csharp",
+  "title": "Média",
+  "description": "Crie `Solution.Media(int[] arr)`.",
+  "starterCode": "public class Solution\n{\n    public static double Media(int[] arr)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "array",
+    "cálculo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.Media(new[]{1,2,3,4,5}) - 3.0) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"Média=3!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "css-int-003",
+  "track": "css",
+  "title": "Justify Content",
+  "description": "Centralize com justify-content.",
+  "starterCode": "<style>\n/* Use justify-content center */\n\n</style>\n\n<div class=\"center-flex\"><div>Item</div></div>",
+  "tags": [
+    "flexbox",
+    "justify"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".center-flex",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "Precisa display flex.",
+        "successMessage": "Flex ok!"
+      },
+      {
+        "type": "css-property",
+        "selector": ".center-flex",
+        "property": "justify-content",
+        "value": "center",
+        "errorMessage": "justify-content deve ser center.",
+        "successMessage": "Centralizado!"
+      }
+    ]
+  }
+}

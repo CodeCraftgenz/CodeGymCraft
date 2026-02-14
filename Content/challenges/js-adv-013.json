@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-013",
+  "track": "javascript",
+  "title": "Iterator",
+  "description": "Crie objeto iterável.",
+  "starterCode": "function range(start, end) {\n    // Retorne objeto iterável de start a end\n    return {\n        [Symbol.iterator]() {\n            // TODO\n        }\n    };\n}\n",
+  "tags": [
+    "iterator",
+    "protocol"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = [...range(1,4)]; results.push({ pass: JSON.stringify(r)==='[1,2,3,4]', message: JSON.stringify(r)==='[1,2,3,4]' ? 'Iterável!' : 'Incorreto: ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

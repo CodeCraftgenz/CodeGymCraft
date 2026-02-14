@@ -1,0 +1,25 @@
+{
+  "id": "css-int-012",
+  "track": "css",
+  "title": "Position Relative",
+  "description": "Use position relative.",
+  "starterCode": "<style>\n/* Use position relative */\n\n</style>\n\n<div class=\"relative\"><span class=\"badge\">!</span>Conteúdo</div>",
+  "tags": [
+    "position",
+    "layout"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".relative",
+        "property": "position",
+        "value": "relative",
+        "errorMessage": "position deve ser relative.",
+        "successMessage": "Relative ok!"
+      }
+    ]
+  }
+}

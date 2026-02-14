@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-030",
+  "track": "css",
+  "title": "Unidades CSS",
+  "description": "Use rem para font-size.",
+  "starterCode": "<style>\n/* Use rem */\n\n</style>\n\n<p class=\"rem-text\">Texto em rem</p>",
+  "tags": [
+    "unidades",
+    "rem"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".rem-text",
+        "property": "font-size",
+        "errorMessage": "Defina font-size com rem.",
+        "successMessage": "Rem ok!"
+      }
+    ]
+  }
+}

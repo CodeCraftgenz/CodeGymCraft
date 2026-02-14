@@ -1,0 +1,31 @@
+{
+  "id": "css-ini-024",
+  "track": "css",
+  "title": "Estilizar Links",
+  "description": "Estilize estados de links.",
+  "starterCode": "<style>\n/* Estilize link e hover */\n\n</style>\n\n<a class=\"nav-link\" href=\"#\">Link</a>",
+  "tags": [
+    "links",
+    "estados"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".nav-link",
+        "property": "color",
+        "errorMessage": "Defina color em .nav-link.",
+        "successMessage": "Link color ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".nav-link:hover",
+        "property": "color",
+        "errorMessage": "Defina color em .nav-link:hover.",
+        "successMessage": "Hover ok!"
+      }
+    ]
+  }
+}

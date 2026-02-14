@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-014",
+  "track": "csharp",
+  "title": "HashSet",
+  "description": "Use HashSet para únicos.",
+  "starterCode": "public class Solution\n{\n    public static List<int> Unicos(List<int> nums)\n    {\n        // Use HashSet para remover duplicatas, mantenha ordem\n        return new List<int>();\n    }\n}",
+  "tags": [
+    "HashSet",
+    "coleção"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Unicos(new List<int>{1,2,2,3,3}).SequenceEqual(new[]{1,2,3}); results.Add(new TestResult { Pass = p, Message = p ? \"Únicos!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

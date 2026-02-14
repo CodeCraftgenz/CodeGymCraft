@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-004",
+  "track": "csharp",
+  "title": "LINQ Aggregate",
+  "description": "Use Sum e Average.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static (int soma, double media) Calcular(List<int> nums)\n    {\n        return (0, 0);\n    }\n}",
+  "tags": [
+    "LINQ",
+    "agregação"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.Calcular(new List<int>{1,2,3,4,5}); return r.soma == 15 && Math.Abs(r.media - 3.0) < 0.01; }; results.Add(new TestResult { Pass = p, Message = p ? \"Soma=15, Média=3!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

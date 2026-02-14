@@ -1,0 +1,25 @@
+{
+  "id": "css-ini-013",
+  "track": "css",
+  "title": "Display Block vs Inline",
+  "description": "Mude display.",
+  "starterCode": "<style>\n/* Mude para display block */\n\n</style>\n\n<span class=\"bloco\">Span como bloco</span>",
+  "tags": [
+    "display",
+    "layout"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".bloco",
+        "property": "display",
+        "value": "block",
+        "errorMessage": "display deve ser block.",
+        "successMessage": "Display block!"
+      }
+    ]
+  }
+}

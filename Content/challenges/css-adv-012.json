@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-012",
+  "track": "css",
+  "title": "Aspect Ratio",
+  "description": "Use aspect-ratio.",
+  "starterCode": "<style>\n/* Use aspect-ratio */\n\n</style>\n\n<div class=\"ratio-box\" style=\"width:200px;background:teal\">16:9</div>",
+  "tags": [
+    "aspect-ratio",
+    "dimensão"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".ratio-box",
+        "property": "aspect-ratio",
+        "errorMessage": "Defina aspect-ratio.",
+        "successMessage": "Ratio ok!"
+      }
+    ]
+  }
+}

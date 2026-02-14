@@ -1,0 +1,16 @@
+{
+  "id": "js-int-011",
+  "track": "javascript",
+  "title": "Spread Objeto",
+  "description": "Crie `mesclar(a, b)` mescla objetos.",
+  "starterCode": "function mesclar(a, b) {\n    // Use spread para mesclar\n}\n",
+  "tags": [
+    "spread",
+    "objeto"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = mesclar({x:1},{y:2}).y; const exp = \"2\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'y=2 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

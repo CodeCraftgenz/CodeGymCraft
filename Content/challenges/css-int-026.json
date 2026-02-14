@@ -1,0 +1,24 @@
+{
+  "id": "css-int-026",
+  "track": "css",
+  "title": "Calc Function",
+  "description": "Use calc().",
+  "starterCode": "<style>\n/* Use calc() para width */\n\n</style>\n\n<div class=\"calc-width\">Calculado</div>",
+  "tags": [
+    "calc",
+    "funções"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".calc-width",
+        "property": "width",
+        "errorMessage": "Defina width com calc().",
+        "successMessage": "Calc ok!"
+      }
+    ]
+  }
+}

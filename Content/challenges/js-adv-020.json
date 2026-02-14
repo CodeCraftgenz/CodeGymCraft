@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-020",
+  "track": "javascript",
+  "title": "Imutabilidade",
+  "description": "Crie `atualizarProp(obj, key, val)` sem mutar original.",
+  "starterCode": "function atualizarProp(obj, key, val) {\n    // Retorne novo objeto sem mutar original\n}\n",
+  "tags": [
+    "imutável",
+    "spread"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const o = {a:1,b:2}; const n = atualizarProp(o, 'a', 10); results.push({ pass: n.a===10 && o.a===1, message: n.a===10 && o.a===1 ? 'Imutável!' : 'Original mutado!' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

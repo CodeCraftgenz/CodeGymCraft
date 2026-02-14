@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-029",
+  "track": "css",
+  "title": "Max Width",
+  "description": "Use max-width.",
+  "starterCode": "<style>\n/* Use max-width */\n\n</style>\n\n<div class=\"content\">Conteúdo limitado</div>",
+  "tags": [
+    "dimensão",
+    "responsivo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".content",
+        "property": "max-width",
+        "errorMessage": "Defina max-width.",
+        "successMessage": "Max-width ok!"
+      }
+    ]
+  }
+}

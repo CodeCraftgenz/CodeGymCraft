@@ -1,0 +1,16 @@
+{
+  "id": "js-int-024",
+  "track": "javascript",
+  "title": "Regex Test",
+  "description": "Crie `isEmail(str)` com regex.",
+  "starterCode": "function isEmail(str) {\n    // Retorne true se parece email válido\n}\n",
+  "tags": [
+    "regex",
+    "validação"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = isEmail('a@b.com'); const exp = \"true\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Email válido!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = isEmail('abc'); const exp = \"false\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Não é email!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-019",
+  "track": "javascript",
+  "title": "Saudação",
+  "description": "Crie `saudacao(nome)` com template literal.",
+  "starterCode": "function saudacao(nome) {\n    // Retorne 'Olá, {nome}!' usando template literal\n}\n",
+  "tags": [
+    "string",
+    "template literal"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = saudacao('Maria'); const exp = \"'Ol\\u00e1, Maria!'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Maria ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = saudacao('João'); const exp = \"'Ol\\u00e1, Jo\\u00e3o!'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'João ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

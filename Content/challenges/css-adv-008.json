@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-008",
+  "track": "css",
+  "title": "Clip-path",
+  "description": "Use clip-path.",
+  "starterCode": "<style>\n/* Use clip-path */\n\n</style>\n\n<div class=\"clipped\" style=\"width:200px;height:200px;background:purple\">Cortado</div>",
+  "tags": [
+    "clip-path",
+    "visual"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".clipped",
+        "property": "clip-path",
+        "errorMessage": "Defina clip-path.",
+        "successMessage": "Clip-path ok!"
+      }
+    ]
+  }
+}

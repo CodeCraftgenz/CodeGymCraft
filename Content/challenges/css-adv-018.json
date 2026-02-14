@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-018",
+  "track": "css",
+  "title": "Tooltip CSS",
+  "description": "Tooltip com pseudo-elements.",
+  "starterCode": "<style>\n/* Crie tooltip com ::after */\n\n</style>\n\n<span class=\"tooltip\" data-tip=\"Dica aqui!\">Passe o mouse</span>",
+  "tags": [
+    "tooltip",
+    "pseudo-element"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".tooltip:hover::after",
+        "property": "content",
+        "errorMessage": "Defina content em tooltip hover ::after.",
+        "successMessage": "Tooltip ok!"
+      }
+    ]
+  }
+}

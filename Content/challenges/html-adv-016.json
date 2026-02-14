@@ -1,0 +1,36 @@
+{
+  "id": "html-adv-016",
+  "track": "html",
+  "title": "Portfolio Layout",
+  "description": "Layout semântico de portfolio.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie layout de portfolio -->\n    \n</body>\n</html>",
+  "tags": [
+    "layout",
+    "portfolio"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "header",
+        "errorMessage": "Header não encontrado.",
+        "successMessage": "Header ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "section",
+        "min": 3,
+        "errorMessage": "Adicione 3+ sections.",
+        "successMessage": "Sections ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "footer",
+        "errorMessage": "Footer não encontrado.",
+        "successMessage": "Footer ok!"
+      }
+    ]
+  }
+}

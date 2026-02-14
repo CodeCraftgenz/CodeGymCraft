@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-001",
+  "track": "csharp",
+  "title": "Delegate",
+  "description": "Crie e use delegates.",
+  "starterCode": "public delegate int Operacao(int a, int b);\n\npublic class Solution\n{\n    public static int Executar(Operacao op, int a, int b) => op(a, b);\n    public static int Soma(int a, int b) => a + b;\n    public static int Teste() => Executar(Soma, 3, 4);\n}",
+  "tags": [
+    "delegate",
+    "função"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == 7; results.Add(new TestResult { Pass = p, Message = p ? \"3+4=7!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

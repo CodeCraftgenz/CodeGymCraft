@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-028",
+  "track": "javascript",
+  "title": "Tipo Igual",
+  "description": "Crie `tipoIgual(a, b)` verifica se mesmo tipo.",
+  "starterCode": "function tipoIgual(a, b) {\n    // Retorne true se a e b são do mesmo tipo\n}\n",
+  "tags": [
+    "typeof",
+    "comparação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = tipoIgual(1, 2); const exp = \"true\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Ambos number!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = tipoIgual(1, '1'); const exp = \"false\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Tipos diferentes!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

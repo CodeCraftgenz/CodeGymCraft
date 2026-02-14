@@ -1,0 +1,13 @@
+{
+  "id": "csharp-int-030",
+  "track": "csharp",
+  "title": "Pattern Matching com is",
+  "description": "Crie um m\u00e9todo `DescreverObjeto` que recebe um `object` e retorna uma string descrevendo o tipo e valor usando pattern matching com `is`.\n\nRequisitos:\n1. Se for `int`, retorne \"Inteiro: {valor}\"\n2. Se for `string`, retorne \"Texto: {valor}\"\n3. Se for `double`, retorne \"Decimal: {valor}\"\n4. Se for `bool`, retorne \"Booleano: {valor}\" (True ou False)\n5. Para qualquer outro tipo, retorne \"Desconhecido\"",
+  "difficulty": "intermediario",
+  "tags": ["pattern-matching", "is", "tipos", "casting"],
+  "starterCode": "using System;\n\npublic class Desafio\n{\n    // Implemente o m\u00e9todo DescreverObjeto usando pattern matching\n    public static string DescreverObjeto(object obj)\n    {\n        // Use if (obj is tipo variavel) para cada caso\n        return \"\";\n    }\n}",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "bool ok = true;\nok = ok && Desafio.DescreverObjeto(42) == \"Inteiro: 42\";\nok = ok && Desafio.DescreverObjeto(\"hello\") == \"Texto: hello\";\nok = ok && Desafio.DescreverObjeto(3.14) == \"Decimal: 3.14\";\nok = ok && Desafio.DescreverObjeto(true) == \"Booleano: True\";\nok = ok && Desafio.DescreverObjeto(new int[]{1}) == \"Desconhecido\";\nif (!ok) throw new Exception(\"Falhou\");"
+  }
+}

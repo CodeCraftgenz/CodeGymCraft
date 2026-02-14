@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-011",
+  "track": "javascript",
+  "title": "Dobro",
+  "description": "Crie `dobro(n)` que retorna n*2.",
+  "starterCode": "function dobro(n) {\n    // Retorne n * 2\n}\n",
+  "tags": [
+    "função",
+    "retorno"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = dobro(5); const exp = \"10\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'dobro(5)=10!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = dobro(0); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'dobro(0)=0!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

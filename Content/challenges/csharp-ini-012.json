@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-012",
+  "track": "csharp",
+  "title": "Converter Temperatura",
+  "description": "Crie `Solution.CelsiusParaFahrenheit(double c)`.",
+  "starterCode": "public class Solution\n{\n    public static double CelsiusParaFahrenheit(double c)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "conversão",
+    "cálculo"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.CelsiusParaFahrenheit(0) - 32) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"0°C=32°F!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { bool p = Math.Abs(Solution.CelsiusParaFahrenheit(100) - 212) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"100°C=212°F!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

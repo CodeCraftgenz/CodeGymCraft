@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-029",
+  "track": "csharp",
+  "title": "Generic Constraints",
+  "description": "Generics com where.",
+  "starterCode": "public interface INomeavel { string Nome { get; } }\n\npublic class Solution\n{\n    public static string PegarNome<T>(T item) where T : INomeavel\n    {\n        return item.Nome;\n    }\n}\n\npublic class Aluno : INomeavel { public string Nome { get; set; } }",
+  "tags": [
+    "generics",
+    "constraint"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.PegarNome(new Aluno { Nome = \"Carlos\" }); bool p = r == \"Carlos\"; results.Add(new TestResult { Pass = p, Message = p ? \"Carlos ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

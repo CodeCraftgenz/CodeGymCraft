@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-029",
+  "track": "html",
+  "title": "Favicon",
+  "description": "Adicione um favicon à página.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <!-- Adicione favicon aqui -->\n    <title>Favicon</title>\n</head>\n<body>\n    <h1>Meu Site</h1>\n</body>\n</html>",
+  "tags": [
+    "favicon",
+    "head"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "link[rel='icon']",
+        "errorMessage": "link rel='icon' não encontrado.",
+        "successMessage": "Favicon ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "link[rel='icon']",
+        "attribute": "href",
+        "errorMessage": "href do favicon não encontrado.",
+        "successMessage": "Href ok!"
+      }
+    ]
+  }
+}

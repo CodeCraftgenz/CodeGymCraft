@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-002",
+  "track": "csharp",
+  "title": "Dobro",
+  "description": "Crie `Solution.Dobro(int n)` retorna n*2.",
+  "starterCode": "public class Solution\n{\n    public static int Dobro(int n)\n    {\n        return 0;\n    }\n}",
+  "tags": [
+    "operador",
+    "função"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Dobro(5); bool p = r == 10; results.Add(new TestResult { Pass = p, Message = p ? \"5*2=10!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Dobro(0); bool p = r == 0; results.Add(new TestResult { Pass = p, Message = p ? \"0*2=0!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

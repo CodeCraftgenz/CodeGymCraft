@@ -1,0 +1,23 @@
+{
+  "id": "html-int-029",
+  "track": "html",
+  "title": "Srcset",
+  "description": "Use srcset para diferentes resoluções.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use srcset na img -->\n    \n</body>\n</html>",
+  "tags": [
+    "responsivo",
+    "srcset"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "img[srcset]",
+        "errorMessage": "img com srcset não encontrado.",
+        "successMessage": "Srcset ok!"
+      }
+    ]
+  }
+}

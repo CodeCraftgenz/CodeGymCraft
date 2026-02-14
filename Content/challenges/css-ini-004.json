@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-004",
+  "track": "css",
+  "title": "Família de Fonte",
+  "description": "Use font-family.",
+  "starterCode": "<style>\n/* Use font-family */\n\n</style>\n\n<p class=\"elegante\">Texto elegante</p>",
+  "tags": [
+    "fonte",
+    "família"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".elegante",
+        "property": "font-family",
+        "errorMessage": "Defina font-family.",
+        "successMessage": "Font-family ok!"
+      }
+    ]
+  }
+}

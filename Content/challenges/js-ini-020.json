@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-020",
+  "track": "javascript",
+  "title": "Último Elemento",
+  "description": "Crie `ultimoElemento(arr)` retorna o último.",
+  "starterCode": "function ultimoElemento(arr) {\n    // Retorne o último elemento\n}\n",
+  "tags": [
+    "array",
+    "index"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = ultimoElemento([1,2,3]); const exp = \"3\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '3 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = ultimoElemento(['a']); const exp = \"'a'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'a ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

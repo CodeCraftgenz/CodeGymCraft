@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-013",
+  "track": "html",
+  "title": "Select e Options",
+  "description": "Crie um dropdown com 4 opções.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie select com options -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "select"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "select",
+        "errorMessage": "<select> não encontrado.",
+        "successMessage": "<select> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "option",
+        "min": 4,
+        "errorMessage": "Adicione pelo menos 4 <option>.",
+        "successMessage": "4+ opções!"
+      }
+    ]
+  }
+}

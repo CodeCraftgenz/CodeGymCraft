@@ -1,0 +1,37 @@
+{
+  "id": "html-int-006",
+  "track": "html",
+  "title": "Datalist Autocomplete",
+  "description": "Crie autocomplete com datalist.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use datalist para autocomplete -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "datalist"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "datalist",
+        "errorMessage": "<datalist> não encontrado.",
+        "successMessage": "<datalist> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "datalist option",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 options.",
+        "successMessage": "Options ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "input",
+        "attribute": "list",
+        "errorMessage": "Atributo list no input não encontrado.",
+        "successMessage": "List attribute ok!"
+      }
+    ]
+  }
+}

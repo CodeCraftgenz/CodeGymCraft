@@ -1,0 +1,16 @@
+{
+  "id": "js-int-019",
+  "track": "javascript",
+  "title": "Try/Catch",
+  "description": "Crie `seguro(fn)` que captura erros.",
+  "starterCode": "function seguro(fn) {\n    // Execute fn, retorne resultado ou 'erro'\n}\n",
+  "tags": [
+    "error",
+    "try/catch"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = seguro(() => 42); const exp = \"42\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '42 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = seguro(() => { throw new Error('x') }); const exp = \"'erro'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Erro capturado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

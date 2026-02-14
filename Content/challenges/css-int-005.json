@@ -1,0 +1,33 @@
+{
+  "id": "css-int-005",
+  "track": "css",
+  "title": "Flex Wrap",
+  "description": "Permita quebra de linha.",
+  "starterCode": "<style>\n/* Use flex-wrap */\n\n</style>\n\n<div class=\"wrap\"><div class=\"item\" style=\"width:200px\">1</div><div class=\"item\" style=\"width:200px\">2</div><div class=\"item\" style=\"width:200px\">3</div></div>",
+  "tags": [
+    "flexbox",
+    "wrap"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".wrap",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "Precisa flex.",
+        "successMessage": "Flex!"
+      },
+      {
+        "type": "css-property",
+        "selector": ".wrap",
+        "property": "flex-wrap",
+        "value": "wrap",
+        "errorMessage": "flex-wrap deve ser wrap.",
+        "successMessage": "Wrap ok!"
+      }
+    ]
+  }
+}

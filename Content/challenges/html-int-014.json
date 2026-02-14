@@ -1,0 +1,30 @@
+{
+  "id": "html-int-014",
+  "track": "html",
+  "title": "Pattern Validation",
+  "description": "Use pattern para validação de regex.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use atributo pattern -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "validação"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "input[pattern]",
+        "errorMessage": "Input com pattern não encontrado.",
+        "successMessage": "Pattern ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "input[pattern]",
+        "attribute": "title",
+        "errorMessage": "Title descritivo para o pattern não encontrado.",
+        "successMessage": "Title ok!"
+      }
+    ]
+  }
+}

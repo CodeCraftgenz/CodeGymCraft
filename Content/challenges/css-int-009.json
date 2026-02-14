@@ -1,0 +1,32 @@
+{
+  "id": "css-int-009",
+  "track": "css",
+  "title": "Grid Template Rows",
+  "description": "Defina linhas.",
+  "starterCode": "<style>\n/* Use grid-template-rows */\n\n</style>\n\n<div class=\"rows\"><div>1</div><div>2</div></div>",
+  "tags": [
+    "grid",
+    "rows"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".rows",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "Precisa grid.",
+        "successMessage": "Grid!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".rows",
+        "property": "grid-template-rows",
+        "errorMessage": "Defina grid-template-rows.",
+        "successMessage": "Rows ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "css-int-024",
+  "track": "css",
+  "title": "Gradiente Radial",
+  "description": "Crie gradiente radial.",
+  "starterCode": "<style>\n/* Use radial-gradient */\n\n</style>\n\n<div class=\"radial\" style=\"height:100px\">Radial</div>",
+  "tags": [
+    "gradiente",
+    "radial"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".radial",
+        "property": "background",
+        "errorMessage": "Defina background.",
+        "successMessage": "Radial ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-008",
+  "track": "javascript",
+  "title": "Deep Clone",
+  "description": "Crie `deepClone(obj)` clone profundo.",
+  "starterCode": "function deepClone(obj) {\n    // Clone profundo sem referências compartilhadas\n}\n",
+  "tags": [
+    "clone",
+    "objeto"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const o = {a:{b:1}}; const c = deepClone(o); o.a.b = 2; results.push({ pass: c.a.b===1, message: c.a.b===1 ? 'Deep clone ok!' : 'Referência compartilhada!' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

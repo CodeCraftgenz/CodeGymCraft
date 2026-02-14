@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-014",
+  "track": "javascript",
+  "title": "Generator",
+  "description": "Crie generator de Fibonacci.",
+  "starterCode": "function* fibonacci() {\n    // yield sequência de Fibonacci\n}\n",
+  "tags": [
+    "generator",
+    "fibonacci"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const gen = fibonacci(); const vals = [gen.next().value, gen.next().value, gen.next().value, gen.next().value, gen.next().value]; results.push({ pass: JSON.stringify(vals)==='[0,1,1,2,3]', message: JSON.stringify(vals)==='[0,1,1,2,3]' ? 'Fibonacci ok!' : 'Incorreto: ' + JSON.stringify(vals) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "html-int-015",
+  "track": "html",
+  "title": "Elemento Output",
+  "description": "Use output para resultado de cálculo.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento output -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "output"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "output",
+        "errorMessage": "<output> não encontrado.",
+        "successMessage": "<output> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "<form> ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-007",
+  "track": "javascript",
+  "title": "Dia da Semana",
+  "description": "Crie `diaDaSemana(n)` (1=Domingo...7=Sábado).",
+  "starterCode": "function diaDaSemana(n) {\n    // 1=Domingo, 2=Segunda, ..., 7=Sábado\n}\n",
+  "tags": [
+    "switch",
+    "lógica"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = diaDaSemana(1); const exp = \"'Domingo'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '1=Domingo!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = diaDaSemana(2); const exp = \"'Segunda'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '2=Segunda!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = diaDaSemana(7); const exp = \"'S\\u00e1bado'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '7=Sábado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

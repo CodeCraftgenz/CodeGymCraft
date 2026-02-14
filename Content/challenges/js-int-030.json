@@ -1,0 +1,13 @@
+{
+  "id": "js-int-030",
+  "track": "javascript",
+  "title": "String Methods Avançados",
+  "description": "Crie `formatarTelefone(str)` que formata número de telefone.\n\nEx: '11999887766' → '(11) 99988-7766'",
+  "starterCode": "function formatarTelefone(str) {\n    // Formate: (XX) XXXXX-XXXX\n}\n",
+  "tags": ["string", "formatação"],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = formatarTelefone('11999887766'); const pass = r === '(11) 99988-7766'; results.push({ pass, message: pass ? 'Formatado!' : 'Esperado (11) 99988-7766, obteve ' + r }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = formatarTelefone('21912345678'); const pass = r === '(21) 91234-5678'; results.push({ pass, message: pass ? 'Segundo teste ok!' : 'Incorreto: ' + r }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

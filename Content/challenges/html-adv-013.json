@@ -1,0 +1,29 @@
+{
+  "id": "html-adv-013",
+  "track": "html",
+  "title": "Landmark Roles",
+  "description": "Use todos os landmark roles.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use landmark roles -->\n    \n</body>\n</html>",
+  "tags": [
+    "acessibilidade",
+    "landmarks"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "[role='banner']",
+        "errorMessage": "role='banner' não encontrado.",
+        "successMessage": "Banner ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[role='contentinfo']",
+        "errorMessage": "role='contentinfo' não encontrado.",
+        "successMessage": "Contentinfo ok!"
+      }
+    ]
+  }
+}

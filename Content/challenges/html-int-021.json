@@ -1,0 +1,29 @@
+{
+  "id": "html-int-021",
+  "track": "html",
+  "title": "Code e Pre",
+  "description": "Exiba código com pre e code.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use pre e code -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "código"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "pre",
+        "errorMessage": "<pre> não encontrado.",
+        "successMessage": "<pre> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "code",
+        "errorMessage": "<code> não encontrado.",
+        "successMessage": "<code> ok!"
+      }
+    ]
+  }
+}

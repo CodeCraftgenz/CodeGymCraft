@@ -1,0 +1,30 @@
+{
+  "id": "html-int-017",
+  "track": "html",
+  "title": "Elemento Meter",
+  "description": "Use meter para medição.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento meter -->\n    \n</body>\n</html>",
+  "tags": [
+    "interativo",
+    "meter"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "meter",
+        "errorMessage": "<meter> não encontrado.",
+        "successMessage": "<meter> ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "meter",
+        "attribute": "value",
+        "errorMessage": "Value não encontrado.",
+        "successMessage": "Value ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-int-027",
+  "track": "javascript",
+  "title": "Map",
+  "description": "Crie `contarLetras(str)` retorna Map de contagens.",
+  "starterCode": "function contarLetras(str) {\n    // Retorne Map com contagem de cada letra\n}\n",
+  "tags": [
+    "Map",
+    "contagem"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const m = contarLetras('aab'); results.push({ pass: m.get('a')===2, message: m.get('a')===2 ? 'a=2 ok!' : 'Incorreto' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "html-adv-005",
+  "track": "html",
+  "title": "SVG com Path",
+  "description": "Crie SVG usando path.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie SVG com path -->\n    \n</body>\n</html>",
+  "tags": [
+    "SVG",
+    "path"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "svg",
+        "errorMessage": "<svg> não encontrado.",
+        "successMessage": "SVG ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "svg path",
+        "errorMessage": "<path> não encontrado.",
+        "successMessage": "Path ok!"
+      }
+    ]
+  }
+}

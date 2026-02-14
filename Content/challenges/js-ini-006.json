@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-006",
+  "track": "javascript",
+  "title": "Valor Absoluto",
+  "description": "Crie `absoluto(n)` que retorna o valor absoluto.",
+  "starterCode": "function absoluto(n) {\n    // Retorne o valor absoluto sem usar Math.abs\n}\n",
+  "tags": [
+    "ternário",
+    "math"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = absoluto(-5); const exp = \"5\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '-5→5 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = absoluto(3); const exp = \"3\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '3→3 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = absoluto(0); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '0→0 ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

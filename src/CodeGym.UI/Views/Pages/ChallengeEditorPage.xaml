@@ -1,0 +1,214 @@
+<Page x:Class="CodeGym.UI.Views.Pages.ChallengeEditorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+      xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+      Title="Editor">
+
+    <Grid Margin="16,8">
+        <Grid.RowDefinitions>
+            <!-- Toolbar -->
+            <RowDefinition Height="Auto" />
+            <!-- Editor + painel direito -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Toolbar -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,8">
+            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="{Binding ChallengeTitle}"
+                           FontSize="20" FontWeight="Bold"
+                           VerticalAlignment="Center" Margin="0,0,12,0" />
+                <Border Background="{Binding DifficultyBrush}"
+                        CornerRadius="4" Padding="8,3"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="{Binding DifficultyDisplay}" FontSize="12" Foreground="White" />
+                </Border>
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                <ui:Button Content="Favoritar"
+                           Icon="{ui:SymbolIcon Star24}"
+                           Command="{Binding ToggleFavoriteCommand}"
+                           Appearance="{Binding FavoriteAppearance}"
+                           Margin="0,0,4,0" />
+                <ui:Button Content="Reiniciar"
+                           Icon="{ui:SymbolIcon ArrowReset24}"
+                           Command="{Binding ResetCodeCommand}"
+                           Appearance="Danger"
+                           Margin="0,0,4,0" />
+                <ui:Button Content="Validar (Ctrl+Enter)"
+                           Icon="{ui:SymbolIcon PlayCircle24}"
+                           Command="{Binding ValidateCommand}"
+                           Appearance="Success"
+                           IsEnabled="{Binding IsNotValidating}" />
+            </StackPanel>
+
+            <Border /> <!-- spacer -->
+        </DockPanel>
+
+        <!-- Conteúdo principal: editor + painel direito -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MinWidth="400" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" MinWidth="300" />
+            </Grid.ColumnDefinitions>
+
+            <!-- PAINEL ESQUERDO: Enunciado + Editor -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" MaxHeight="220" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Enunciado -->
+                <ui:CardControl Grid.Row="0" Margin="0,0,0,6">
+                    <ui:CardControl.Header>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="200">
+                            <TextBlock Text="{Binding ChallengeDescription}"
+                                       FontSize="14" TextWrapping="Wrap" LineHeight="22" />
+                        </ScrollViewer>
+                    </ui:CardControl.Header>
+                </ui:CardControl>
+
+                <!-- Editor AvalonEdit -->
+                <Border Grid.Row="1" CornerRadius="6" ClipToBounds="True">
+                    <avalonEdit:TextEditor
+                        x:Name="CodeEditor"
+                        FontFamily="Cascadia Code, Consolas, Courier New"
+                        FontSize="14"
+                        ShowLineNumbers="True"
+                        WordWrap="True"
+                        Background="#1E1E1E"
+                        Foreground="#D4D4D4"
+                        LineNumbersForeground="#858585" />
+                </Border>
+            </Grid>
+
+            <!-- Splitter -->
+            <GridSplitter Grid.Column="1" Width="5"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Stretch" />
+
+            <!-- PAINEL DIREITO: Abas (Preview / Resultados / Histórico) -->
+            <TabControl Grid.Column="2" Margin="6,0,0,0">
+                <!-- Aba Preview (HTML/CSS/JS) -->
+                <TabItem Header="Preview"
+                         Visibility="{Binding ShowPreview, Converter={StaticResource BoolToVisibility}}">
+                    <wv2:WebView2 x:Name="PreviewWebView" />
+                </TabItem>
+
+                <!-- Aba Resultados -->
+                <TabItem Header="Resultados" x:Name="ResultsTab">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="8">
+                            <!-- Status geral -->
+                            <Border CornerRadius="6" Padding="12" Margin="0,0,0,8"
+                                    Visibility="{Binding ShowResults, Converter={StaticResource BoolToVisibility}}"
+                                    Background="{Binding ResultStatusBrush}">
+                                <TextBlock Text="{Binding ResultMessage}"
+                                           FontSize="14" Foreground="White"
+                                           TextWrapping="Wrap" />
+                            </Border>
+
+                            <!-- Indicador de validação -->
+                            <StackPanel Visibility="{Binding IsValidating, Converter={StaticResource BoolToVisibility}}"
+                                        HorizontalAlignment="Center" Margin="0,24">
+                                <ui:ProgressRing IsIndeterminate="True" Width="48" Height="48" />
+                                <TextBlock Text="Validando seu código..." FontSize="15"
+                                           HorizontalAlignment="Center" Margin="0,12,0,0" Opacity="0.6" />
+                            </StackPanel>
+
+                            <!-- Lista de testes -->
+                            <ItemsControl ItemsSource="{Binding TestResults}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Padding="8,6" Margin="0,0,0,2"
+                                                BorderBrush="{ui:ThemeResource ControlStrokeColorDefaultBrush}"
+                                                BorderThickness="0,0,0,1">
+                                            <DockPanel>
+                                                <TextBlock DockPanel.Dock="Left"
+                                                           Text="{Binding Passed, Converter={StaticResource BoolToIcon}}"
+                                                           FontSize="16"
+                                                           Foreground="{Binding Passed, Converter={StaticResource BoolToColor}}"
+                                                           VerticalAlignment="Top" Margin="0,0,8,0" />
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Name}"
+                                                               FontSize="13" FontWeight="SemiBold" />
+                                                    <TextBlock Text="{Binding Message}"
+                                                               FontSize="12" Opacity="0.6"
+                                                               TextWrapping="Wrap" Margin="0,2,0,0" />
+                                                </StackPanel>
+                                            </DockPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+
+                <!-- Aba Histórico -->
+                <TabItem Header="Histórico">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding AttemptHistory}" Margin="8">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Padding="8,6" Margin="0,0,0,4"
+                                            BorderBrush="{ui:ThemeResource ControlStrokeColorDefaultBrush}"
+                                            BorderThickness="0,0,0,1">
+                                        <DockPanel>
+                                            <TextBlock DockPanel.Dock="Left"
+                                                       Text="{Binding Passed, Converter={StaticResource BoolToIcon}}"
+                                                       FontSize="16"
+                                                       Foreground="{Binding Passed, Converter={StaticResource BoolToColor}}"
+                                                       VerticalAlignment="Center" Margin="0,0,8,0" />
+                                            <StackPanel>
+                                                <TextBlock FontSize="13">
+                                                    <Run Text="{Binding TestsPassed, Mode=OneWay}" />
+                                                    <Run Text="/" />
+                                                    <Run Text="{Binding TestsTotal, Mode=OneWay}" />
+                                                    <Run Text=" testes" />
+                                                </TextBlock>
+                                                <TextBlock Text="{Binding Timestamp, StringFormat='{}{0:dd/MM/yyyy HH:mm}'}"
+                                                           FontSize="11" Opacity="0.5" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </TabItem>
+
+                <!-- Aba Anotações -->
+                <TabItem Header="Anotações">
+                    <Grid Margin="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBox Grid.Row="0"
+                                 x:Name="NoteEditor"
+                                 Text="{Binding NoteText, UpdateSourceTrigger=PropertyChanged}"
+                                 AcceptsReturn="True"
+                                 AcceptsTab="True"
+                                 TextWrapping="Wrap"
+                                 VerticalScrollBarVisibility="Auto"
+                                 FontFamily="Cascadia Code, Consolas"
+                                 FontSize="14" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="{Binding NoteSaveStatus}"
+                                   FontSize="12" Opacity="0.5"
+                                   HorizontalAlignment="Right"
+                                   Margin="0,6,0,0" />
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Page>

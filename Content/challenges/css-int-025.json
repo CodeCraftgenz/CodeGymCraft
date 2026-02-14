@@ -1,0 +1,25 @@
+{
+  "id": "css-int-025",
+  "track": "css",
+  "title": "Box Sizing",
+  "description": "Use border-box.",
+  "starterCode": "<style>\n/* Use box-sizing */\n\n</style>\n\n<div class=\"border-box\" style=\"width:200px;padding:20px;border:2px solid\">Box</div>",
+  "tags": [
+    "box model",
+    "sizing"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".border-box",
+        "property": "box-sizing",
+        "value": "border-box",
+        "errorMessage": "box-sizing deve ser border-box.",
+        "successMessage": "Border-box ok!"
+      }
+    ]
+  }
+}

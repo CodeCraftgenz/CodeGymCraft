@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-001",
+  "track": "javascript",
+  "title": "Bubble Sort",
+  "description": "Implemente bubble sort.",
+  "starterCode": "function bubbleSort(arr) {\n    // Implemente bubble sort\n}\n",
+  "tags": [
+    "algoritmo",
+    "sort"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = bubbleSort([3,1,4,1,5]); const exp = \"[1,1,3,4,5]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Ordenado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

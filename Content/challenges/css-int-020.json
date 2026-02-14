@@ -1,0 +1,24 @@
+{
+  "id": "css-int-020",
+  "track": "css",
+  "title": "Pseudo-element Before",
+  "description": "Use ::before.",
+  "starterCode": "<style>\n/* Use ::before */\n\n</style>\n\n<p class=\"quote\">Citação importante</p>",
+  "tags": [
+    "pseudo-element",
+    "before"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".quote::before",
+        "property": "content",
+        "errorMessage": "Defina content em ::before.",
+        "successMessage": "Before ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-022",
+  "track": "csharp",
+  "title": "Expression Body",
+  "description": "Use expression-bodied members.",
+  "starterCode": "public class Circulo\n{\n    public double Raio { get; set; }\n    // Area como expression body => Math.PI * Raio * Raio\n    // Circunferencia como expression body\n}\n\npublic class Solution\n{\n    public static double Teste() => new Circulo { Raio = 1 }.Area;\n}",
+  "tags": [
+    "syntax",
+    "expressão"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Math.Abs(Solution.Teste() - Math.PI) < 0.01; results.Add(new TestResult { Pass = p, Message = p ? \"π ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

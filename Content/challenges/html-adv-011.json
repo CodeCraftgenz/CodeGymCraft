@@ -1,0 +1,24 @@
+{
+  "id": "html-adv-011",
+  "track": "html",
+  "title": "Data Attributes Avançado",
+  "description": "Estrutura complexa com data-*.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use data-attributes para cards -->\n    \n</body>\n</html>",
+  "tags": [
+    "data",
+    "estrutura"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "[data-category]",
+        "min": 3,
+        "errorMessage": "3+ elementos com data-category.",
+        "successMessage": "Data-category ok!"
+      }
+    ]
+  }
+}

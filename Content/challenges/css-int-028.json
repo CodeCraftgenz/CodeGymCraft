@@ -1,0 +1,32 @@
+{
+  "id": "css-int-028",
+  "track": "css",
+  "title": "Flex Order",
+  "description": "Mude ordem dos itens.",
+  "starterCode": "<style>\n/* Use order */\n\n</style>\n\n<div class=\"order-flex\"><div class=\"first\">1</div><div class=\"second\">2</div><div class=\"third\">3</div></div>",
+  "tags": [
+    "flexbox",
+    "order"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".order-flex",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "Precisa flex.",
+        "successMessage": "Flex!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".third",
+        "property": "order",
+        "errorMessage": "Defina order em .third.",
+        "successMessage": "Order ok!"
+      }
+    ]
+  }
+}

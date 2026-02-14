@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-022",
+  "track": "javascript",
+  "title": "Criar Pessoa",
+  "description": "Crie `criarPessoa(nome, idade)` retorna objeto.",
+  "starterCode": "function criarPessoa(nome, idade) {\n    // Retorne { nome, idade }\n}\n",
+  "tags": [
+    "objeto",
+    "criação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = criarPessoa('Ana', 25).nome; const exp = \"'Ana'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Nome ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = criarPessoa('Ana', 25).idade; const exp = \"25\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Idade ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

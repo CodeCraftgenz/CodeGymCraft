@@ -1,0 +1,32 @@
+{
+  "id": "css-adv-003",
+  "track": "css",
+  "title": "Grid Responsivo",
+  "description": "Grid com auto-fit.",
+  "starterCode": "<style>\n/* Use auto-fit e minmax */\n\n</style>\n\n<div class=\"auto-grid\"><div class=\"card\">1</div><div class=\"card\">2</div><div class=\"card\">3</div><div class=\"card\">4</div><div class=\"card\">5</div><div class=\"card\">6</div></div>",
+  "tags": [
+    "grid",
+    "responsivo"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".auto-grid",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "Precisa grid.",
+        "successMessage": "Grid!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".auto-grid",
+        "property": "grid-template-columns",
+        "errorMessage": "Defina columns com auto-fit.",
+        "successMessage": "Auto-fit ok!"
+      }
+    ]
+  }
+}

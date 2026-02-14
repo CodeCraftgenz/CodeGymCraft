@@ -1,0 +1,37 @@
+{
+  "id": "html-ini-009",
+  "track": "html",
+  "title": "Lista de Definição",
+  "description": "Crie uma lista de definição com 3 termos.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie dl com dt e dd -->\n    \n</body>\n</html>",
+  "tags": [
+    "lista",
+    "dl"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "dl",
+        "errorMessage": "<dl> não encontrado.",
+        "successMessage": "<dl> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "dt",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 <dt>.",
+        "successMessage": "3+ termos!"
+      },
+      {
+        "type": "element-count",
+        "selector": "dd",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 <dd>.",
+        "successMessage": "3+ definições!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-007",
+  "track": "html",
+  "title": "Lista Não-Ordenada",
+  "description": "Crie uma lista não-ordenada com 4 itens.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie uma lista ul com 4 li -->\n    \n</body>\n</html>",
+  "tags": [
+    "lista",
+    "ul"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "ul",
+        "errorMessage": "<ul> não encontrado.",
+        "successMessage": "<ul> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "ul > li",
+        "min": 4,
+        "errorMessage": "Adicione pelo menos 4 <li>.",
+        "successMessage": "4+ itens!"
+      }
+    ]
+  }
+}

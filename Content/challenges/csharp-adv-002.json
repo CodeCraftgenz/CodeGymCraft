@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-002",
+  "track": "csharp",
+  "title": "Events",
+  "description": "Crie classe com evento.",
+  "starterCode": "public class Botao\n{\n    public event Action<string>? Clicado;\n    public void Clicar() => Clicado?.Invoke(\"clicou\");\n}\n\npublic class Solution\n{\n    public static string Teste()\n    {\n        string resultado = \"\";\n        var btn = new Botao();\n        btn.Clicado += msg => resultado = msg;\n        btn.Clicar();\n        return resultado;\n    }\n}",
+  "tags": [
+    "evento",
+    "observer"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"clicou\"; results.Add(new TestResult { Pass = p, Message = p ? \"Evento ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

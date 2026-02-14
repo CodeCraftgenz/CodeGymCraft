@@ -1,0 +1,32 @@
+{
+  "id": "css-adv-005",
+  "track": "css",
+  "title": "Holy Grail Layout",
+  "description": "Layout clássico com Grid.",
+  "starterCode": "<style>\n/* Crie holy grail layout */\n\n</style>\n\n<div class=\"holy\"><header class=\"hg-header\">H</header><nav class=\"hg-nav\">N</nav><main class=\"hg-main\">M</main><aside class=\"hg-aside\">A</aside><footer class=\"hg-footer\">F</footer></div>",
+  "tags": [
+    "grid",
+    "layout"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".holy",
+        "property": "display",
+        "value": "grid",
+        "errorMessage": "Precisa grid.",
+        "successMessage": "Grid!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".holy",
+        "property": "grid-template-areas",
+        "errorMessage": "Defina grid-template-areas.",
+        "successMessage": "Areas ok!"
+      }
+    ]
+  }
+}

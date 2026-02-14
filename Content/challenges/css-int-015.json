@@ -1,0 +1,24 @@
+{
+  "id": "css-int-015",
+  "track": "css",
+  "title": "Z-index",
+  "description": "Controle sobreposição.",
+  "starterCode": "<style>\n/* Use z-index */\n\n</style>\n\n<div class=\"behind\" style=\"position:relative\">Atrás</div><div class=\"front\" style=\"position:relative\">Frente</div>",
+  "tags": [
+    "z-index",
+    "camadas"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".front",
+        "property": "z-index",
+        "errorMessage": "Defina z-index em .front.",
+        "successMessage": "Z-index ok!"
+      }
+    ]
+  }
+}

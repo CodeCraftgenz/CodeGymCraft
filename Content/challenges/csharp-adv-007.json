@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-007",
+  "track": "csharp",
+  "title": "Task WhenAll",
+  "description": "Use Task.WhenAll.",
+  "starterCode": "using System.Threading.Tasks;\n\npublic class Solution\n{\n    public static async Task<int[]> ExecutarTodas()\n    {\n        var t1 = Task.FromResult(1);\n        var t2 = Task.FromResult(2);\n        var t3 = Task.FromResult(3);\n        // Use WhenAll e retorne resultados\n        return new int[0];\n    }\n}",
+  "tags": [
+    "async",
+    "WhenAll"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.ExecutarTodas().GetAwaiter().GetResult().SequenceEqual(new[]{1,2,3}); results.Add(new TestResult { Pass = p, Message = p ? \"[1,2,3] ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

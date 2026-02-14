@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-024",
+  "track": "javascript",
+  "title": "Arredondar",
+  "description": "Crie `arredondar(n)` arredonda para baixo.",
+  "starterCode": "function arredondar(n) {\n    // Use Math.floor\n}\n",
+  "tags": [
+    "Math",
+    "floor"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = arredondar(4.7); const exp = \"4\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '4.7→4!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = arredondar(1.1); const exp = \"1\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '1.1→1!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

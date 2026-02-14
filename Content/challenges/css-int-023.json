@@ -1,0 +1,24 @@
+{
+  "id": "css-int-023",
+  "track": "css",
+  "title": "Gradiente Linear",
+  "description": "Crie gradiente.",
+  "starterCode": "<style>\n/* Use linear-gradient */\n\n</style>\n\n<div class=\"gradient\" style=\"height:100px\">Gradiente</div>",
+  "tags": [
+    "gradiente",
+    "visual"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".gradient",
+        "property": "background",
+        "errorMessage": "Defina background com gradient.",
+        "successMessage": "Gradient ok!"
+      }
+    ]
+  }
+}

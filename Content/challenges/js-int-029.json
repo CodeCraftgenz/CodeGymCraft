@@ -1,0 +1,16 @@
+{
+  "id": "js-int-029",
+  "track": "javascript",
+  "title": "Nullish Coalescing",
+  "description": "Crie `padrao(val, def)` com ??.",
+  "starterCode": "function padrao(val, def) {\n    // Use ?? para retornar def se val é null/undefined\n}\n",
+  "tags": [
+    "nullish",
+    "coalescing"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = padrao(null, 'default'); const exp = \"'default'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Default ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = padrao(0, 'default'); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '0 mantido!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

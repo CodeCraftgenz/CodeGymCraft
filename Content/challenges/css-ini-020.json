@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-020",
+  "track": "css",
+  "title": "Seletor de Elemento",
+  "description": "Estilize todos os p.",
+  "starterCode": "<style>\n/* Estilize todos os p */\n\n</style>\n\n<p>Um</p><p>Dois</p><p>Três</p>",
+  "tags": [
+    "seletor",
+    "elemento"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": "p",
+        "property": "color",
+        "errorMessage": "Defina color em p.",
+        "successMessage": "Elementos estilizados!"
+      }
+    ]
+  }
+}

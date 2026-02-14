@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-022",
+  "track": "html",
+  "title": "Âncoras de Navegação",
+  "description": "Crie links internos usando id e href=#.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie âncoras internas -->\n    \n</body>\n</html>",
+  "tags": [
+    "âncora",
+    "navegação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "a[href^='#']",
+        "errorMessage": "Link âncora (href=#) não encontrado.",
+        "successMessage": "Âncora ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "h2",
+        "attribute": "id",
+        "errorMessage": "id não encontrado em heading.",
+        "successMessage": "ID no heading ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "html-ini-030",
+  "track": "html",
+  "title": "Entidades HTML",
+  "description": "Use entidades para caracteres especiais.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use entidades HTML como &amp; &lt; &gt; -->\n    \n</body>\n</html>",
+  "tags": [
+    "entidades",
+    "caracteres"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "p",
+        "errorMessage": "<p> não encontrado.",
+        "successMessage": "<p> ok!"
+      }
+    ]
+  }
+}

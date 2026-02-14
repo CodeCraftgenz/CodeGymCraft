@@ -1,0 +1,24 @@
+{
+  "id": "html-ini-003",
+  "track": "html",
+  "title": "Parágrafos",
+  "description": "Adicione 3 parágrafos de texto.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Adicione 3 parágrafos -->\n    \n</body>\n</html>",
+  "tags": [
+    "parágrafo",
+    "texto"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "p",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 parágrafos <p>.",
+        "successMessage": "3+ parágrafos encontrados!"
+      }
+    ]
+  }
+}

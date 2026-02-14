@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-007",
+  "track": "csharp",
+  "title": "Classe com Props",
+  "description": "Crie classe Pessoa com Nome e Idade.",
+  "starterCode": "public class Pessoa\n{\n    // Propriedades Nome (string) e Idade (int)\n    // Método Apresentar() retorna \"Sou {Nome}, tenho {Idade} anos\"\n}\n\npublic class Solution\n{\n    public static string Teste()\n    {\n        var p = new Pessoa { Nome = \"Ana\", Idade = 25 };\n        return p.Apresentar();\n    }\n}",
+  "tags": [
+    "classe",
+    "propriedade"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"Sou Ana, tenho 25 anos\"; results.Add(new TestResult { Pass = p, Message = p ? \"Apresentação ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

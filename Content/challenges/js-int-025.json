@@ -1,0 +1,16 @@
+{
+  "id": "js-int-025",
+  "track": "javascript",
+  "title": "Regex Replace",
+  "description": "Crie `censurar(str)` substitui palavrões por ***.",
+  "starterCode": "function censurar(str, palavra) {\n    // Substitua todas ocorrências de palavra por '***'\n}\n",
+  "tags": [
+    "regex",
+    "replace"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = censurar('foo bar foo', 'foo'); const exp = \"'*** bar ***'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'Censurado!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

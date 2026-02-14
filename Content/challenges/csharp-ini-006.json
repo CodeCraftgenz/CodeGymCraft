@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-006",
+  "track": "csharp",
+  "title": "Classificar Idade",
+  "description": "Crie `Solution.Classificar(int idade)`: criança(<12), adolescente(<18), adulto.",
+  "starterCode": "public class Solution\n{\n    public static string Classificar(int idade)\n    {\n        return \"\";\n    }\n}",
+  "tags": [
+    "if/else",
+    "classificação"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Classificar(8); bool p = r == \"criança\"; results.Add(new TestResult { Pass = p, Message = p ? \"8=criança!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Classificar(15); bool p = r == \"adolescente\"; results.Add(new TestResult { Pass = p, Message = p ? \"15=adolescente!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Classificar(25); bool p = r == \"adulto\"; results.Add(new TestResult { Pass = p, Message = p ? \"25=adulto!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

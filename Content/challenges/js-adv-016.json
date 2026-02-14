@@ -1,0 +1,16 @@
+{
+  "id": "js-adv-016",
+  "track": "javascript",
+  "title": "Promise.allSettled",
+  "description": "Use allSettled.",
+  "starterCode": "function executarTodas(promises) {\n    // Use Promise.allSettled\n    return Promise.allSettled(promises);\n}\n",
+  "tags": [
+    "promise",
+    "allSettled"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = executarTodas([Promise.resolve(1), Promise.reject('err')]); results.push({ pass: r instanceof Promise, message: r instanceof Promise ? 'Promise ok!' : 'Deve ser Promise' }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

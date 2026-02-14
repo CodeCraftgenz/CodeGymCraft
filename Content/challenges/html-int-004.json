@@ -1,0 +1,36 @@
+{
+  "id": "html-int-004",
+  "track": "html",
+  "title": "Fieldset e Legend",
+  "description": "Agrupe campos com fieldset e legend.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use fieldset e legend -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "fieldset"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "fieldset",
+        "errorMessage": "<fieldset> não encontrado.",
+        "successMessage": "<fieldset> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "legend",
+        "errorMessage": "<legend> não encontrado.",
+        "successMessage": "<legend> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "fieldset input",
+        "min": 2,
+        "errorMessage": "Adicione inputs dentro do fieldset.",
+        "successMessage": "Inputs no fieldset ok!"
+      }
+    ]
+  }
+}

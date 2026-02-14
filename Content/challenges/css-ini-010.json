@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-010",
+  "track": "css",
+  "title": "Preenchimento",
+  "description": "Use padding.",
+  "starterCode": "<style>\n/* Use padding */\n\n</style>\n\n<div class=\"padded\">Espaçado</div>",
+  "tags": [
+    "box",
+    "padding"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".padded",
+        "property": "padding",
+        "errorMessage": "Defina padding.",
+        "successMessage": "Padding ok!"
+      }
+    ]
+  }
+}

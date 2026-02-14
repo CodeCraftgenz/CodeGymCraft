@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-012",
+  "track": "css",
+  "title": "Border Radius",
+  "description": "Arredonde cantos.",
+  "starterCode": "<style>\n/* Use border-radius */\n\n</style>\n\n<div class=\"round\">Arredondado</div>",
+  "tags": [
+    "borda",
+    "radius"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".round",
+        "property": "border-radius",
+        "errorMessage": "Defina border-radius.",
+        "successMessage": "Radius ok!"
+      }
+    ]
+  }
+}

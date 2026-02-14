@@ -1,0 +1,43 @@
+{
+  "id": "html-ini-001",
+  "track": "html",
+  "title": "Estrutura HTML Básica",
+  "description": "Crie uma página HTML com a estrutura básica correta.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie a estrutura básica -->\n    \n</body>\n</html>",
+  "tags": [
+    "estrutura",
+    "básico"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "html",
+        "errorMessage": "Elemento <html> não encontrado.",
+        "successMessage": "<html> encontrado!"
+      },
+      {
+        "type": "attribute-value",
+        "selector": "html",
+        "attribute": "lang",
+        "value": "pt-BR",
+        "errorMessage": "Atributo lang='pt-BR' não encontrado em <html>.",
+        "successMessage": "lang='pt-BR' correto!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "head",
+        "errorMessage": "<head> não encontrado.",
+        "successMessage": "<head> encontrado!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "body",
+        "errorMessage": "<body> não encontrado.",
+        "successMessage": "<body> encontrado!"
+      }
+    ]
+  }
+}

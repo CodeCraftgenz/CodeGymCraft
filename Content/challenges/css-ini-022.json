@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-022",
+  "track": "css",
+  "title": "Pseudo-classe Hover",
+  "description": "Mude cor no hover.",
+  "starterCode": "<style>\n/* Use :hover */\n\n</style>\n\n<button class=\"btn\">Hover me</button>",
+  "tags": [
+    "pseudo-classe",
+    "hover"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".btn:hover",
+        "property": "background-color",
+        "errorMessage": "Defina background-color em .btn:hover.",
+        "successMessage": "Hover ok!"
+      }
+    ]
+  }
+}

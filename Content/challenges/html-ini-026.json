@@ -1,0 +1,38 @@
+{
+  "id": "html-ini-026",
+  "track": "html",
+  "title": "Label e For",
+  "description": "Associe labels a inputs usando for/id.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie labels com for -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "acessibilidade"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-count",
+        "selector": "label",
+        "min": 2,
+        "errorMessage": "Adicione pelo menos 2 labels.",
+        "successMessage": "Labels ok!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "label",
+        "attribute": "for",
+        "errorMessage": "Atributo for não encontrado.",
+        "successMessage": "For presente!"
+      },
+      {
+        "type": "attribute-exists",
+        "selector": "input",
+        "attribute": "id",
+        "errorMessage": "id no input não encontrado.",
+        "successMessage": "ID no input ok!"
+      }
+    ]
+  }
+}

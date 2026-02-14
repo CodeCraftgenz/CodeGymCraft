@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-018",
+  "track": "csharp",
+  "title": "Enum Avançado",
+  "description": "Crie enum com método de extensão.",
+  "starterCode": "public enum Status { Ativo, Inativo, Pendente }\n\npublic static class StatusExtensions\n{\n    // Método de extensão Descricao() para Status\n    // Ativo=\"Em uso\", Inativo=\"Desativado\", Pendente=\"Aguardando\"\n}\n\npublic class Solution\n{\n    public static string Teste() => Status.Ativo.Descricao();\n}",
+  "tags": [
+    "enum",
+    "extensão"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == \"Em uso\"; results.Add(new TestResult { Pass = p, Message = p ? \"Em uso ok!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

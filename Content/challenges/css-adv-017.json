@@ -1,0 +1,32 @@
+{
+  "id": "css-adv-017",
+  "track": "css",
+  "title": "Navbar Responsiva",
+  "description": "Navbar sem JavaScript.",
+  "starterCode": "<style>\n/* Crie navbar responsiva */\n\n</style>\n\n<nav class=\"navbar\"><a class=\"logo\">Logo</a><input type=\"checkbox\" id=\"toggle\" class=\"toggle\"><label for=\"toggle\" class=\"hamburger\">☰</label><div class=\"nav-links\"><a>Home</a><a>About</a><a>Contact</a></div></nav>",
+  "tags": [
+    "navbar",
+    "responsivo"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-property",
+        "selector": ".navbar",
+        "property": "display",
+        "value": "flex",
+        "errorMessage": "Navbar precisa flex.",
+        "successMessage": "Flex ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ".toggle",
+        "property": "display",
+        "errorMessage": "Controle visibilidade do toggle.",
+        "successMessage": "Toggle ok!"
+      }
+    ]
+  }
+}

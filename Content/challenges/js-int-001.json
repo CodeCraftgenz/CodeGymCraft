@@ -1,0 +1,16 @@
+{
+  "id": "js-int-001",
+  "track": "javascript",
+  "title": "Array Map",
+  "description": "Crie `dobrarTodos(arr)` usando map.",
+  "starterCode": "function dobrarTodos(arr) {\n    // Use map para dobrar todos\n}\n",
+  "tags": [
+    "array",
+    "map"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = dobrarTodos([1,2,3]); const exp = \"[2,4,6]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '[2,4,6] ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

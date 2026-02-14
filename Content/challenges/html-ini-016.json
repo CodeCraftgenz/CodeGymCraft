@@ -1,0 +1,29 @@
+{
+  "id": "html-ini-016",
+  "track": "html",
+  "title": "Botão Submit",
+  "description": "Crie um formulário com botão de envio.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie form com button submit -->\n    \n</body>\n</html>",
+  "tags": [
+    "formulário",
+    "botão"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "form",
+        "errorMessage": "<form> não encontrado.",
+        "successMessage": "<form> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "button[type='submit']",
+        "errorMessage": "button type='submit' não encontrado. Alternativamente use input type='submit'.",
+        "successMessage": "Botão submit ok!"
+      }
+    ]
+  }
+}

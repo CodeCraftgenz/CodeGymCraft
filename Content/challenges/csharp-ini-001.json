@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-001",
+  "track": "csharp",
+  "title": "Soma",
+  "description": "Crie `Solution.Soma(int a, int b)` que retorna a soma.",
+  "starterCode": "public class Solution\n{\n    public static int Soma(int a, int b)\n    {\n        // Retorne a + b\n        return 0;\n    }\n}",
+  "tags": [
+    "tipos",
+    "operador"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Soma(2, 3); bool p = r == 5; results.Add(new TestResult { Pass = p, Message = p ? \"2+3=5!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.Soma(-1, 1); bool p = r == 0; results.Add(new TestResult { Pass = p, Message = p ? \"-1+1=0!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

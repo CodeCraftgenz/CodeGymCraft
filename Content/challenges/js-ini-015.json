@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-015",
+  "track": "javascript",
+  "title": "Gritar",
+  "description": "Crie `grito(str)` retorna em MAIÚSCULAS.",
+  "starterCode": "function grito(str) {\n    // Retorne em maiúsculas\n}\n",
+  "tags": [
+    "string",
+    "toUpperCase"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = grito('hello'); const exp = \"'HELLO'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'HELLO ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = grito('abc'); const exp = \"'ABC'\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'ABC ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

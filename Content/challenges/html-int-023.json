@@ -1,0 +1,23 @@
+{
+  "id": "html-int-023",
+  "track": "html",
+  "title": "Template Element",
+  "description": "Use template para conteúdo reutilizável.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use elemento template -->\n    \n</body>\n</html>",
+  "tags": [
+    "template",
+    "avançado"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "template",
+        "errorMessage": "<template> não encontrado.",
+        "successMessage": "<template> ok!"
+      }
+    ]
+  }
+}

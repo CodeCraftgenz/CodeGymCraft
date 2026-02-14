@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-011",
+  "track": "csharp",
+  "title": "Extension Method",
+  "description": "Crie método de extensão.",
+  "starterCode": "public static class StringExtensions\n{\n    // Método de extensão ContarPalavras() para string\n}\n\npublic class Solution\n{\n    public static int Teste() => \"hello world foo\".ContarPalavras();\n}",
+  "tags": [
+    "extensão",
+    "método"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == 3; results.Add(new TestResult { Pass = p, Message = p ? \"3 palavras!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

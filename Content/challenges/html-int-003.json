@@ -1,0 +1,29 @@
+{
+  "id": "html-int-003",
+  "track": "html",
+  "title": "Elemento Aside",
+  "description": "Crie conteúdo lateral com aside.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use aside para conteúdo lateral -->\n    \n</body>\n</html>",
+  "tags": [
+    "semântica",
+    "aside"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "main",
+        "errorMessage": "<main> não encontrado.",
+        "successMessage": "<main> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "aside",
+        "errorMessage": "<aside> não encontrado.",
+        "successMessage": "<aside> ok!"
+      }
+    ]
+  }
+}

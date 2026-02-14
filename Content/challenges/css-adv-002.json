@@ -1,0 +1,24 @@
+{
+  "id": "css-adv-002",
+  "track": "css",
+  "title": "Animação Multi-step",
+  "description": "Animação com múltiplos steps.",
+  "starterCode": "<style>\n/* Crie animação bounce */\n\n</style>\n\n<div class=\"bounce\" style=\"width:50px;height:50px;background:blue;border-radius:50%\">●</div>",
+  "tags": [
+    "animação",
+    "steps"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".bounce",
+        "property": "animation",
+        "errorMessage": "Defina animation.",
+        "successMessage": "Animation ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-013",
+  "track": "javascript",
+  "title": "Arrow Function",
+  "description": "Crie `quadrado` como arrow function.",
+  "starterCode": "// Crie como arrow function\nconst quadrado = (n) => {\n    // Retorne n ao quadrado\n};\n",
+  "tags": [
+    "arrow",
+    "função"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = quadrado(4); const exp = \"16\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '4²=16!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = quadrado(0); const exp = \"0\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? '0²=0!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

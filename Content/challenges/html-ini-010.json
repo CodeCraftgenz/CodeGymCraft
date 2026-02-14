@@ -1,0 +1,37 @@
+{
+  "id": "html-ini-010",
+  "track": "html",
+  "title": "Tabela Simples",
+  "description": "Crie uma tabela com 3 linhas e 2 colunas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie uma tabela 3x2 -->\n    \n</body>\n</html>",
+  "tags": [
+    "tabela",
+    "dados"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "table",
+        "errorMessage": "<table> não encontrado.",
+        "successMessage": "<table> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "tr",
+        "min": 3,
+        "errorMessage": "Adicione pelo menos 3 <tr>.",
+        "successMessage": "3+ linhas!"
+      },
+      {
+        "type": "element-count",
+        "selector": "td",
+        "min": 6,
+        "errorMessage": "Adicione pelo menos 6 <td>.",
+        "successMessage": "6+ células!"
+      }
+    ]
+  }
+}

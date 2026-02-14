@@ -1,0 +1,16 @@
+{
+  "id": "js-ini-008",
+  "track": "javascript",
+  "title": "Contar até N",
+  "description": "Crie `contarAte(n)` que retorna array [1..n].",
+  "starterCode": "function contarAte(n) {\n    // Retorne array [1, 2, ..., n]\n}\n",
+  "tags": [
+    "loop",
+    "array"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const r = contarAte(5); const exp = \"[1,2,3,4,5]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'contarAte(5) ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    try { const r = contarAte(1); const exp = \"[1]\"; const pass = JSON.stringify(r) === JSON.stringify(exp); results.push({ pass, message: pass ? 'contarAte(1) ok!' : 'Incorreto: esperado ' + JSON.stringify(exp) + ' obteve ' + JSON.stringify(r) }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

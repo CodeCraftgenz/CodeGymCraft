@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-019",
+  "track": "csharp",
+  "title": "List Add/Remove",
+  "description": "Crie `Solution.ManipularLista()` retorna lista [1,3,5].",
+  "starterCode": "public class Solution\n{\n    public static List<int> ManipularLista()\n    {\n        // Crie lista, adicione 1,2,3,4,5, remova pares, retorne\n        return new List<int>();\n    }\n}",
+  "tags": [
+    "List",
+    "coleção"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.ManipularLista().SequenceEqual(new[]{1,3,5}); results.Add(new TestResult { Pass = p, Message = p ? \"[1,3,5] ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

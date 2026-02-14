@@ -1,0 +1,36 @@
+{
+  "id": "html-ini-024",
+  "track": "html",
+  "title": "Lista Aninhada",
+  "description": "Crie uma lista com sub-listas.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie lista aninhada -->\n    \n</body>\n</html>",
+  "tags": [
+    "lista",
+    "aninhada"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "ul",
+        "errorMessage": "<ul> não encontrado.",
+        "successMessage": "<ul> ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "ul ul",
+        "errorMessage": "Sub-lista não encontrada.",
+        "successMessage": "Sub-lista ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "li",
+        "min": 6,
+        "errorMessage": "Adicione pelo menos 6 <li> no total.",
+        "successMessage": "6+ itens!"
+      }
+    ]
+  }
+}

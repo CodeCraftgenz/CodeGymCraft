@@ -1,0 +1,16 @@
+{
+  "id": "csharp-ini-025",
+  "track": "csharp",
+  "title": "Switch Expression",
+  "description": "Crie `Solution.DiaDaSemana(int n)` com switch.",
+  "starterCode": "public class Solution\n{\n    public static string DiaDaSemana(int n)\n    {\n        // 1=Domingo...7=Sábado\n        return \"\";\n    }\n}",
+  "tags": [
+    "switch",
+    "expressão"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.DiaDaSemana(1); bool p = r == \"Domingo\"; results.Add(new TestResult { Pass = p, Message = p ? \"1=Domingo!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        try { var r = Solution.DiaDaSemana(7); bool p = r == \"Sábado\"; results.Add(new TestResult { Pass = p, Message = p ? \"7=Sábado!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-024",
+  "track": "csharp",
+  "title": "Static Members",
+  "description": "Use membros estáticos.",
+  "starterCode": "public class Contador\n{\n    private static int _count = 0;\n    // Incrementar() incrementa _count\n    // Valor propriedade static retorna _count\n}\n\npublic class Solution\n{\n    public static int Teste()\n    {\n        Contador.Incrementar();\n        Contador.Incrementar();\n        Contador.Incrementar();\n        return Contador.Valor;\n    }\n}",
+  "tags": [
+    "static",
+    "classe"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { var r = Solution.Teste(); bool p = r == 3; results.Add(new TestResult { Pass = p, Message = p ? \"Count=3!\" : \"Incorreto: \" + r }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

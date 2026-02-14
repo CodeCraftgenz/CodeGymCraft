@@ -1,0 +1,23 @@
+{
+  "id": "html-adv-008",
+  "track": "html",
+  "title": "Web Manifest",
+  "description": "Adicione link para manifest.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <!-- Adicione manifest link -->\n    <title>PWA</title>\n</head>\n<body><h1>App</h1></body>\n</html>",
+  "tags": [
+    "PWA",
+    "manifest"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "link[rel='manifest']",
+        "errorMessage": "link rel='manifest' não encontrado.",
+        "successMessage": "Manifest ok!"
+      }
+    ]
+  }
+}

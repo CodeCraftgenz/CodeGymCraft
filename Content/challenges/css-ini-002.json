@@ -1,0 +1,24 @@
+{
+  "id": "css-ini-002",
+  "track": "css",
+  "title": "Cor de Fundo",
+  "description": "Defina cor de fundo.",
+  "starterCode": "<style>\n/* Defina background-color */\n\n</style>\n\n<div class=\"caixa\">Caixa colorida</div>",
+  "tags": [
+    "background",
+    "cor"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".caixa",
+        "property": "background-color",
+        "errorMessage": "Defina background-color em .caixa.",
+        "successMessage": "Background ok!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-int-005",
+  "track": "csharp",
+  "title": "LINQ First/Last",
+  "description": "Use First e Last.",
+  "starterCode": "using System.Linq;\n\npublic class Solution\n{\n    public static (int primeiro, int ultimo) Extremos(List<int> nums)\n    {\n        return (0, 0);\n    }\n}",
+  "tags": [
+    "LINQ",
+    "acesso"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = { var r = Solution.Extremos(new List<int>{5,3,8,1}); return r.primeiro == 5 && r.ultimo == 1; }; results.Add(new TestResult { Pass = p, Message = p ? \"Extremos ok!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

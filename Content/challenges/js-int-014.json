@@ -1,0 +1,16 @@
+{
+  "id": "js-int-014",
+  "track": "javascript",
+  "title": "Closure",
+  "description": "Crie `contador()` que retorna função incrementadora.",
+  "starterCode": "function contador() {\n    // Retorne uma função que incrementa e retorna o valor\n}\n",
+  "tags": [
+    "closure",
+    "função"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "js-tests",
+  "validatorConfig": {
+    "testCode": "function __runTests() {\n    const results = [];\n    try { const c = contador(); const r1 = c(); const r2 = c(); results.push({ pass: r1===1&&r2===2, message: r1===1&&r2===2 ? 'Contador incrementa!' : 'Esperado 1,2 obteve '+r1+','+r2 }); } catch(e) { results.push({ pass: false, message: 'Erro: ' + e.message }); }\n    return results;\n}"
+  }
+}

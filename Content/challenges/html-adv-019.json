@@ -1,0 +1,31 @@
+{
+  "id": "html-adv-019",
+  "track": "html",
+  "title": "Multi-language",
+  "description": "Página com atributos lang.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Use lang em diferentes elementos -->\n    \n</body>\n</html>",
+  "tags": [
+    "i18n",
+    "lang"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "attribute-value",
+        "selector": "html",
+        "attribute": "lang",
+        "value": "pt-BR",
+        "errorMessage": "lang principal não é pt-BR.",
+        "successMessage": "Lang ok!"
+      },
+      {
+        "type": "element-exists",
+        "selector": "[lang='en']",
+        "errorMessage": "Elemento com lang='en' não encontrado.",
+        "successMessage": "Lang en ok!"
+      }
+    ]
+  }
+}

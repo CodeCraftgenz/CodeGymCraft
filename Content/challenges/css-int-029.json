@@ -1,0 +1,24 @@
+{
+  "id": "css-int-029",
+  "track": "css",
+  "title": "Combinador de Seletores",
+  "description": "Use > + ~.",
+  "starterCode": "<style>\n/* Use seletor filho direto > */\n\n</style>\n\n<div class=\"parent\"><p>Filho direto</p><div><p>Neto</p></div></div>",
+  "tags": [
+    "seletores",
+    "combinadores"
+  ],
+  "difficulty": "Intermediario",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ".parent > p",
+        "property": "color",
+        "errorMessage": "Use seletor .parent > p.",
+        "successMessage": "Combinador ok!"
+      }
+    ]
+  }
+}

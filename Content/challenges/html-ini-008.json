@@ -1,0 +1,30 @@
+{
+  "id": "html-ini-008",
+  "track": "html",
+  "title": "Lista Ordenada",
+  "description": "Crie uma lista ordenada com 5 passos.",
+  "starterCode": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Desafio</title>\n</head>\n<body>\n    <!-- Crie uma lista ol com 5 li -->\n    \n</body>\n</html>",
+  "tags": [
+    "lista",
+    "ol"
+  ],
+  "difficulty": "Iniciante",
+  "validatorType": "html-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "element-exists",
+        "selector": "ol",
+        "errorMessage": "<ol> não encontrado.",
+        "successMessage": "<ol> ok!"
+      },
+      {
+        "type": "element-count",
+        "selector": "ol > li",
+        "min": 5,
+        "errorMessage": "Adicione pelo menos 5 <li>.",
+        "successMessage": "5+ itens!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "csharp-adv-014",
+  "track": "csharp",
+  "title": "Yield Return",
+  "description": "Use yield return.",
+  "starterCode": "using System.Collections.Generic;\n\npublic class Solution\n{\n    public static IEnumerable<int> Pares(int ate)\n    {\n        // Use yield return para gerar pares de 2 até 'ate'\n        yield break;\n    }\n}",
+  "tags": [
+    "iterator",
+    "yield"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "csharp-tests",
+  "validatorConfig": {
+    "testCode": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class TestRunner\n{\n    public static List<TestResult> RunTests()\n    {\n        var results = new List<TestResult>();\n        try { bool p = Solution.Pares(10).SequenceEqual(new[]{2,4,6,8,10}); results.Add(new TestResult { Pass = p, Message = p ? \"Pares até 10!\" : \"Incorreto\" }); } catch (Exception ex) { results.Add(new TestResult { Pass = false, Message = \"Erro: \" + ex.Message }); }\n        return results;\n    }\n}\n\npublic class TestResult { public bool Pass { get; set; } public string Message { get; set; } }"
+  }
+}

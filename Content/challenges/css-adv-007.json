@@ -1,0 +1,31 @@
+{
+  "id": "css-adv-007",
+  "track": "css",
+  "title": "Dark Mode CSS",
+  "description": "Implemente dark mode com variáveis.",
+  "starterCode": "<style>\n/* Use variáveis para dark/light */\n\n</style>\n\n<div class=\"theme-container\"><h2>Dark Mode</h2><p>Texto adaptável</p></div>",
+  "tags": [
+    "dark mode",
+    "variáveis"
+  ],
+  "difficulty": "Avancado",
+  "validatorType": "css-rules",
+  "validatorConfig": {
+    "rules": [
+      {
+        "type": "css-rule-exists",
+        "selector": ":root",
+        "property": "--bg-color",
+        "errorMessage": "Defina --bg-color em :root.",
+        "successMessage": "Variável bg ok!"
+      },
+      {
+        "type": "css-rule-exists",
+        "selector": ":root",
+        "property": "--text-color",
+        "errorMessage": "Defina --text-color.",
+        "successMessage": "Variável text ok!"
+      }
+    ]
+  }
+}
