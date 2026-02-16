@@ -56,13 +56,30 @@
                        Icon="{ui:SymbolIcon Key24}" />
 
             <!-- Loading -->
-            <StackPanel x:Name="LoadingPanel" Orientation="Horizontal"
+            <StackPanel x:Name="LoadingPanel" Orientation="Vertical"
                         HorizontalAlignment="Center"
                         Margin="0,16,0,0"
                         Visibility="Collapsed">
-                <ui:ProgressRing Width="20" Height="20" IsIndeterminate="True" />
-                <TextBlock Text="Verificando licença..." FontSize="13" Opacity="0.6"
-                           VerticalAlignment="Center" Margin="10,0,0,0" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <ui:ProgressRing Width="20" Height="20" IsIndeterminate="True" />
+                    <TextBlock x:Name="LoadingText" Text="Verificando licença..." FontSize="13" Opacity="0.6"
+                               VerticalAlignment="Center" Margin="10,0,0,0" />
+                </StackPanel>
+                <TextBlock x:Name="LoadingSubText"
+                           Text="O servidor pode levar alguns segundos para responder..."
+                           FontSize="11" Opacity="0.4"
+                           HorizontalAlignment="Center"
+                           Margin="0,6,0,0"
+                           Visibility="Collapsed" />
+                <ui:Button x:Name="SkipButton"
+                           Content="Cancelar"
+                           Appearance="Secondary"
+                           HorizontalAlignment="Center"
+                           FontSize="12"
+                           Padding="16,4"
+                           Margin="0,8,0,0"
+                           Visibility="Collapsed"
+                           Click="SkipButton_Click" />
             </StackPanel>
 
             <!-- Mensagem de erro/sucesso -->
