@@ -34,11 +34,27 @@ public static class HardwareHelper
 
     public static string ComputeHardwareId()
     {
-        var processorId = GetProcessorId();
-        var motherboardSerial = GetMotherboardSerial();
-        var composite = $"PROC={processorId};MB={motherboardSerial}";
-        var fullHash = CryptoHelper.ComputeSha256(composite);
-        return fullHash[..64].ToUpper();
+        try
+        {
+            var processorId = GetProcessorId();
+            var motherboardSerial = GetMotherboardSerial();
+
+            // Fallback: se WMI falhar, usar nome da máquina + usuário
+            if (string.IsNullOrWhiteSpace(processorId) && string.IsNullOrWhiteSpace(motherboardSerial))
+            {
+                var fallback = $"MACHINE={Environment.MachineName};USER={Environment.UserName}";
+                return CryptoHelper.ComputeSha256(fallback)[..64].ToUpper();
+            }
+
+            var composite = $"PROC={processorId};MB={motherboardSerial}";
+            return CryptoHelper.ComputeSha256(composite)[..64].ToUpper();
+        }
+        catch
+        {
+            // Último recurso: usar nome da máquina
+            var fallback = $"MACHINE={Environment.MachineName};USER={Environment.UserName}";
+            return CryptoHelper.ComputeSha256(fallback)[..64].ToUpper();
+        }
     }
 
     public static string GetHardwareId() => ComputeHardwareId();

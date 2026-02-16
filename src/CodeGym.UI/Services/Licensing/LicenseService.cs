@@ -11,7 +11,7 @@ public class LicenseService
     private const string LegacyEndpoint = "https://codecraftgenz-monorepo.onrender.com/api/compat/license-check";
     private const int AppId = 12;
 
-    private static readonly HttpClient DefaultClient = new();
+    private static readonly HttpClient DefaultClient = new() { Timeout = TimeSpan.FromSeconds(90) };
     private readonly HttpClient _client;
 
     public LicenseService() : this(DefaultClient) { }
@@ -46,7 +46,7 @@ public class LicenseService
         if (string.IsNullOrWhiteSpace(endpoint)) endpoint = Endpoint;
 
         using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-        cts.CancelAfter(TimeSpan.FromSeconds(20));
+        cts.CancelAfter(TimeSpan.FromSeconds(60));
 
         HttpResponseMessage response;
         try
@@ -128,7 +128,7 @@ public class LicenseService
             return new LicenseCheckResult { Success = false, Message = "ID do computador não informado.", Code = "INVALID_HARDWARE_ID" };
 
         using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-        cts.CancelAfter(TimeSpan.FromSeconds(20));
+        cts.CancelAfter(TimeSpan.FromSeconds(60));
 
         try
         {

@@ -2,6 +2,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using CodeGym.UI.Services.Licensing;
+using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
 
 namespace CodeGym.UI.Views;
@@ -9,13 +10,17 @@ namespace CodeGym.UI.Views;
 public partial class LoginWindow : FluentWindow
 {
     private readonly LicensingService _licensingService;
-    private CancellationTokenSource? _autoValidateCts;
+    private CancellationTokenSource? _currentCts;
 
     public bool IsLicensed { get; private set; }
 
     public LoginWindow(LicensingService licensingService)
     {
         _licensingService = licensingService;
+
+        // Garantir que o tema Light está aplicado antes de renderizar
+        ApplicationThemeManager.Apply(ApplicationTheme.Light);
+
         InitializeComponent();
         HardwareIdText.Text = _licensingService.CurrentFingerprint;
 
@@ -28,29 +33,16 @@ public partial class LoginWindow : FluentWindow
         if (existing == null) return;
 
         EmailTextBox.Text = existing.Email;
-        ShowLoading(true, "Verificando licença...");
+        ShowLoading(true, "Verificando licença salva...");
         ShowMessage(null);
 
-        _autoValidateCts = new CancellationTokenSource();
-
-        // Após 3 segundos mostra o subtexto e botão cancelar
-        _ = Task.Delay(3000, _autoValidateCts.Token).ContinueWith(_ =>
-        {
-            Dispatcher.Invoke(() =>
-            {
-                if (LoadingPanel.Visibility == Visibility.Visible)
-                {
-                    LoadingSubText.Visibility = Visibility.Visible;
-                    SkipButton.Visibility = Visibility.Visible;
-                }
-            });
-        }, TaskContinuationOptions.OnlyOnRanToCompletion);
+        _currentCts = new CancellationTokenSource();
+        StartLoadingFeedback(_currentCts.Token);
 
         try
         {
-            // Timeout de 15 segundos para auto-validação
-            using var timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(_autoValidateCts.Token);
-            timeoutCts.CancelAfter(TimeSpan.FromSeconds(15));
+            using var timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(_currentCts.Token);
+            timeoutCts.CancelAfter(TimeSpan.FromSeconds(60));
 
             var result = await Task.Run(async () =>
                 await _licensingService.ValidateExistingAsync(), timeoutCts.Token);
@@ -66,7 +58,6 @@ public partial class LoginWindow : FluentWindow
         }
         catch (OperationCanceledException)
         {
-            // Usuário cancelou ou timeout
             ShowMessage("Verificação cancelada. Insira seu e-mail para ativar.", false);
         }
         catch (Exception ex)
@@ -76,14 +67,14 @@ public partial class LoginWindow : FluentWindow
         finally
         {
             ShowLoading(false);
-            _autoValidateCts?.Dispose();
-            _autoValidateCts = null;
+            _currentCts?.Dispose();
+            _currentCts = null;
         }
     }
 
     private void SkipButton_Click(object sender, RoutedEventArgs e)
     {
-        _autoValidateCts?.Cancel();
+        _currentCts?.Cancel();
     }
 
     private async void ActivateButton_Click(object sender, RoutedEventArgs e)
@@ -113,22 +104,17 @@ public partial class LoginWindow : FluentWindow
         ShowMessage(null);
         ActivateButton.IsEnabled = false;
 
-        // Mostrar subtexto após 3 segundos
-        using var cts = new CancellationTokenSource();
-        _ = Task.Delay(3000, cts.Token).ContinueWith(_ =>
-        {
-            Dispatcher.Invoke(() =>
-            {
-                if (LoadingPanel.Visibility == Visibility.Visible)
-                {
-                    LoadingSubText.Visibility = Visibility.Visible;
-                }
-            });
-        }, TaskContinuationOptions.OnlyOnRanToCompletion);
+        _currentCts = new CancellationTokenSource();
+        StartLoadingFeedback(_currentCts.Token);
 
         try
         {
-            var result = await _licensingService.EnsureLicensedAsync(() => Task.FromResult<string?>(email));
+            using var timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(_currentCts.Token);
+            timeoutCts.CancelAfter(TimeSpan.FromSeconds(90));
+
+            var result = await Task.Run(async () =>
+                await _licensingService.EnsureLicensedAsync(() => Task.FromResult<string?>(email)),
+                timeoutCts.Token);
 
             if (result.IsValid)
             {
@@ -143,16 +129,53 @@ public partial class LoginWindow : FluentWindow
                 ShowMessage(result.Message ?? "Não foi possível ativar a licença.", false);
             }
         }
+        catch (OperationCanceledException)
+        {
+            ShowMessage("Ativação cancelada. Tente novamente.", false);
+        }
         catch (Exception ex)
         {
             ShowMessage($"Erro: {ex.Message}", false);
         }
         finally
         {
-            cts.Cancel();
+            _currentCts?.Dispose();
+            _currentCts = null;
             ShowLoading(false);
             ActivateButton.IsEnabled = true;
         }
+    }
+
+    /// <summary>
+    /// Mostra feedback progressivo durante o loading:
+    /// - Após 3s: mostra subtexto + botão cancelar
+    /// - Após 5s: atualiza subtexto com "servidor pode demorar até 1 minuto"
+    /// </summary>
+    private void StartLoadingFeedback(CancellationToken token)
+    {
+        _ = Task.Delay(3000, token).ContinueWith(_ =>
+        {
+            Dispatcher.Invoke(() =>
+            {
+                if (LoadingPanel.Visibility == Visibility.Visible)
+                {
+                    LoadingSubText.Text = "Conectando ao servidor, aguarde...";
+                    LoadingSubText.Visibility = Visibility.Visible;
+                    SkipButton.Visibility = Visibility.Visible;
+                }
+            });
+        }, TaskContinuationOptions.OnlyOnRanToCompletion);
+
+        _ = Task.Delay(8000, token).ContinueWith(_ =>
+        {
+            Dispatcher.Invoke(() =>
+            {
+                if (LoadingPanel.Visibility == Visibility.Visible)
+                {
+                    LoadingSubText.Text = "O servidor pode levar até 1 minuto na primeira conexão...";
+                }
+            });
+        }, TaskContinuationOptions.OnlyOnRanToCompletion);
     }
 
     private void ShowLoading(bool show, string? text = null)

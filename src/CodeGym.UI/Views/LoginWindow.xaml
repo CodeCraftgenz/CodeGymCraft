@@ -7,15 +7,16 @@
         MinWidth="480" MinHeight="580"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
+        WindowBackdropType="None"
         ExtendsContentIntoTitleBar="True">
 
-    <Grid>
+    <Grid Background="{DynamicResource ApplicationBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ui:TitleBar Grid.Row="0" Title="" ShowMaximize="False" ShowMinimize="False" />
+        <ui:TitleBar Grid.Row="0" Title="CodeGym Offline - Ativação" ShowMaximize="False" ShowMinimize="False" />
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"
                     MaxWidth="360" Margin="40,0">
