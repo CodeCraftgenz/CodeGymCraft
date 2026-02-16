@@ -22,23 +22,36 @@ public partial class App : Application
     {
         base.OnStartup(e);
 
+        // CRITICAL: Impedir que o WPF encerre o app quando a LoginWindow fechar.
+        // Sem isso, quando ShowDialog() retorna e a LoginWindow fecha,
+        // o WPF detecta "última janela fechou" e inicia shutdown antes de MainWindow.Show().
+        ShutdownMode = ShutdownMode.OnExplicitShutdown;
+
         try
         {
+            LogToFile("=== Iniciando CodeGym Offline ===");
+
             // 1. Inicializar banco de dados SQLite
             DatabaseInitializer.Initialize();
+            LogToFile("DB inicializado");
 
             // 2. Configurar DI container
             var services = new ServiceCollection();
             ConfigureServices(services);
             _serviceProvider = services.BuildServiceProvider();
+            LogToFile("DI configurado");
 
             // 3. Aplicar tema salvo (padrão: Light)
             await ApplyThemeFromSettingsAsync();
+            LogToFile("Tema aplicado");
 
             // 4. Verificar licença — mostra tela de login se necessário
             var licensingService = _serviceProvider.GetRequiredService<LicensingService>();
             var loginWindow = new Views.LoginWindow(licensingService);
+            LogToFile("LoginWindow criada, exibindo...");
+
             var licensed = loginWindow.ShowDialog() == true && loginWindow.IsLicensed;
+            LogToFile($"LoginWindow fechou: licensed={licensed}");
 
             if (!licensed)
             {
@@ -46,22 +59,47 @@ public partial class App : Application
                 return;
             }
 
-            // 5. Carregar pacote base de desafios
-            await LoadBasePackageAsync();
+            // 5. Carregar pacote base de desafios (non-fatal)
+            try
+            {
+                await LoadBasePackageAsync();
+                LogToFile("Pacote base carregado");
+            }
+            catch (Exception ex)
+            {
+                LogToFile($"AVISO: falha ao carregar pacote base (non-fatal): {ex.Message}");
+            }
 
             // 6. Abrir janela principal
             var mainWindow = _serviceProvider.GetRequiredService<Views.MainWindow>();
+            MainWindow = mainWindow;
+            ShutdownMode = ShutdownMode.OnMainWindowClose;
             mainWindow.Show();
+            LogToFile("MainWindow exibida com sucesso");
         }
         catch (Exception ex)
         {
+            LogToFile($"ERRO FATAL: {ex}");
             MessageBox.Show(
-                $"Erro ao inicializar o aplicativo:\n{ex.Message}",
+                $"Erro ao inicializar o aplicativo:\n{ex.Message}\n\nDetalhes: {ex.StackTrace}",
                 "Erro de Inicialização",
                 MessageBoxButton.OK,
                 MessageBoxImage.Error);
             Shutdown(1);
         }
+    }
+
+    private static void LogToFile(string message)
+    {
+        try
+        {
+            var logDir = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "CodeGym");
+            if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
+            var logPath = Path.Combine(logDir, "startup.log");
+            File.AppendAllText(logPath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] {message}{Environment.NewLine}");
+        }
+        catch { }
     }
 
     private static void ConfigureServices(IServiceCollection services)
@@ -175,6 +213,7 @@ public partial class App : Application
 
     private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
     {
+        LogToFile($"DISPATCHER EXCEPTION: {e.Exception}");
         MessageBox.Show(
             $"Erro inesperado:\n{e.Exception.Message}",
             "Erro",
