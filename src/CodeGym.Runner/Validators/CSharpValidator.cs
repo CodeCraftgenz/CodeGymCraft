@@ -41,19 +41,46 @@ public class CSharpValidator : IValidator
             return result;
         }
 
-        // Montar o código completo: código do usuário + testes
-        // Os testes referenciam as classes/métodos definidos pelo usuário
+        // Extrair 'using' do testCode e userCode para consolidar no topo.
+        // Sem isso, 'using' no meio do arquivo causa erro de compilação.
+        var allUsings = new HashSet<string>(StringComparer.Ordinal)
+        {
+            "using System;",
+            "using System.Collections.Generic;",
+            "using System.Linq;",
+            "using System.Text;"
+        };
+
+        string StripUsings(string code)
+        {
+            var lines = code.Split('\n');
+            var filtered = new List<string>();
+            foreach (var line in lines)
+            {
+                var trimmed = line.Trim();
+                if (trimmed.StartsWith("using ") && trimmed.EndsWith(";") && !trimmed.Contains("("))
+                {
+                    allUsings.Add(trimmed);
+                }
+                else
+                {
+                    filtered.Add(line);
+                }
+            }
+            return string.Join("\n", filtered);
+        }
+
+        var cleanUserCode = StripUsings(userCode);
+        var cleanTestCode = StripUsings(testCode);
+
         var fullCode = $@"
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+{string.Join("\n", allUsings)}
 
 // === Código do Usuário ===
-{userCode}
+{cleanUserCode}
 
 // === Testes ===
-{testCode}
+{cleanTestCode}
 ";
 
         // Compilar com Roslyn

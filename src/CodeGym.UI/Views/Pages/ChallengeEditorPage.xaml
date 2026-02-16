@@ -83,16 +83,18 @@
                 </ui:CardControl>
 
                 <!-- Editor AvalonEdit -->
-                <Border Grid.Row="1" CornerRadius="6" ClipToBounds="True">
+                <Border Grid.Row="1" CornerRadius="6" ClipToBounds="True"
+                        BorderBrush="{ui:ThemeResource ControlStrokeColorDefaultBrush}"
+                        BorderThickness="1">
                     <avalonEdit:TextEditor
                         x:Name="CodeEditor"
                         FontFamily="Cascadia Code, Consolas, Courier New"
                         FontSize="14"
                         ShowLineNumbers="True"
                         WordWrap="True"
-                        Background="#1E1E1E"
-                        Foreground="#D4D4D4"
-                        LineNumbersForeground="#858585" />
+                        Background="#FAFAFA"
+                        Foreground="#1E1E1E"
+                        LineNumbersForeground="#999999" />
                 </Border>
             </Grid>
 
