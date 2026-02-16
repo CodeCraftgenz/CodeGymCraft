@@ -131,9 +131,20 @@ public class JavaScriptValidator : IValidator
                         if (item.IsObject())
                         {
                             var obj = item.AsObject();
-                            var name = obj.Get("name").AsString();
-                            var passed = obj.Get("passed").AsBoolean();
-                            var message = obj.Get("message").AsString();
+
+                            // Suportar ambos os formatos: { pass, message } e { name, passed, message }
+                            var passProp = obj.HasProperty("pass") ? obj.Get("pass")
+                                         : obj.HasProperty("passed") ? obj.Get("passed")
+                                         : Jint.Native.JsValue.Undefined;
+
+                            var passed = !passProp.IsUndefined() && passProp.AsBoolean();
+
+                            var messageProp = obj.Get("message");
+                            var message = !messageProp.IsUndefined() ? messageProp.AsString() : "";
+
+                            var nameProp = obj.Get("name");
+                            var name = !nameProp.IsUndefined() ? nameProp.AsString()
+                                     : $"Teste {result.Details.Count + 1}";
 
                             result.Details.Add(new TestResult
                             {

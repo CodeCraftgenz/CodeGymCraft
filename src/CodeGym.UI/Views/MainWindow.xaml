@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         xmlns:pages="clr-namespace:CodeGym.UI.Views.Pages"
-        Title="CodeGym Offline"
+        Title="ProgrammingCraft"
         Width="1340" Height="860"
         MinWidth="960" MinHeight="640"
         WindowStartupLocation="CenterScreen"
@@ -16,7 +16,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ui:TitleBar Grid.Row="0" Title="CodeGym Offline" />
+        <ui:TitleBar Grid.Row="0" Title="ProgrammingCraft" />
 
         <ui:NavigationView Grid.Row="1"
                            x:Name="RootNavigation"
@@ -30,7 +30,7 @@
                     <Image Source="/Resources/Logo.png" Width="28" Height="28"
                            RenderOptions.BitmapScalingMode="HighQuality"
                            VerticalAlignment="Center" Margin="0,0,10,0" />
-                    <TextBlock Text="CodeGym Offline" FontSize="15" FontWeight="SemiBold"
+                    <TextBlock Text="ProgrammingCraft" FontSize="15" FontWeight="SemiBold"
                                VerticalAlignment="Center" />
                 </StackPanel>
             </ui:NavigationView.Header>

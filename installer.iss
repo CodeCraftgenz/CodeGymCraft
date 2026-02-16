@@ -1,9 +1,9 @@
 ; ===============================================================
-; CodeGym Offline - Inno Setup Installer Script
+; ProgrammingCraft - Inno Setup Installer Script
 ; ===============================================================
 
-#define MyAppName "CodeGym Offline"
-#define MyAppVersion "2.0.0"
+#define MyAppName "ProgrammingCraft"
+#define MyAppVersion "2.1.0"
 #define MyAppPublisher "CodeCraftGenZ"
 #define MyAppExeName "CodeGymOffline.exe"
 #define MyAppURL "https://codecraftgenz.com"
@@ -19,7 +19,7 @@ DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=.\output
-OutputBaseFilename=CodeGymOffline_v{#MyAppVersion}_Setup
+OutputBaseFilename=ProgrammingCraft_v{#MyAppVersion}_Setup
 SetupIconFile=.\src\CodeGym.UI\Resources\icon.ico
 UninstallDisplayIcon={app}\{#MyAppExeName}
 Compression=lzma2/ultra64
@@ -39,7 +39,7 @@ WizardSmallImageFile=compiler:WizClassicSmallImage-IS.bmp
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "Criar atalho na &\u00c1rea de Trabalho"; GroupDescription: "Atalhos adicionais:"; Flags: unchecked
+Name: "desktopicon"; Description: "Criar atalho na &Área de Trabalho"; GroupDescription: "Atalhos adicionais:"; Flags: unchecked
 
 [Files]
 ; Todos os arquivos do publish (app self-contained)

@@ -29,7 +29,7 @@ public partial class App : Application
 
         try
         {
-            LogToFile("=== Iniciando CodeGym Offline ===");
+            LogToFile("=== Iniciando ProgrammingCraft ===");
 
             // 1. Inicializar banco de dados SQLite
             DatabaseInitializer.Initialize();

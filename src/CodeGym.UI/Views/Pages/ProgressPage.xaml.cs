@@ -206,7 +206,7 @@ public partial class ProgressPage : Page, INotifyPropertyChanged
 
                         page.Header().Column(col =>
                         {
-                            col.Item().Text("CodeGym Offline — Relatório de Progresso")
+                            col.Item().Text("ProgrammingCraft — Relatório de Progresso")
                                 .FontSize(22).Bold().FontColor(Colors.Blue.Medium);
                             col.Item().Text($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
                                 .FontSize(10).FontColor(Colors.Grey.Medium);
@@ -265,7 +265,7 @@ public partial class ProgressPage : Page, INotifyPropertyChanged
                         });
 
                         page.Footer().AlignCenter()
-                            .Text("CodeGym Offline — Pratique programação 100% offline")
+                            .Text("ProgrammingCraft — Pratique programação 100% offline")
                             .FontSize(9).FontColor(Colors.Grey.Medium);
                     });
                 }).GeneratePdf(dialog.FileName);

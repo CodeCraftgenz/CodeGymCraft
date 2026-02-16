@@ -67,8 +67,17 @@
                 <ui:CardControl Grid.Row="0" Margin="0,0,0,6">
                     <ui:CardControl.Header>
                         <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="200">
-                            <TextBlock Text="{Binding ChallengeDescription}"
-                                       FontSize="14" TextWrapping="Wrap" LineHeight="22" />
+                            <StackPanel>
+                                <TextBlock Text="{Binding ChallengeDescription}"
+                                           FontSize="14" TextWrapping="Wrap" LineHeight="22" />
+                                <!-- Dica para iniciantes -->
+                                <Border Visibility="{Binding ShowBeginnerTip, Converter={StaticResource BoolToVisibility}}"
+                                        Background="#1A3498DB" CornerRadius="6" Padding="10,8" Margin="0,8,0,0">
+                                    <TextBlock Text="{Binding BeginnerTip}"
+                                               FontSize="13" TextWrapping="Wrap" Opacity="0.8"
+                                               Foreground="#3498DB" />
+                                </Border>
+                            </StackPanel>
                         </ScrollViewer>
                     </ui:CardControl.Header>
                 </ui:CardControl>

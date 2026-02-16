@@ -41,7 +41,7 @@ public partial class MainWindow : FluentWindow
             if (!settings.OnboardingCompleted)
             {
                 var result = System.Windows.MessageBox.Show(
-                    "Bem-vindo ao CodeGym Offline!\n\n" +
+                    "Bem-vindo ao ProgrammingCraft!\n\n" +
                     "Este aplicativo permite que você pratique programação 100% offline " +
                     "em 4 trilhas: HTML, CSS, JavaScript e C#.\n\n" +
                     "Dicas rápidas:\n" +
@@ -50,7 +50,7 @@ public partial class MainWindow : FluentWindow
                     "- Ctrl+I para importar pacotes de desafios\n" +
                     "- Tema e configurações do editor estão em Configurações\n\n" +
                     "Deseja começar?",
-                    "Bem-vindo ao CodeGym!",
+                    "Bem-vindo ao ProgrammingCraft!",
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Information);
 

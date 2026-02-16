@@ -43,6 +43,17 @@ public partial class ChallengeEditorPage : Page, INotifyPropertyChanged
     public string ChallengeTitle => _challenge?.Title ?? "Desafio";
     public string ChallengeDescription => _challenge?.Description ?? "";
 
+    public bool ShowBeginnerTip => _challenge?.Difficulty == Difficulty.Iniciante;
+
+    public string BeginnerTip => _challenge?.TrackType switch
+    {
+        TrackType.Html => "Dica: Escreva o HTML completo com as tags pedidas. Lembre-se de abrir e fechar cada tag corretamente (ex: <p>texto</p>).",
+        TrackType.Css => "Dica: Escreva suas regras CSS com o seletor, chaves { }, propriedade e valor. Não esqueça do ponto-e-vírgula (;) no final.",
+        TrackType.JavaScript => "Dica: Crie a função pedida com function ou arrow function. Certifique-se de que ela retorna (return) o valor correto.",
+        TrackType.CSharp => "Dica: Implemente o método pedido na classe Solution. Use 'return' para retornar o resultado.",
+        _ => ""
+    };
+
     public string DifficultyDisplay => _challenge?.Difficulty switch
     {
         Difficulty.Iniciante => "Iniciante",
@@ -245,10 +256,39 @@ public partial class ChallengeEditorPage : Page, INotifyPropertyChanged
             _lastValidationPassed = result.Success;
             ResultMessage = result.Message;
 
+            // Feedback encorajador para iniciantes
+            if (_challenge.Difficulty == Difficulty.Iniciante && !result.Success)
+            {
+                var passedCount = result.Details.Count(d => d.Passed);
+                var totalCount = result.Details.Count;
+
+                if (passedCount > 0)
+                    ResultMessage = $"Quase lá! Você acertou {passedCount} de {totalCount} testes. Continue tentando!";
+                else if (!string.IsNullOrEmpty(result.CompilationError))
+                    ResultMessage = "Parece que há um erro de sintaxe no seu código. Revise com calma e tente novamente.";
+                else
+                    ResultMessage = "Não desanime! Releia o enunciado com atenção e tente novamente. Cada erro é uma oportunidade de aprender.";
+
+                ResultMessage += _challenge.TrackType switch
+                {
+                    TrackType.Html => "\n\nDica: Verifique se todas as tags estão abertas e fechadas corretamente.",
+                    TrackType.Css => "\n\nDica: Verifique se o seletor e as propriedades estão escritos corretamente, com dois-pontos (:) e ponto-e-vírgula (;).",
+                    TrackType.JavaScript => "\n\nDica: Verifique se a função existe e retorna o valor esperado. Use console.log() para depurar.",
+                    TrackType.CSharp => "\n\nDica: Verifique se o nome do método e os tipos de retorno estão corretos.",
+                    _ => ""
+                };
+            }
+            else if (result.Success)
+            {
+                ResultMessage = _challenge.Difficulty == Difficulty.Iniciante
+                    ? "Parabéns! Você completou o desafio com sucesso! Continue assim!"
+                    : result.Message;
+            }
+
             if (!string.IsNullOrEmpty(result.CompilationError))
-                ResultMessage += "\n\nErros de compilação:\n" + result.CompilationError;
+                ResultMessage += "\n\nDetalhes do erro:\n" + result.CompilationError;
             if (!string.IsNullOrEmpty(result.Output))
-                ResultMessage += "\n\nSaída:\n" + result.Output;
+                ResultMessage += "\n\nSaída do programa:\n" + result.Output;
 
             Dispatcher.Invoke(() =>
             {
@@ -444,5 +484,7 @@ public partial class ChallengeEditorPage : Page, INotifyPropertyChanged
         Notify(nameof(DifficultyBrush));
         Notify(nameof(ShowPreview));
         Notify(nameof(FavoriteAppearance));
+        Notify(nameof(ShowBeginnerTip));
+        Notify(nameof(BeginnerTip));
     }
 }

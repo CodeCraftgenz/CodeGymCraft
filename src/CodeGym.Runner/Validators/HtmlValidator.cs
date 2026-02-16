@@ -165,7 +165,10 @@ public class HtmlValidator : IValidator
         }
 
         var attrValue = element.GetAttribute(rule.Attribute ?? "");
-        var passed = attrValue == rule.ExpectedValue;
+        var passed = string.Equals(
+            attrValue?.Trim(),
+            rule.ExpectedValue?.Trim(),
+            StringComparison.OrdinalIgnoreCase);
 
         return new TestResult
         {

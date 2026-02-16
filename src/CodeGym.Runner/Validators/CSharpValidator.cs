@@ -204,10 +204,27 @@ using System.Text;
                         ? output[..MaxOutputLength] + "\n... (saída truncada)"
                         : output;
 
-                    // Converter resultado
+                    // Converter resultado — suporta ambos os formatos:
+                    // 1. IEnumerable<(string, bool, string)> (tuplas)
+                    // 2. List<TestResult> com propriedades Pass/Message (usado nos desafios)
                     if (rawResult is IEnumerable<(string, bool, string)> typedResults)
                     {
                         testResults = typedResults.ToList();
+                    }
+                    else if (rawResult is System.Collections.IEnumerable enumerable)
+                    {
+                        testResults = new List<(string, bool, string)>();
+                        var idx = 0;
+                        foreach (var item in enumerable)
+                        {
+                            idx++;
+                            var itemType = item.GetType();
+                            var pass = itemType.GetProperty("Pass")?.GetValue(item) as bool? ?? false;
+                            var msg = itemType.GetProperty("Message")?.GetValue(item)?.ToString() ?? "";
+                            var name = itemType.GetProperty("Name")?.GetValue(item)?.ToString()
+                                     ?? $"Teste {idx}";
+                            testResults.Add((name, pass, msg));
+                        }
                     }
                 }
                 catch (TargetInvocationException tie)

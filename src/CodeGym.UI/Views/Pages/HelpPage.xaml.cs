@@ -110,9 +110,9 @@ public partial class HelpPage : Page
     #region Markdown Content
 
     private const string MarkdownComoUsar = """
-        # Como Usar o CodeGym Offline
+        # Como Usar o ProgrammingCraft
 
-        Bem-vindo ao **CodeGym Offline** — sua plataforma de prática de programação 100% offline!
+        Bem-vindo ao **ProgrammingCraft** — sua plataforma de prática de programação 100% offline!
 
         ## Primeiros Passos
 
@@ -673,13 +673,13 @@ public partial class HelpPage : Page
         """;
 
     private const string MarkdownSobre = """
-        # Sobre o CodeGym Offline
+        # Sobre o ProgrammingCraft
 
-        **Versão**: 2.0.0
+        **Versão**: 2.1.0
 
         ## O que é?
 
-        CodeGym Offline é uma plataforma de prática de programação que funciona **100% offline**. Ideal para estudantes que querem aprender e praticar HTML, CSS, JavaScript e C# sem precisar de internet.
+        ProgrammingCraft é uma plataforma de prática de programação que funciona **100% offline**. Ideal para estudantes que querem aprender e praticar HTML, CSS, JavaScript e C# sem precisar de internet.
 
         ## Trilhas Disponíveis
 
